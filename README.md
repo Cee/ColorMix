@@ -1,1 +1,1 @@
-# Colorix
+# ColorMix
