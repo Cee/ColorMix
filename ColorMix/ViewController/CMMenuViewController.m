@@ -7,7 +7,7 @@
 //
 
 #import "CMMenuViewController.h"
-#import "CMClassicGameViewController.h"
+#import "CMGameViewController.h"
 
 @interface CMMenuViewController ()
 
@@ -27,12 +27,13 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onEasyButtonClicked:(id)sender {
-    CMClassicGameViewController *gameViewController = [[CMClassicGameViewController alloc] init];
+    CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:classicMode];
     [self.navigationController pushViewController:gameViewController animated:YES];
 }
 
 - (IBAction)onFantasyButtonClicked:(id)sender {
-    
+    CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:fantasyMode];
+    [self.navigationController pushViewController:gameViewController animated:YES];
 }
 
 - (IBAction)onSettingButtonClicked:(id)sender {

@@ -8,7 +8,7 @@
 
 #import "CMGameResultViewController.h"
 #import "CMMenuViewController.h"
-#import "CMClassicGameViewController.h"
+#import "CMGameViewController.h"
 @interface CMGameResultViewController ()
 @end
 
@@ -26,12 +26,8 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onReplayButtonClicked:(id)sender {
-    if (_gameMode == classicMode) {
-        CMClassicGameViewController *gameViewController = [[CMClassicGameViewController alloc] init];
-        [self.navigationController pushViewController:gameViewController animated:YES];
-    } else {
-        
-    }
+    CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:_gameMode];
+    [self.navigationController pushViewController:gameViewController animated:YES];
     self.navigationController.viewControllers = @[self.navigationController.childViewControllers[0],self.navigationController.topViewController];
 }
 

@@ -6,28 +6,37 @@
 //
 //
 
-#import "CMClassicQuestionView.h"
+#import "CMQuestionView.h"
 
-@interface CMClassicQuestionView()
+@interface CMQuestionView()
 @property (nonatomic, weak) IBOutlet UIView *cardView;
 @property (nonatomic, weak) IBOutlet UIView *timerView;
 @property (nonatomic, weak) IBOutlet UILabel *cardTextLabel;
 @property (nonatomic, weak) IBOutlet UILabel *questionLabel;
 @property (nonatomic, weak) IBOutlet UIView *optionView;
 @property (nonatomic, strong) CMQuestion *question;
+@property (nonatomic) GameMode gameMode;
 @end
 
-@implementation CMClassicQuestionView
+@implementation CMQuestionView
 
 - (void)setFrame:(CGRect)frame question:(CMQuestion *)question {
     [self setFrame:frame];
     self.question = question;
-    CMCard *card = question.cardList[0];
-    //card
-    [self.cardView cm_setBackgroundColor:card.backgroundColor];
-    [self.cardTextLabel cm_setTextColor:card.textColor];
-    [self.cardTextLabel cm_setText:card.textContentColor];
-    //question
+    if (question.cardList.count == 1) {
+        self.gameMode = classicMode;
+        CMCard *card = question.cardList[0];
+        //card
+        [self.cardView cm_setBackgroundColor:card.backgroundColor];
+        [self.cardTextLabel cm_setTextColor:card.textColor];
+        [self.cardTextLabel cm_setText:card.textContentColor];
+    } else {
+        self.gameMode = fantasyMode;
+        [self.cardView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
+        [self.cardTextLabel setTextColor:[UIColor whiteColor]];
+        [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld",self.question.targetCardIndex+1]];
+    }
+       //question
     [self.questionLabel setText:[self.question getQuestion]];
     //options
     NSArray *options = self.question.options;
@@ -44,7 +53,7 @@
 #pragma mark - Public
 - (void) startTimer {
     CGFloat interval = (CGFloat)self.question.limitTime;
-    [UIView animateWithDuration:interval delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:interval delay:self.gameMode == classicMode ? 0 : 6 options:UIViewAnimationOptionCurveLinear animations:^{
         self.timerView.transform = CGAffineTransformMakeTranslation(-[[UIScreen mainScreen]bounds].size.width, 0);
     } completion:^(BOOL finished) {
         [self.timerView removeFromSuperview];

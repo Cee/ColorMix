@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMClassicGameViewController : UIViewController
+@interface CMGameViewController : UIViewController
+- (instancetype)initWithGameMode:(GameMode)mode;
 @end
