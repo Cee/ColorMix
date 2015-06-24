@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CMQuestionFactory.h"
 
 @interface CMScene : NSObject
-- (instancetype) initWithGameMode:(GameMode)gameMode;
+@property (nonatomic) NSInteger point;
+@property (nonatomic, strong) CMQuestion *currentQuestion;
+@property (nonatomic, strong) CMQuestion *nextQuestion;
+- (instancetype)initWithGameMode:(GameMode)gameMode;
+- (void)showNextQuestion;
 @end

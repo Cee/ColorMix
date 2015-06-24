@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CMCard.h"
 
 @interface CMQuestion : NSObject
-- (BOOL) checkAnswer:(NSInteger)answerIndex;
-- (instancetype) initWithCardList:(NSArray*)cardList;
+@property (nonatomic, strong) NSArray *cardList;
+@property (nonatomic, strong) NSArray *options;
+@property (nonatomic) NSInteger targetCardIndex;
+
+- (BOOL)checkAnswer:(NSInteger)answerIndex;
+- (NSString*)getQuestion;
+- (instancetype)initWithCardList:(NSArray*)cardList;
 @end

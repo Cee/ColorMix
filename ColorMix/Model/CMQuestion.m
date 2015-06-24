@@ -7,15 +7,14 @@
 //
 
 #import "CMQuestion.h"
-#import "CMCard.h"
+
 @interface CMQuestion()
-@property (nonatomic,strong) NSArray *cardList;
-@property (nonatomic,strong) NSArray *options;
-@property (nonatomic) NSInteger targetCardIndex;
-@property (nonatomic) Element targetElement;
 @property (nonatomic) NSInteger answerIndex;
+@property (nonatomic) Element targetElement;
 @end
+
 @implementation CMQuestion
+
 - (instancetype)initWithCardList:(NSArray *)cardList {
     self = [super init];
     if (self) {
@@ -28,12 +27,28 @@
         CMCard* targetCard = self.cardList[self.targetCardIndex];
         self.options = [targetCard generateOptions];
         self.targetElement = arc4random() % 3;
-        self.answerIndex = [targetCard getAnswerByOptions:self.options andElement:self.targetElement];
+        self.answerIndex = [targetCard getAnswerByOptions:self.options Element:self.targetElement];
     }
     return self;
 }
 
 - (BOOL)checkAnswer:(NSInteger)answerIndex {
     return answerIndex == self.answerIndex;
+}
+
+- (NSString *)getQuestion {
+    switch (_targetElement) {
+        case background:
+            return @"Background";
+            break;
+        case textColor:
+            return @"TextColor";
+            break;
+        case textContent:
+            return @"TextContent";
+        default:
+            break;
+    }
+    return nil;
 }
 @end

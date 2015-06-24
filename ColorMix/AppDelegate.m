@@ -19,9 +19,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     CMMenuViewController *menuViewController = [[CMMenuViewController alloc] initWithNibName:NSStringFromClass([CMMenuViewController class]) bundle:nil];
-    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:menuViewController];
-    [rootNav setNavigationBarHidden:YES];
-    self.window.rootViewController = rootNav;
+    UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+    [rootNavigationController setNavigationBarHidden:YES];
+    self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

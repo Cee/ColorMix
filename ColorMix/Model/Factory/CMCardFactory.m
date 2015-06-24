@@ -37,4 +37,5 @@
     CMCard* card = [[CMCard alloc] initWithColorArray:cmColorArray];
     return card;
 }
+
 @end

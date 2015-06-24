@@ -7,35 +7,28 @@
 //
 
 #import "CMScene.h"
-#import "CMQuestionFactory.h"
+
 @interface CMScene()
 @property (nonatomic) GameMode currentMode;
-@property (nonatomic) NSInteger point;
-@property (nonatomic,strong) CMQuestion *currentQuestion;
-@property (nonatomic,strong) CMQuestion *nextQuestion;
+@property (nonatomic, strong) CMQuestionFactory *questionFactory;
 @end
+
 @implementation CMScene
 - (instancetype)initWithGameMode:(GameMode)gameMode {
     self = [super init];
     if (self) {
         self.currentMode = gameMode;
         self.point = 0;
-        self.currentQuestion = [[CMQuestionFactory sharedInstance] createQuestionOfMode:gameMode];
-        self.nextQuestion = [[CMQuestionFactory sharedInstance] createQuestionOfMode:gameMode];
+        self.questionFactory = [CMQuestionFactory sharedInstance];
+        self.currentQuestion = [self.questionFactory createQuestionOfMode:gameMode];
+        self.nextQuestion = [self.questionFactory createQuestionOfMode:gameMode];
     }
     return self;
 }
 
-- (void) chooseAnswer:(NSInteger) answerIndex {
-    if ([_currentQuestion checkAnswer:answerIndex]) {
-        self.point ++;
-        [self showNextQuestion];
-    }
-}
-
 - (void) showNextQuestion {
     self.currentQuestion = self.nextQuestion;
-    self.nextQuestion = [[CMQuestionFactory sharedInstance] createQuestionOfMode:self.currentMode];
+    self.nextQuestion = [self.questionFactory createQuestionOfMode:self.currentMode];
 }
 
 @end

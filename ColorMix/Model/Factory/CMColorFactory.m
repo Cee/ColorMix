@@ -7,6 +7,7 @@
 //
 
 #import "CMColorFactory.h"
+
 @interface CMColorFactory()
 @property (nonatomic,strong) NSArray* colorArrays;
 @end

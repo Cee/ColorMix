@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CMQuestion.h"
+
 @interface CMQuestionFactory : NSObject
 + (instancetype)sharedInstance;
 - (CMQuestion*) createQuestionOfMode:(GameMode)mode;

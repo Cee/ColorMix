@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CMCard.h"
+
 @interface CMCardFactory : NSObject
 + (instancetype)sharedInstance;
 - (CMCard*)createCard;

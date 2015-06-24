@@ -16,9 +16,13 @@
 		7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3351B3AD31500C2FDDC /* CMQuestionFactory.m */; };
 		7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */; };
 		7D1BB33C1B3ADB4500C2FDDC /* CMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */; };
-		7D1BB3411B3ADC9B00C2FDDC /* CMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */; };
-		7D1BB3451B3AE03200C2FDDC /* CMQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */; };
-		7D1BB3471B3AEF9A00C2FDDC /* CMQuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */; };
+		7D1BB3411B3ADC9B00C2FDDC /* CMClassicGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB33F1B3ADC9B00C2FDDC /* CMClassicGameViewController.m */; };
+		7D1BB3451B3AE03200C2FDDC /* CMClassicQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3441B3AE03200C2FDDC /* CMClassicQuestionView.m */; };
+		7D1BB3471B3AEF9A00C2FDDC /* CMClassicQuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB3461B3AEF9A00C2FDDC /* CMClassicQuestionView.xib */; };
+		7D56C0681B3B0CFD0032FA52 /* UIView+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C0671B3B0CFD0032FA52 /* UIView+ColorMix.m */; };
+		7D56C06B1B3B0D5B0032FA52 /* UIColor+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06A1B3B0D5B0032FA52 /* UIColor+ColorMix.m */; };
+		7D56C06E1B3B0E540032FA52 /* UILabel+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */; };
+		7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0741B3B19230032FA52 /* ColorList.plist */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
 		9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
@@ -55,11 +59,18 @@
 		7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMMenuViewController.h; path = ViewController/CMMenuViewController.h; sourceTree = "<group>"; };
 		7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMMenuViewController.m; path = ViewController/CMMenuViewController.m; sourceTree = "<group>"; };
 		7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMMenuViewController.xib; path = ViewController/CMMenuViewController.xib; sourceTree = "<group>"; };
-		7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameViewController.h; path = ViewController/CMGameViewController.h; sourceTree = "<group>"; };
-		7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameViewController.m; path = ViewController/CMGameViewController.m; sourceTree = "<group>"; };
-		7D1BB3431B3AE03200C2FDDC /* CMQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMQuestionView.h; path = View/CMQuestionView.h; sourceTree = "<group>"; };
-		7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMQuestionView.m; path = View/CMQuestionView.m; sourceTree = "<group>"; };
-		7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMQuestionView.xib; path = View/CMQuestionView.xib; sourceTree = "<group>"; };
+		7D1BB33E1B3ADC9B00C2FDDC /* CMClassicGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMClassicGameViewController.h; path = ViewController/CMClassicGameViewController.h; sourceTree = "<group>"; };
+		7D1BB33F1B3ADC9B00C2FDDC /* CMClassicGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMClassicGameViewController.m; path = ViewController/CMClassicGameViewController.m; sourceTree = "<group>"; };
+		7D1BB3431B3AE03200C2FDDC /* CMClassicQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMClassicQuestionView.h; path = View/CMClassicQuestionView.h; sourceTree = "<group>"; };
+		7D1BB3441B3AE03200C2FDDC /* CMClassicQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMClassicQuestionView.m; path = View/CMClassicQuestionView.m; sourceTree = "<group>"; };
+		7D1BB3461B3AEF9A00C2FDDC /* CMClassicQuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMClassicQuestionView.xib; path = View/CMClassicQuestionView.xib; sourceTree = "<group>"; };
+		7D56C0661B3B0CFD0032FA52 /* UIView+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ColorMix.h"; path = "Category/UIView+ColorMix.h"; sourceTree = "<group>"; };
+		7D56C0671B3B0CFD0032FA52 /* UIView+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ColorMix.m"; path = "Category/UIView+ColorMix.m"; sourceTree = "<group>"; };
+		7D56C0691B3B0D5A0032FA52 /* UIColor+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorMix.h"; path = "Category/UIColor+ColorMix.h"; sourceTree = "<group>"; };
+		7D56C06A1B3B0D5B0032FA52 /* UIColor+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorMix.m"; path = "Category/UIColor+ColorMix.m"; sourceTree = "<group>"; };
+		7D56C06C1B3B0E540032FA52 /* UILabel+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+ColorMix.h"; path = "Category/UILabel+ColorMix.h"; sourceTree = "<group>"; };
+		7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+ColorMix.m"; path = "Category/UILabel+ColorMix.m"; sourceTree = "<group>"; };
+		7D56C0741B3B19230032FA52 /* ColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorList.plist; sourceTree = "<group>"; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +117,8 @@
 		7D1BB3371B3ADB0300C2FDDC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */,
-				7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */,
+				7D1BB33E1B3ADC9B00C2FDDC /* CMClassicGameViewController.h */,
+				7D1BB33F1B3ADC9B00C2FDDC /* CMClassicGameViewController.m */,
 				7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */,
 				7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */,
 				7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */,
@@ -118,11 +129,24 @@
 		7D1BB33D1B3ADC7A00C2FDDC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D1BB3431B3AE03200C2FDDC /* CMQuestionView.h */,
-				7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */,
-				7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */,
+				7D1BB3431B3AE03200C2FDDC /* CMClassicQuestionView.h */,
+				7D1BB3441B3AE03200C2FDDC /* CMClassicQuestionView.m */,
+				7D1BB3461B3AEF9A00C2FDDC /* CMClassicQuestionView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7D1BB3481B3B0CB900C2FDDC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7D56C0661B3B0CFD0032FA52 /* UIView+ColorMix.h */,
+				7D56C0671B3B0CFD0032FA52 /* UIView+ColorMix.m */,
+				7D56C0691B3B0D5A0032FA52 /* UIColor+ColorMix.h */,
+				7D56C06A1B3B0D5B0032FA52 /* UIColor+ColorMix.m */,
+				7D56C06C1B3B0E540032FA52 /* UILabel+ColorMix.h */,
+				7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		7DD3848E1B3AC7FA004C287C /* Model */ = {
@@ -163,6 +187,7 @@
 		9234BD571B3A805100D3FFF2 /* ColorMix */ = {
 			isa = PBXGroup;
 			children = (
+				7D1BB3481B3B0CB900C2FDDC /* Category */,
 				7D1BB33D1B3ADC7A00C2FDDC /* View */,
 				7D1BB3371B3ADB0300C2FDDC /* ViewController */,
 				7DD3848E1B3AC7FA004C287C /* Model */,
@@ -180,6 +205,7 @@
 			children = (
 				9234BD591B3A805100D3FFF2 /* Info.plist */,
 				9234BD5A1B3A805100D3FFF2 /* main.m */,
+				7D56C0741B3B19230032FA52 /* ColorList.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -285,7 +311,8 @@
 			files = (
 				9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */,
 				7D1BB33C1B3ADB4500C2FDDC /* CMMenuViewController.xib in Resources */,
-				7D1BB3471B3AEF9A00C2FDDC /* CMQuestionView.xib in Resources */,
+				7D1BB3471B3AEF9A00C2FDDC /* CMClassicQuestionView.xib in Resources */,
+				7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */,
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,11 +336,14 @@
 				9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */,
 				7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */,
 				7D1BB3331B3ACFC000C2FDDC /* CMColorFactory.m in Sources */,
+				7D56C06E1B3B0E540032FA52 /* UILabel+ColorMix.m in Sources */,
 				7D1BB32E1B3ACEFE00C2FDDC /* CMCardFactory.m in Sources */,
-				7D1BB3451B3AE03200C2FDDC /* CMQuestionView.m in Sources */,
+				7D56C06B1B3B0D5B0032FA52 /* UIColor+ColorMix.m in Sources */,
+				7D1BB3451B3AE03200C2FDDC /* CMClassicQuestionView.m in Sources */,
 				7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */,
 				9234BD5B1B3A805100D3FFF2 /* main.m in Sources */,
-				7D1BB3411B3ADC9B00C2FDDC /* CMGameViewController.m in Sources */,
+				7D56C0681B3B0CFD0032FA52 /* UIView+ColorMix.m in Sources */,
+				7D1BB3411B3ADC9B00C2FDDC /* CMClassicGameViewController.m in Sources */,
 				7D1BB32A1B3ACC2C00C2FDDC /* CMScene.m in Sources */,
 				7D1BB3271B3ACAE200C2FDDC /* CMQuestion.m in Sources */,
 			);
