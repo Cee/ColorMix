@@ -21,14 +21,21 @@
         self.point = 0;
         self.questionFactory = [CMQuestionFactory sharedInstance];
         self.currentQuestion = [self.questionFactory createQuestionOfMode:gameMode];
+        self.currentQuestion.limitTime = [self limitTime];
         self.nextQuestion = [self.questionFactory createQuestionOfMode:gameMode];
     }
     return self;
 }
 
-- (void) showNextQuestion {
+- (void)showNextQuestion {
+    self.point++;
     self.currentQuestion = self.nextQuestion;
+    self.currentQuestion.limitTime = [self limitTime];
     self.nextQuestion = [self.questionFactory createQuestionOfMode:self.currentMode];
 }
 
+- (NSInteger)limitTime {
+    NSInteger limitTime = 10 - self.point / 5;
+    return limitTime > 5 ? limitTime : 5;
+}
 @end

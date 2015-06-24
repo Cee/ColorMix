@@ -33,7 +33,8 @@
 #pragma mark - Private
 - (void) initColorArrays {
     //此处从plist文件中获取
-    NSArray* colorArrays = @[@{@"color":@"494949",@"colorName":@"GRAY"},@{@"color":@"ffffff",@"colorName":@"WHITE"},@{@"color":@"000000",@"colorName":@"BLACK"}];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ColorList" ofType:@"plist"];
+    NSArray* colorArrays = [[NSArray alloc] initWithContentsOfFile:path];
     NSMutableArray *cmColorArray = [[NSMutableArray alloc] init];
     for (NSDictionary *dic in colorArrays) {
         [cmColorArray addObject:[[CMColor alloc] initWithDictionary:dic]];

@@ -12,8 +12,8 @@
 - (instancetype)initWithDictionary:(NSDictionary *)colorDic {
     self = [super init];
     if (self) {
-        self.color = [UIColor colorWithHexString:colorDic[@"color"]];
-        self.colorName = colorDic[@"colorName"];
+        self.color = [UIColor colorWithHexString:colorDic[@"Color"]];
+        self.colorName = colorDic[@"Name"];
     }
     return self;
 }

@@ -24,7 +24,7 @@
     return self;
 }
 
-- (NSArray*) generateOptions {
+- (NSArray*)generateOptions {
     NSMutableArray *mutableOptions = [[NSMutableArray alloc] initWithArray:self.colorArray];
     NSUInteger count = [mutableOptions count];
     //乱序
@@ -36,11 +36,11 @@
     return mutableOptions;
 }
 
-- (NSInteger) getAnswerByOptions:(NSArray *)options Element:(Element)element {
+- (NSInteger)getAnswerByOptions:(NSArray *)options Element:(Element)element {
     CMColor* targetColor = self.colorArray[element];
     int index = 0;
-    for (index = 0; index < options.count; index ++) {
-        CMColor* color = options[index];
+    for (index = 0; index < options.count; index++) {
+        CMColor *color = options[index];
         if ([targetColor.colorName isEqualToString:color.colorName]) {
             return index;
         }

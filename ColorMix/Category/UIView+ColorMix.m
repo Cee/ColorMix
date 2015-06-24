@@ -10,7 +10,7 @@
 
 @implementation UIView (ColorMix)
 
-- (void)cm_setBackgroundColor:(CMColor *)backgroundColor {
+- (void)cm_setBackgroundColor:(CMColor*)backgroundColor {
     [self setBackgroundColor:backgroundColor.color];
 }
 

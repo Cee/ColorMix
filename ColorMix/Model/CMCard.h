@@ -20,7 +20,7 @@ typedef enum {
 @property (nonatomic, strong) CMColor *textColor;
 @property (nonatomic, strong) CMColor *textContentColor;
 
-- (instancetype)initWithColorArray:(NSArray*)colorArray;
-- (NSArray*) generateOptions;
-- (NSInteger) getAnswerByOptions:(NSArray*)options Element:(Element)element;
+- (instancetype)initWithColorArray:(NSArray *)colorArray;
+- (NSArray *)generateOptions;
+- (NSInteger)getAnswerByOptions:(NSArray*)options Element:(Element)element;
 @end

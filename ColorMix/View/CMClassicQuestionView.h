@@ -12,9 +12,11 @@
 @protocol ClassicQuestionViewDelegate <NSObject>
 @required
 - (void)answerQuestionWithResult:(BOOL)right;
+- (void)timeout;
 @end
 
 @interface CMClassicQuestionView : UIView
 @property (nonatomic, weak) id<ClassicQuestionViewDelegate> delegate;
 - (void)setFrame:(CGRect)frame question:(CMQuestion*)question;
+- (void)startTimer;
 @end

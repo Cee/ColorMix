@@ -11,5 +11,5 @@
 
 @interface CMColorFactory : NSObject
 + (instancetype)sharedInstance;
-- (CMColor*) createColor;
+- (CMColor *) createColor;
 @end

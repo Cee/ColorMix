@@ -34,9 +34,14 @@
                         <constraint firstAttribute="bottom" secondItem="5B7-vq-pIN" secondAttribute="bottom" constant="100" id="ZB9-6k-vgu"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-Tf-zzQ" userLabel="Question">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-Tf-zzQ" userLabel="Question">
                     <rect key="frame" x="0.0" y="236" width="600" height="64"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-80-eGj">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="0.39030433768656714" colorSpace="calibratedWhite"/>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-7a-f3F">
                             <rect key="frame" x="253" y="22" width="94" height="21"/>
                             <animations/>
@@ -46,9 +51,13 @@
                         </label>
                     </subviews>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="2lV-80-eGj" firstAttribute="leading" secondItem="XcW-Tf-zzQ" secondAttribute="leading" id="2gJ-Hw-VvE"/>
                         <constraint firstAttribute="centerY" secondItem="f8g-7a-f3F" secondAttribute="centerY" id="A7m-B0-a4O"/>
+                        <constraint firstAttribute="trailing" secondItem="2lV-80-eGj" secondAttribute="trailing" id="DbJ-qJ-yGa"/>
+                        <constraint firstAttribute="bottom" secondItem="2lV-80-eGj" secondAttribute="bottom" id="FMP-9h-Gel"/>
+                        <constraint firstItem="2lV-80-eGj" firstAttribute="top" secondItem="XcW-Tf-zzQ" secondAttribute="top" id="Iil-Dr-usj"/>
                         <constraint firstAttribute="height" constant="64" id="SVw-kD-hj0"/>
                         <constraint firstAttribute="centerX" secondItem="f8g-7a-f3F" secondAttribute="centerX" id="Zlz-3P-S4n"/>
                     </constraints>
@@ -164,6 +173,7 @@
                 <outlet property="cardView" destination="jVP-ud-CVs" id="bd8-Ke-3DT"/>
                 <outlet property="optionView" destination="3bb-xY-epD" id="JEl-E9-7B0"/>
                 <outlet property="questionLabel" destination="f8g-7a-f3F" id="ZzH-C1-QZ6"/>
+                <outlet property="timerView" destination="2lV-80-eGj" id="mpn-PO-ic8"/>
             </connections>
         </view>
     </objects>
