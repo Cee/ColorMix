@@ -23,6 +23,8 @@
 		7D56C06B1B3B0D5B0032FA52 /* UIColor+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06A1B3B0D5B0032FA52 /* UIColor+ColorMix.m */; };
 		7D56C06E1B3B0E540032FA52 /* UILabel+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */; };
 		7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0741B3B19230032FA52 /* ColorList.plist */; };
+		7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */; };
+		7D56C07C1B3B25390032FA52 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
 		9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
@@ -71,6 +73,9 @@
 		7D56C06C1B3B0E540032FA52 /* UILabel+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+ColorMix.h"; path = "Category/UILabel+ColorMix.h"; sourceTree = "<group>"; };
 		7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+ColorMix.m"; path = "Category/UILabel+ColorMix.m"; sourceTree = "<group>"; };
 		7D56C0741B3B19230032FA52 /* ColorList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorList.plist; sourceTree = "<group>"; };
+		7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameResultViewController.xib; path = ViewController/CMGameResultViewController.xib; sourceTree = "<group>"; };
+		7D56C07A1B3B25390032FA52 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameResultViewController.h; path = ViewController/CMGameResultViewController.h; sourceTree = "<group>"; };
+		7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameResultViewController.m; path = ViewController/CMGameResultViewController.m; sourceTree = "<group>"; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +127,9 @@
 				7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */,
 				7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */,
 				7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */,
+				7D56C07A1B3B25390032FA52 /* CMGameResultViewController.h */,
+				7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */,
+				7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 				7D1BB3471B3AEF9A00C2FDDC /* CMClassicQuestionView.xib in Resources */,
 				7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */,
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
+				7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +355,7 @@
 				7D1BB3411B3ADC9B00C2FDDC /* CMClassicGameViewController.m in Sources */,
 				7D1BB32A1B3ACC2C00C2FDDC /* CMScene.m in Sources */,
 				7D1BB3271B3ACAE200C2FDDC /* CMQuestion.m in Sources */,
+				7D56C07C1B3B25390032FA52 /* CMGameResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

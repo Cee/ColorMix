@@ -9,6 +9,7 @@
 #import "CMClassicGameViewController.h"
 #import "CMScene.h"
 #import "CMClassicQuestionView.h"
+#import "CMGameResultViewController.h"
 
 @interface CMClassicGameViewController ()<ClassicQuestionViewDelegate>
 @property (nonatomic, strong) CMScene *scene;
@@ -50,6 +51,12 @@
     [self.view bringSubviewToFront:self.scoreLabel];
 }
 
+- (void) gameEnd {
+    CMGameResultViewController *gameResultViewController = [[CMGameResultViewController alloc] initWithNibName:NSStringFromClass([CMGameResultViewController class]) bundle:nil];
+    gameResultViewController.gameMode = classicMode;
+    [self.navigationController pushViewController:gameResultViewController animated:YES];
+}
+
 #pragma mark - ClassicQuestionViewDelegate
 - (void)answerQuestionWithResult:(BOOL)right {
     if (right) {
@@ -72,13 +79,16 @@
         [self.nextQuestionView setFrame:frame question:self.scene.currentQuestion];
         [self.view addSubview:self.nextQuestionView];
     } else {
-        [self.navigationController popViewControllerAnimated:YES];
+        self.currentQuestionView.delegate = nil;
+        [self gameEnd];
     }
 }
 
 - (void)timeout {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self gameEnd];
 }
+
+
 /*
 #pragma mark - Navigation
 

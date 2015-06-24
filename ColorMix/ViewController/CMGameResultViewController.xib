@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CMGameResultViewController">
+            <connections>
+                <outlet property="view" destination="0Af-ja-LYP" id="f4i-3A-HZG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0Af-ja-LYP">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6r-yl-4SB">
+                    <rect key="frame" x="277" y="283" width="47" height="34"/>
+                    <animations/>
+                    <state key="normal" title="Share">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onShareButtonClicked:" destination="-1" eventType="touchUpInside" id="A4r-ME-Lqp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-MJ-32N">
+                    <rect key="frame" x="273" y="239" width="56" height="34"/>
+                    <animations/>
+                    <state key="normal" title="Replay">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onReplayButtonClicked:" destination="-1" eventType="touchUpInside" id="yPf-AU-yTd"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xCp-tP-Y8s" userLabel="Logo">
+                    <rect key="frame" x="251" y="89" width="100" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="buO-rJ-fNH"/>
+                        <constraint firstAttribute="width" constant="100" id="rCq-Od-dnf"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REx-LW-bZw">
+                    <rect key="frame" x="276" y="327" width="49" height="34"/>
+                    <animations/>
+                    <state key="normal" title="Home">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onHomeButtonClicked:" destination="-1" eventType="touchUpInside" id="7Tl-ib-zfv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="E6r-yl-4SB" firstAttribute="centerX" secondItem="REx-LW-bZw" secondAttribute="centerX" id="1Jq-Fm-UiC"/>
+                <constraint firstItem="REx-LW-bZw" firstAttribute="top" secondItem="E6r-yl-4SB" secondAttribute="bottom" constant="10" id="BWe-we-70v"/>
+                <constraint firstItem="E6r-yl-4SB" firstAttribute="top" secondItem="qaY-MJ-32N" secondAttribute="bottom" constant="10" id="Jin-Ls-hlj"/>
+                <constraint firstItem="xCp-tP-Y8s" firstAttribute="centerX" secondItem="qaY-MJ-32N" secondAttribute="centerX" id="LZi-8u-KrC"/>
+                <constraint firstItem="E6r-yl-4SB" firstAttribute="centerX" secondItem="qaY-MJ-32N" secondAttribute="centerX" id="Sl4-Zc-ejL"/>
+                <constraint firstAttribute="centerX" secondItem="E6r-yl-4SB" secondAttribute="centerX" id="aPn-Qf-0Q4"/>
+                <constraint firstItem="qaY-MJ-32N" firstAttribute="top" secondItem="xCp-tP-Y8s" secondAttribute="bottom" constant="50" id="ddW-KI-qdr"/>
+                <constraint firstAttribute="centerY" secondItem="E6r-yl-4SB" secondAttribute="centerY" id="kjn-ke-7ZT"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

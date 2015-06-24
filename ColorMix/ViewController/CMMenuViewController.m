@@ -32,9 +32,11 @@
 }
 
 - (IBAction)onFantasyButtonClicked:(id)sender {
+    
 }
 
 - (IBAction)onSettingButtonClicked:(id)sender {
+    
 }
 
 /*
