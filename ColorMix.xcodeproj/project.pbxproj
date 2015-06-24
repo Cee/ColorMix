@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1BB31F1B3AC8A800C2FDDC /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */; };
+		7D1BB3221B3AC93A00C2FDDC /* CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3211B3AC93A00C2FDDC /* CMColor.m */; };
+		7D1BB3271B3ACAE200C2FDDC /* CMQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3261B3ACAE200C2FDDC /* CMQuestion.m */; };
+		7D1BB32A1B3ACC2C00C2FDDC /* CMScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3291B3ACC2C00C2FDDC /* CMScene.m */; };
+		7D1BB32E1B3ACEFE00C2FDDC /* CMCardFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB32D1B3ACEFE00C2FDDC /* CMCardFactory.m */; };
+		7D1BB3331B3ACFC000C2FDDC /* CMColorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3321B3ACFC000C2FDDC /* CMColorFactory.m */; };
+		7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3351B3AD31500C2FDDC /* CMQuestionFactory.m */; };
+		7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */; };
+		7D1BB33C1B3ADB4500C2FDDC /* CMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */; };
+		7D1BB3411B3ADC9B00C2FDDC /* CMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */; };
+		7D1BB3451B3AE03200C2FDDC /* CMQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */; };
+		7D1BB3471B3AEF9A00C2FDDC /* CMQuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
 		9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */; };
-		9234BD611B3A805100D3FFF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD601B3A805100D3FFF2 /* ViewController.m */; };
-		9234BD641B3A805100D3FFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD621B3A805100D3FFF2 /* Main.storyboard */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
@@ -27,14 +37,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D1BB31D1B3AC8A800C2FDDC /* CMCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCard.h; path = Model/CMCard.h; sourceTree = "<group>"; };
+		7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCard.m; path = Model/CMCard.m; sourceTree = "<group>"; };
+		7D1BB3201B3AC93A00C2FDDC /* CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMColor.h; path = Model/CMColor.h; sourceTree = "<group>"; };
+		7D1BB3211B3AC93A00C2FDDC /* CMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMColor.m; path = Model/CMColor.m; sourceTree = "<group>"; };
+		7D1BB3241B3ACA2300C2FDDC /* ColorMix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ColorMix-Prefix.pch"; path = "ColorMix/ColorMix-Prefix.pch"; sourceTree = "<group>"; };
+		7D1BB3251B3ACAE200C2FDDC /* CMQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMQuestion.h; path = Model/CMQuestion.h; sourceTree = "<group>"; };
+		7D1BB3261B3ACAE200C2FDDC /* CMQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMQuestion.m; path = Model/CMQuestion.m; sourceTree = "<group>"; };
+		7D1BB3281B3ACC2C00C2FDDC /* CMScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMScene.h; path = Model/CMScene.h; sourceTree = "<group>"; };
+		7D1BB3291B3ACC2C00C2FDDC /* CMScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMScene.m; path = Model/CMScene.m; sourceTree = "<group>"; };
+		7D1BB32C1B3ACEFE00C2FDDC /* CMCardFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCardFactory.h; path = Model/Factory/CMCardFactory.h; sourceTree = "<group>"; };
+		7D1BB32D1B3ACEFE00C2FDDC /* CMCardFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCardFactory.m; path = Model/Factory/CMCardFactory.m; sourceTree = "<group>"; };
+		7D1BB3311B3ACFC000C2FDDC /* CMColorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMColorFactory.h; path = Model/Factory/CMColorFactory.h; sourceTree = "<group>"; };
+		7D1BB3321B3ACFC000C2FDDC /* CMColorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMColorFactory.m; path = Model/Factory/CMColorFactory.m; sourceTree = "<group>"; };
+		7D1BB3341B3AD31500C2FDDC /* CMQuestionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMQuestionFactory.h; path = Model/Factory/CMQuestionFactory.h; sourceTree = "<group>"; };
+		7D1BB3351B3AD31500C2FDDC /* CMQuestionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMQuestionFactory.m; path = Model/Factory/CMQuestionFactory.m; sourceTree = "<group>"; };
+		7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMMenuViewController.h; path = ViewController/CMMenuViewController.h; sourceTree = "<group>"; };
+		7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMMenuViewController.m; path = ViewController/CMMenuViewController.m; sourceTree = "<group>"; };
+		7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMMenuViewController.xib; path = ViewController/CMMenuViewController.xib; sourceTree = "<group>"; };
+		7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameViewController.h; path = ViewController/CMGameViewController.h; sourceTree = "<group>"; };
+		7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameViewController.m; path = ViewController/CMGameViewController.m; sourceTree = "<group>"; };
+		7D1BB3431B3AE03200C2FDDC /* CMQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMQuestionView.h; path = View/CMQuestionView.h; sourceTree = "<group>"; };
+		7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMQuestionView.m; path = View/CMQuestionView.m; sourceTree = "<group>"; };
+		7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMQuestionView.xib; path = View/CMQuestionView.xib; sourceTree = "<group>"; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9234BD5C1B3A805100D3FFF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9234BD5F1B3A805100D3FFF2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9234BD601B3A805100D3FFF2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9234BD631B3A805100D3FFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9234BD651B3A805100D3FFF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9234BD681B3A805100D3FFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,9 +90,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D1BB32B1B3ACEE500C2FDDC /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				7D1BB3311B3ACFC000C2FDDC /* CMColorFactory.h */,
+				7D1BB3321B3ACFC000C2FDDC /* CMColorFactory.m */,
+				7D1BB32C1B3ACEFE00C2FDDC /* CMCardFactory.h */,
+				7D1BB32D1B3ACEFE00C2FDDC /* CMCardFactory.m */,
+				7D1BB3341B3AD31500C2FDDC /* CMQuestionFactory.h */,
+				7D1BB3351B3AD31500C2FDDC /* CMQuestionFactory.m */,
+			);
+			name = Factory;
+			sourceTree = "<group>";
+		};
+		7D1BB3371B3ADB0300C2FDDC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */,
+				7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */,
+				7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */,
+				7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */,
+				7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7D1BB33D1B3ADC7A00C2FDDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7D1BB3431B3AE03200C2FDDC /* CMQuestionView.h */,
+				7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */,
+				7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DD3848E1B3AC7FA004C287C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D1BB32B1B3ACEE500C2FDDC /* Factory */,
+				7D1BB3201B3AC93A00C2FDDC /* CMColor.h */,
+				7D1BB3211B3AC93A00C2FDDC /* CMColor.m */,
+				7D1BB31D1B3AC8A800C2FDDC /* CMCard.h */,
+				7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */,
+				7D1BB3251B3ACAE200C2FDDC /* CMQuestion.h */,
+				7D1BB3261B3ACAE200C2FDDC /* CMQuestion.m */,
+				7D1BB3281B3ACC2C00C2FDDC /* CMScene.h */,
+				7D1BB3291B3ACC2C00C2FDDC /* CMScene.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		9234BD4C1B3A805100D3FFF2 = {
 			isa = PBXGroup;
 			children = (
+				7D1BB3241B3ACA2300C2FDDC /* ColorMix-Prefix.pch */,
 				9234BD571B3A805100D3FFF2 /* ColorMix */,
 				9234BD711B3A805100D3FFF2 /* ColorMixTests */,
 				9234BD561B3A805100D3FFF2 /* Products */,
@@ -81,11 +163,11 @@
 		9234BD571B3A805100D3FFF2 /* ColorMix */ = {
 			isa = PBXGroup;
 			children = (
+				7D1BB33D1B3ADC7A00C2FDDC /* View */,
+				7D1BB3371B3ADB0300C2FDDC /* ViewController */,
+				7DD3848E1B3AC7FA004C287C /* Model */,
 				9234BD5C1B3A805100D3FFF2 /* AppDelegate.h */,
 				9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */,
-				9234BD5F1B3A805100D3FFF2 /* ViewController.h */,
-				9234BD601B3A805100D3FFF2 /* ViewController.m */,
-				9234BD621B3A805100D3FFF2 /* Main.storyboard */,
 				9234BD651B3A805100D3FFF2 /* Images.xcassets */,
 				9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */,
 				9234BD581B3A805100D3FFF2 /* Supporting Files */,
@@ -163,6 +245,7 @@
 		9234BD4D1B3A805100D3FFF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CM;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Cee;
 				TargetAttributes = {
@@ -200,8 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9234BD641B3A805100D3FFF2 /* Main.storyboard in Resources */,
 				9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */,
+				7D1BB33C1B3ADB4500C2FDDC /* CMMenuViewController.xib in Resources */,
+				7D1BB3471B3AEF9A00C2FDDC /* CMQuestionView.xib in Resources */,
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,9 +304,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9234BD611B3A805100D3FFF2 /* ViewController.m in Sources */,
+				7D1BB3221B3AC93A00C2FDDC /* CMColor.m in Sources */,
+				7D1BB31F1B3AC8A800C2FDDC /* CMCard.m in Sources */,
 				9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */,
+				7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */,
+				7D1BB3331B3ACFC000C2FDDC /* CMColorFactory.m in Sources */,
+				7D1BB32E1B3ACEFE00C2FDDC /* CMCardFactory.m in Sources */,
+				7D1BB3451B3AE03200C2FDDC /* CMQuestionView.m in Sources */,
+				7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */,
 				9234BD5B1B3A805100D3FFF2 /* main.m in Sources */,
+				7D1BB3411B3ADC9B00C2FDDC /* CMGameViewController.m in Sources */,
+				7D1BB32A1B3ACC2C00C2FDDC /* CMScene.m in Sources */,
+				7D1BB3271B3ACAE200C2FDDC /* CMQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +338,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9234BD621B3A805100D3FFF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9234BD631B3A805100D3FFF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -352,6 +437,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
@@ -365,6 +452,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
