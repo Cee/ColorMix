@@ -32,6 +32,8 @@
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
+		923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D731B3BEDC4005386A4 /* libz.dylib */; };
+		923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F5F626241465BCBE2CD2FF /* Pods-ColorMix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMix/Pods-ColorMix.debug.xcconfig"; sourceTree = "<group>"; };
 		7D1BB31D1B3AC8A800C2FDDC /* CMCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCard.h; path = Model/CMCard.h; sourceTree = "<group>"; };
 		7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCard.m; path = Model/CMCard.m; sourceTree = "<group>"; };
 		7D1BB3201B3AC93A00C2FDDC /* CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMColor.h; path = Model/CMColor.h; sourceTree = "<group>"; };
@@ -91,6 +94,13 @@
 		9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD731B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD741B3A805100D3FFF2 /* ColorMixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorMixTests.m; sourceTree = "<group>"; };
+		923B6D731B3BEDC4005386A4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickGameLibrary.a; path = ColorMix/Frameworks/Umeng/libMobClickGameLibrary.a; sourceTree = "<group>"; };
+		923B6D771B3BEE9E005386A4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = ColorMix/Frameworks/Umeng/MobClick.h; sourceTree = "<group>"; };
+		923B6D781B3BEE9E005386A4 /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClickGameAnalytics.h; path = ColorMix/Frameworks/Umeng/MobClickGameAnalytics.h; sourceTree = "<group>"; };
+		923B6D791B3BEE9E005386A4 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClickSocialAnalytics.h; path = ColorMix/Frameworks/Umeng/MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		925358FE1B3BE84400C0677E /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMConstants.h; path = ColorMix/CMConstants.h; sourceTree = "<group>"; };
+		FDC5DC71783A429F41BD5F56 /* Pods-ColorMix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMix.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMix/Pods-ColorMix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */,
+				923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +123,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63BECB6C384543B8E9569D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03F5F626241465BCBE2CD2FF /* Pods-ColorMix.debug.xcconfig */,
+				FDC5DC71783A429F41BD5F56 /* Pods-ColorMix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				923B6D731B3BEDC4005386A4 /* libz.dylib */,
+				923B6D721B3BED9D005386A4 /* Umeng */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D1BB32B1B3ACEE500C2FDDC /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,9 +215,12 @@
 			isa = PBXGroup;
 			children = (
 				7D1BB3241B3ACA2300C2FDDC /* ColorMix-Prefix.pch */,
+				925358FE1B3BE84400C0677E /* CMConstants.h */,
 				9234BD571B3A805100D3FFF2 /* ColorMix */,
 				9234BD711B3A805100D3FFF2 /* ColorMixTests */,
 				9234BD561B3A805100D3FFF2 /* Products */,
+				63BECB6C384543B8E9569D0E /* Pods */,
+				7CFAD281F2F6DB3D8D4C714E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +274,17 @@
 				9234BD731B3A805100D3FFF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		923B6D721B3BED9D005386A4 /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */,
+				923B6D771B3BEE9E005386A4 /* MobClick.h */,
+				923B6D781B3BEE9E005386A4 /* MobClickGameAnalytics.h */,
+				923B6D791B3BEE9E005386A4 /* MobClickSocialAnalytics.h */,
+			);
+			name = Umeng;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +535,12 @@
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ColorMix/Frameworks/Umeng",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -506,6 +556,12 @@
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/ColorMix/Frameworks/Umeng",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
