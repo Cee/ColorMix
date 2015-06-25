@@ -46,7 +46,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="kb2-XH-HGM" userLabel="Logo">
-                    <rect key="frame" x="183" y="44" width="234" height="41"/>
+                    <rect key="frame" x="183" y="64" width="234" height="41"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="234" id="BaU-Ag-5Pi"/>
@@ -92,15 +92,15 @@
                         <action selector="onHomeButtonClicked:" destination="-1" eventType="touchUpInside" id="aKP-yu-YVc"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-V4-5ub">
-                    <rect key="frame" x="258" y="175" width="85" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-V4-5ub">
+                    <rect key="frame" x="255" y="175" width="91" height="33"/>
                     <animations/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
-                    <rect key="frame" x="258" y="132" width="85" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
+                    <rect key="frame" x="248" y="132" width="105" height="33"/>
                     <animations/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,7 +111,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="centerY" secondItem="o4g-2Z-bRL" secondAttribute="centerY" constant="-123" id="4N8-PK-VS8"/>
-                <constraint firstItem="kb2-XH-HGM" firstAttribute="top" secondItem="ovD-eN-FDb" secondAttribute="top" constant="44" id="AU2-zi-yF1"/>
+                <constraint firstItem="kb2-XH-HGM" firstAttribute="top" secondItem="ovD-eN-FDb" secondAttribute="top" constant="64" id="AU2-zi-yF1"/>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="D9T-Wf-fvZ"/>
                 <constraint firstItem="ihv-0d-VuA" firstAttribute="top" secondItem="oK5-fe-fwB" secondAttribute="bottom" constant="14" id="Ky8-6B-SjL"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="top" secondItem="o4g-2Z-bRL" secondAttribute="bottom" constant="14" id="LLD-8d-yiS"/>

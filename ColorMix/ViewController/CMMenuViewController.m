@@ -8,11 +8,13 @@
 
 #import "CMMenuViewController.h"
 #import "CMGameViewController.h"
+#import "CMSettingViewController.h"
 
 @interface CMMenuViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *classicBtn;
 @property (weak, nonatomic) IBOutlet UIButton *fantasyBtn;
 @property (weak, nonatomic) IBOutlet UIButton *settingsBtn;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @end
 
 @implementation CMMenuViewController
@@ -24,6 +26,7 @@
     [self.settingsBtn setToRounded];
     self.settingsBtn.layer.borderColor = self.settingsBtn.titleLabel.textColor.CGColor;
     self.settingsBtn.layer.borderWidth = 2.f;
+    [self.versionLabel setText:[NSString stringWithFormat:@"V %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -44,7 +47,10 @@
 }
 
 - (IBAction)onSettingButtonClicked:(id)sender {
-    
+    CMSettingViewController *settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
+    settingViewController.view.frame = self.view.bounds;
+    [self.view addSubview:settingViewController.view];
+    [self addChildViewController:settingViewController];
 }
 
 /*

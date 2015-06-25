@@ -25,10 +25,17 @@
 		7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0741B3B19230032FA52 /* ColorList.plist */; };
 		7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */; };
 		7D56C07C1B3B25390032FA52 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */; };
+		7D9B79B61B3C407F00055E24 /* CMGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */; };
 		7DCF5ADF1B3B2C2A00A85AB5 /* CMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */; };
 		7DCF5AE11B3B2C4800A85AB5 /* CMCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCF5AE01B3B2C4800A85AB5 /* CMCardView.xib */; };
+		7DFADB681B3C4B0300C2E8F6 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB661B3C4B0300C2E8F6 /* CMSettingViewController.m */; };
+		7DFADB691B3C4B0300C2E8F6 /* CMSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFADB671B3C4B0300C2E8F6 /* CMSettingViewController.xib */; };
+		7DFADB6E1B3C530C00C2E8F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB6D1B3C530C00C2E8F6 /* AppDelegate.m */; };
+		7DFADB711B3C561500C2E8F6 /* CMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB701B3C561500C2E8F6 /* CMLabel.m */; };
+		7DFADB731B3C57F200C2E8F6 /* CMScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB721B3C57F200C2E8F6 /* CMScoreView.m */; };
+		7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */; };
+		7DFADB791B3C5C6100C2E8F6 /* UIImage+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
-		9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
@@ -81,14 +88,25 @@
 		7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameResultViewController.xib; path = ViewController/CMGameResultViewController.xib; sourceTree = "<group>"; };
 		7D56C07A1B3B25390032FA52 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameResultViewController.h; path = ViewController/CMGameResultViewController.h; sourceTree = "<group>"; };
 		7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameResultViewController.m; path = ViewController/CMGameResultViewController.m; sourceTree = "<group>"; };
+		7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameViewController.xib; path = ViewController/CMGameViewController.xib; sourceTree = "<group>"; };
 		7DCF5ADD1B3B2C2A00A85AB5 /* CMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCardView.h; path = View/CMCardView.h; sourceTree = "<group>"; };
 		7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCardView.m; path = View/CMCardView.m; sourceTree = "<group>"; };
 		7DCF5AE01B3B2C4800A85AB5 /* CMCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMCardView.xib; path = View/CMCardView.xib; sourceTree = "<group>"; };
+		7DFADB651B3C4B0300C2E8F6 /* CMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMSettingViewController.h; path = ViewController/CMSettingViewController.h; sourceTree = "<group>"; };
+		7DFADB661B3C4B0300C2E8F6 /* CMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMSettingViewController.m; path = ViewController/CMSettingViewController.m; sourceTree = "<group>"; };
+		7DFADB671B3C4B0300C2E8F6 /* CMSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMSettingViewController.xib; path = ViewController/CMSettingViewController.xib; sourceTree = "<group>"; };
+		7DFADB6D1B3C530C00C2E8F6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DFADB6F1B3C561500C2E8F6 /* CMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMLabel.h; path = View/CMLabel.h; sourceTree = "<group>"; };
+		7DFADB701B3C561500C2E8F6 /* CMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMLabel.m; path = View/CMLabel.m; sourceTree = "<group>"; };
+		7DFADB721B3C57F200C2E8F6 /* CMScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMScoreView.m; path = View/CMScoreView.m; sourceTree = "<group>"; };
+		7DFADB741B3C580300C2E8F6 /* CMScoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CMScoreView.h; path = View/CMScoreView.h; sourceTree = "<group>"; };
+		7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMScoreView.xib; path = View/CMScoreView.xib; sourceTree = "<group>"; };
+		7DFADB771B3C5C6100C2E8F6 /* UIImage+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorMix.h"; path = "Category/UIImage+ColorMix.h"; sourceTree = "<group>"; };
+		7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorMix.m"; path = "Category/UIImage+ColorMix.m"; sourceTree = "<group>"; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9234BD5C1B3A805100D3FFF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9234BD651B3A805100D3FFF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9234BD681B3A805100D3FFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,12 +176,16 @@
 			children = (
 				7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */,
 				7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */,
+				7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */,
 				7D1BB3381B3ADB4500C2FDDC /* CMMenuViewController.h */,
 				7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */,
 				7D1BB33A1B3ADB4500C2FDDC /* CMMenuViewController.xib */,
 				7D56C07A1B3B25390032FA52 /* CMGameResultViewController.h */,
 				7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */,
 				7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */,
+				7DFADB651B3C4B0300C2E8F6 /* CMSettingViewController.h */,
+				7DFADB661B3C4B0300C2E8F6 /* CMSettingViewController.m */,
+				7DFADB671B3C4B0300C2E8F6 /* CMSettingViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -171,6 +193,11 @@
 		7D1BB33D1B3ADC7A00C2FDDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7DFADB741B3C580300C2E8F6 /* CMScoreView.h */,
+				7DFADB721B3C57F200C2E8F6 /* CMScoreView.m */,
+				7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */,
+				7DFADB6F1B3C561500C2E8F6 /* CMLabel.h */,
+				7DFADB701B3C561500C2E8F6 /* CMLabel.m */,
 				7D1BB3431B3AE03200C2FDDC /* CMQuestionView.h */,
 				7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */,
 				7D1BB3461B3AEF9A00C2FDDC /* CMQuestionView.xib */,
@@ -184,6 +211,8 @@
 		7D1BB3481B3B0CB900C2FDDC /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				7DFADB771B3C5C6100C2E8F6 /* UIImage+ColorMix.h */,
+				7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */,
 				7D56C0661B3B0CFD0032FA52 /* UIView+ColorMix.h */,
 				7D56C0671B3B0CFD0032FA52 /* UIView+ColorMix.m */,
 				7D56C0691B3B0D5A0032FA52 /* UIColor+ColorMix.h */,
@@ -242,7 +271,7 @@
 				7D1BB3371B3ADB0300C2FDDC /* ViewController */,
 				7DD3848E1B3AC7FA004C287C /* Model */,
 				9234BD5C1B3A805100D3FFF2 /* AppDelegate.h */,
-				9234BD5D1B3A805100D3FFF2 /* AppDelegate.m */,
+				7DFADB6D1B3C530C00C2E8F6 /* AppDelegate.m */,
 				9234BD651B3A805100D3FFF2 /* Images.xcassets */,
 				9234BD671B3A805100D3FFF2 /* LaunchScreen.xib */,
 				9234BD581B3A805100D3FFF2 /* Supporting Files */,
@@ -372,11 +401,14 @@
 			files = (
 				9234BD691B3A805100D3FFF2 /* LaunchScreen.xib in Resources */,
 				7D1BB33C1B3ADB4500C2FDDC /* CMMenuViewController.xib in Resources */,
+				7D9B79B61B3C407F00055E24 /* CMGameViewController.xib in Resources */,
 				7D1BB3471B3AEF9A00C2FDDC /* CMQuestionView.xib in Resources */,
 				7DCF5AE11B3B2C4800A85AB5 /* CMCardView.xib in Resources */,
 				7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */,
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
 				7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */,
+				7DFADB691B3C4B0300C2E8F6 /* CMSettingViewController.xib in Resources */,
+				7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,17 +426,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFADB6E1B3C530C00C2E8F6 /* AppDelegate.m in Sources */,
 				7D1BB3221B3AC93A00C2FDDC /* CMColor.m in Sources */,
 				7D1BB31F1B3AC8A800C2FDDC /* CMCard.m in Sources */,
-				9234BD5E1B3A805100D3FFF2 /* AppDelegate.m in Sources */,
+				7DFADB681B3C4B0300C2E8F6 /* CMSettingViewController.m in Sources */,
 				7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */,
 				7D1BB3331B3ACFC000C2FDDC /* CMColorFactory.m in Sources */,
 				928208C61B3C11F500664E90 /* UIViewController+ColorMix.m in Sources */,
 				7D56C06E1B3B0E540032FA52 /* UILabel+ColorMix.m in Sources */,
+				7DFADB791B3C5C6100C2E8F6 /* UIImage+ColorMix.m in Sources */,
+				7DFADB711B3C561500C2E8F6 /* CMLabel.m in Sources */,
 				7D1BB32E1B3ACEFE00C2FDDC /* CMCardFactory.m in Sources */,
 				7D56C06B1B3B0D5B0032FA52 /* UIColor+ColorMix.m in Sources */,
 				7D1BB3451B3AE03200C2FDDC /* CMQuestionView.m in Sources */,
 				7DCF5ADF1B3B2C2A00A85AB5 /* CMCardView.m in Sources */,
+				7DFADB731B3C57F200C2E8F6 /* CMScoreView.m in Sources */,
 				7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */,
 				9234BD5B1B3A805100D3FFF2 /* main.m in Sources */,
 				7D56C0681B3B0CFD0032FA52 /* UIView+ColorMix.m in Sources */,

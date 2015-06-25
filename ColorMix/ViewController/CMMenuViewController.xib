@@ -17,6 +17,7 @@
                 <outlet property="classicBtn" destination="4N9-eN-coX" id="CRM-lj-Qcw"/>
                 <outlet property="fantasyBtn" destination="Lyd-1w-cgc" id="QgQ-TB-GIF"/>
                 <outlet property="settingsBtn" destination="3Xp-Ke-BlJ" id="pbw-RG-ZUw"/>
+                <outlet property="versionLabel" destination="p7v-W5-r2C" id="cVM-C7-tRA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +44,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-Vi-fZt" userLabel="Logo">
-                    <rect key="frame" x="183" y="44" width="234" height="41"/>
+                    <rect key="frame" x="183" y="64" width="234" height="41"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="234" id="9uX-VL-5Ie"/>
@@ -108,7 +109,7 @@
                 <constraint firstItem="bfs-Vi-fZt" firstAttribute="centerY" secondItem="4N9-eN-coX" secondAttribute="centerY" constant="-123" id="erp-qV-w7Z"/>
                 <constraint firstAttribute="centerY" secondItem="Lyd-1w-cgc" secondAttribute="centerY" constant="-30" id="kDS-gm-ahe"/>
                 <constraint firstAttribute="centerX" secondItem="Lyd-1w-cgc" secondAttribute="centerX" id="kJK-eq-wkM"/>
-                <constraint firstItem="bfs-Vi-fZt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="n0N-UW-QFD"/>
+                <constraint firstItem="bfs-Vi-fZt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="n0N-UW-QFD"/>
                 <constraint firstAttribute="bottom" secondItem="p7v-W5-r2C" secondAttribute="bottom" constant="10" id="qok-ZC-AXr"/>
                 <constraint firstItem="4N9-eN-coX" firstAttribute="top" secondItem="bfs-Vi-fZt" secondAttribute="bottom" constant="50" id="rhg-iV-vXp"/>
                 <constraint firstItem="p7v-W5-r2C" firstAttribute="centerX" secondItem="4N9-eN-coX" secondAttribute="centerX" id="umq-9g-Hxh"/>
