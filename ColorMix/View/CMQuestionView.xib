@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -114,10 +113,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B7-vq-pIN">
-                            <rect key="frame" x="237" y="117" width="127" height="66"/>
+                            <rect key="frame" x="237" y="84" width="127" height="66"/>
                             <animations/>
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -125,19 +124,25 @@
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="5B7-vq-pIN" secondAttribute="centerX" id="AIz-6q-PSS"/>
+                        <constraint firstAttribute="centerY" secondItem="5B7-vq-pIN" secondAttribute="centerY" constant="33" id="DNV-YM-eSW"/>
                         <constraint firstAttribute="bottom" secondItem="5B7-vq-pIN" secondAttribute="bottom" constant="117" id="ZB9-6k-vgu"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ZB9-6k-vgu"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-Tf-zzQ" userLabel="Question">
-                    <rect key="frame" x="0.0" y="236" width="600" height="64"/>
+                    <rect key="frame" x="0.0" y="234" width="600" height="66"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-80-eGj">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
                             <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.39030433768656714" colorSpace="calibratedWhite"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-7a-f3F">
-                            <rect key="frame" x="194" y="7" width="212" height="50"/>
+                            <rect key="frame" x="194" y="8" width="212" height="50"/>
                             <animations/>
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="36"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,7 +157,7 @@
                         <constraint firstAttribute="trailing" secondItem="2lV-80-eGj" secondAttribute="trailing" id="DbJ-qJ-yGa"/>
                         <constraint firstAttribute="bottom" secondItem="2lV-80-eGj" secondAttribute="bottom" id="FMP-9h-Gel"/>
                         <constraint firstItem="2lV-80-eGj" firstAttribute="top" secondItem="XcW-Tf-zzQ" secondAttribute="top" id="Iil-Dr-usj"/>
-                        <constraint firstAttribute="height" constant="64" id="SVw-kD-hj0"/>
+                        <constraint firstAttribute="height" constant="66" id="SVw-kD-hj0"/>
                         <constraint firstAttribute="centerX" secondItem="f8g-7a-f3F" secondAttribute="centerX" id="Zlz-3P-S4n"/>
                     </constraints>
                 </view>

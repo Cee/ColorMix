@@ -93,17 +93,64 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-V4-5ub">
-                    <rect key="frame" x="255" y="175" width="91" height="33"/>
+                    <rect key="frame" x="255" y="182" width="91" height="33"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
+                    <rect key="frame" x="248" y="144" width="105" height="33"/>
                     <animations/>
                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
-                    <rect key="frame" x="248" y="132" width="105" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-wX-Ku0">
+                    <rect key="frame" x="194" y="555" width="213" height="25"/>
                     <animations/>
-                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Made with ">
+                            <attributes>
+                                <color key="NSColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                <font key="NSOriginalFont" size="18" name="AvenirNext-DemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="&lt;3">
+                            <attributes>
+                                <color key="NSColor" red="1" green="0.15686274509803921" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                <font key="NSOriginalFont" size="18" name="AvenirNext-DemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" and ">
+                            <attributes>
+                                <color key="NSColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                <font key="NSOriginalFont" size="18" name="AvenirNext-DemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="proud">
+                            <attributes>
+                                <color key="NSColor" red="1" green="0.15686274509803921" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                <font key="NSOriginalFont" size="18" name="AvenirNext-DemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=".">
+                            <attributes>
+                                <color key="NSColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                <font key="NSOriginalFont" size="18" name="AvenirNext-DemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -111,18 +158,20 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="centerY" secondItem="o4g-2Z-bRL" secondAttribute="centerY" constant="-123" id="4N8-PK-VS8"/>
+                <constraint firstAttribute="bottom" secondItem="mh4-wX-Ku0" secondAttribute="bottom" constant="20" id="7Gl-jz-ywt"/>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="top" secondItem="ovD-eN-FDb" secondAttribute="top" constant="64" id="AU2-zi-yF1"/>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="D9T-Wf-fvZ"/>
                 <constraint firstItem="ihv-0d-VuA" firstAttribute="top" secondItem="oK5-fe-fwB" secondAttribute="bottom" constant="14" id="Ky8-6B-SjL"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="top" secondItem="o4g-2Z-bRL" secondAttribute="bottom" constant="14" id="LLD-8d-yiS"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="centerX" secondItem="ihv-0d-VuA" secondAttribute="centerX" id="Qaf-zh-ZdJ"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="Whh-5R-keL"/>
-                <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="Z1g-V4-5ub" secondAttribute="bottom" constant="33" id="Z6t-jt-8eC"/>
-                <constraint firstItem="Z1g-V4-5ub" firstAttribute="top" secondItem="uMo-r7-deW" secondAttribute="bottom" constant="10" id="eQ7-ng-puf"/>
+                <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="Z1g-V4-5ub" secondAttribute="bottom" constant="26" id="Z6t-jt-8eC"/>
+                <constraint firstItem="Z1g-V4-5ub" firstAttribute="top" secondItem="uMo-r7-deW" secondAttribute="bottom" constant="5" id="eQ7-ng-puf"/>
                 <constraint firstItem="uMo-r7-deW" firstAttribute="centerX" secondItem="Z1g-V4-5ub" secondAttribute="centerX" id="fpc-dD-Avn"/>
                 <constraint firstAttribute="centerY" secondItem="oK5-fe-fwB" secondAttribute="centerY" constant="-30" id="kBV-dG-X91"/>
                 <constraint firstAttribute="centerX" secondItem="oK5-fe-fwB" secondAttribute="centerX" id="lMa-4o-kr7"/>
                 <constraint firstItem="Z1g-V4-5ub" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="pPQ-lI-7Hm"/>
+                <constraint firstAttribute="centerX" secondItem="mh4-wX-Ku0" secondAttribute="centerX" id="rbm-ns-RQs"/>
                 <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="kb2-XH-HGM" secondAttribute="bottom" constant="50" id="roZ-VQ-RkX"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

@@ -27,7 +27,7 @@
     [self.settingsBtn setToRounded];
     self.settingsBtn.layer.borderColor = self.settingsBtn.titleLabel.textColor.CGColor;
     self.settingsBtn.layer.borderWidth = 2.f;
-    [self.versionLabel setText:[NSString stringWithFormat:@"V %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
+    [self.versionLabel setText:[NSString stringWithFormat:@"v %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     // Do any additional setup after loading the view from its nib.
 }
 
