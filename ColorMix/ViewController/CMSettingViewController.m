@@ -7,6 +7,7 @@
 //
 
 #import "CMSettingViewController.h"
+#import "CMMenuViewController.h"
 
 @interface CMSettingViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *grayscaleBtn;
@@ -17,13 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.alpha = 0;
     [self.grayscaleBtn setSelected:[[NSUserDefaults standardUserDefaults] boolForKey:kGrayscaleSwitchKey]];
-    if (IOS8_OR_LATER) {
-        UIView* visualEfView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-        visualEfView.frame = self.view.bounds;
-        visualEfView.alpha = 1.0;
-        [self.backgroundView addSubview:visualEfView];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,8 +52,13 @@
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self removeFromParentViewController];
-    [self.view removeFromSuperview];
+    [((CMMenuViewController*)self.parentViewController) removeBlurView];
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self removeFromParentViewController];
+        [self.view removeFromSuperview];
+    }];
 }
 /*
 #pragma mark - Navigation

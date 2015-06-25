@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CMMenuViewController : UIViewController
-
+- (void) removeBlurView;
 @end

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *fantasyBtn;
 @property (weak, nonatomic) IBOutlet UIButton *settingsBtn;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+@property (nonatomic, strong) UIView *blurView;
 @end
 
 @implementation CMMenuViewController
@@ -35,6 +36,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)removeBlurView {
+    [UIView animateWithDuration:0.3 animations:^{
+        _blurView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_blurView removeFromSuperview];
+    }];
+}
+
+#pragma mark - Getter
+- (UIView *)blurView {
+    if (!_blurView) {
+        if (IOS8_OR_LATER) {
+            _blurView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+            _blurView.frame = [[UIScreen mainScreen] bounds];
+        } else {
+            _blurView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+            [_blurView setBackgroundColor:[UIColor blackColor]];
+            [_blurView setAlpha:0.6];
+        }
+    }
+    _blurView.alpha = 0;
+    return _blurView;
+}
+
+
 #pragma mark - ButtonAction
 - (IBAction)onEasyButtonClicked:(id)sender {
     CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:classicMode];
@@ -49,8 +75,14 @@
 - (IBAction)onSettingButtonClicked:(id)sender {
     CMSettingViewController *settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
     settingViewController.view.frame = self.view.bounds;
+    settingViewController.view.alpha = 0;
+    [self.view addSubview:self.blurView];
     [self.view addSubview:settingViewController.view];
     [self addChildViewController:settingViewController];
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        _blurView.alpha = 1;
+        settingViewController.view.alpha = 1;
+    } completion:nil];
 }
 
 /*
