@@ -10,4 +10,5 @@
 
 @interface CMGameResultViewController : UIViewController
 @property (nonatomic) GameMode gameMode;
+@property (nonatomic) NSInteger score;
 @end

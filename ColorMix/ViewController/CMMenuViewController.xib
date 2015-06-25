@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N9-eN-coX">
-                    <rect key="frame" x="200" y="211" width="200" height="50"/>
+                    <rect key="frame" x="200" y="241" width="200" height="50"/>
                     <animations/>
                     <color key="backgroundColor" red="1" green="0.15686274510000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -43,7 +43,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-Vi-fZt" userLabel="Logo">
-                    <rect key="frame" x="183" y="22" width="234" height="41"/>
+                    <rect key="frame" x="183" y="44" width="234" height="41"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="234" id="9uX-VL-5Ie"/>
@@ -64,7 +64,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyd-1w-cgc">
-                    <rect key="frame" x="200" y="275" width="200" height="50"/>
+                    <rect key="frame" x="200" y="305" width="200" height="50"/>
                     <animations/>
                     <color key="backgroundColor" red="0.3294117647" green="0.78039215689999997" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -80,7 +80,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xp-Ke-BlJ">
-                    <rect key="frame" x="200" y="339" width="200" height="50"/>
+                    <rect key="frame" x="200" y="369" width="200" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1P7-PC-zI3"/>
@@ -106,9 +106,9 @@
                 <constraint firstItem="Lyd-1w-cgc" firstAttribute="centerX" secondItem="4N9-eN-coX" secondAttribute="centerX" id="VQO-hp-hIb"/>
                 <constraint firstItem="Lyd-1w-cgc" firstAttribute="centerX" secondItem="3Xp-Ke-BlJ" secondAttribute="centerX" id="cNC-4h-5TA"/>
                 <constraint firstItem="bfs-Vi-fZt" firstAttribute="centerY" secondItem="4N9-eN-coX" secondAttribute="centerY" constant="-123" id="erp-qV-w7Z"/>
-                <constraint firstAttribute="centerY" secondItem="Lyd-1w-cgc" secondAttribute="centerY" id="kDS-gm-ahe"/>
+                <constraint firstAttribute="centerY" secondItem="Lyd-1w-cgc" secondAttribute="centerY" constant="-30" id="kDS-gm-ahe"/>
                 <constraint firstAttribute="centerX" secondItem="Lyd-1w-cgc" secondAttribute="centerX" id="kJK-eq-wkM"/>
-                <constraint firstItem="bfs-Vi-fZt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="n0N-UW-QFD"/>
+                <constraint firstItem="bfs-Vi-fZt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="n0N-UW-QFD"/>
                 <constraint firstAttribute="bottom" secondItem="p7v-W5-r2C" secondAttribute="bottom" constant="10" id="qok-ZC-AXr"/>
                 <constraint firstItem="4N9-eN-coX" firstAttribute="top" secondItem="bfs-Vi-fZt" secondAttribute="bottom" constant="50" id="rhg-iV-vXp"/>
                 <constraint firstItem="p7v-W5-r2C" firstAttribute="centerX" secondItem="4N9-eN-coX" secondAttribute="centerX" id="umq-9g-Hxh"/>

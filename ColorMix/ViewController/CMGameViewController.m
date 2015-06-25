@@ -90,12 +90,21 @@
             [cardView removeFromSuperview];
         }];
     }
+    [self.view bringSubviewToFront:self.scoreLabel];
 }
 
 
 - (void)gameEnd {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *key = self.gameMode == classicMode ? kClassicHighScoreKey : kFantasyHighScoreKey;
+    NSNumber *highestPoint = [userDefaults objectForKey:key];
+    if (highestPoint==nil || [highestPoint integerValue] < self.scene.point) {
+        [userDefaults setObject:@(self.scene.point) forKey:key];
+        [userDefaults synchronize];
+    }
     CMGameResultViewController *gameResultViewController = [[CMGameResultViewController alloc] initWithNibName:NSStringFromClass([CMGameResultViewController class]) bundle:nil];
-    gameResultViewController.gameMode = self.gameMode ;
+    gameResultViewController.gameMode = self.gameMode;
+    gameResultViewController.score = self.scene.point;
     [self.navigationController pushViewController:gameResultViewController animated:YES];
 }
 
@@ -118,7 +127,7 @@
         //生成新的nextQuestionView
         CGRect frame = [UIScreen mainScreen].bounds;
         self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-        [self.nextQuestionView setFrame:frame question:self.scene.currentQuestion];
+        [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
         [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
         [self addCardViews];
     } else {

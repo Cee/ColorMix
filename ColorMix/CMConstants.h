@@ -11,4 +11,8 @@
 
 #define kUmengAppKey                    @"558bb56c67e58ef671001f86"
 
+
+//keys
+#define kClassicHighScoreKey @"classicHighScore"
+#define kFantasyHighScoreKey @"fantasyHighScore"
 #endif

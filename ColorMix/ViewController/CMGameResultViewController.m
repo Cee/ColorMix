@@ -10,12 +10,25 @@
 #import "CMMenuViewController.h"
 #import "CMGameViewController.h"
 @interface CMGameResultViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *homeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIButton *replayBtn;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *highScoreLabel;
 @end
 
 @implementation CMGameResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [_replayBtn setToRounded];
+    [_shareBtn setToRounded];
+    [_homeBtn setToRounded];
+    _homeBtn.layer.borderColor = _homeBtn.titleLabel.textColor.CGColor;
+    _homeBtn.layer.borderWidth = 2.0;
+    [_scoreLabel setText:[NSString stringWithFormat:@"Score:%ld",self.score]];
+    NSInteger highestScore = [[[NSUserDefaults standardUserDefaults] objectForKey:self.gameMode == classicMode ? kClassicHighScoreKey : kFantasyHighScoreKey] integerValue];
+    [_highScoreLabel setText:[NSString stringWithFormat:@"Best:%ld",highestScore]];
     // Do any additional setup after loading the view from its nib.
 }
 
