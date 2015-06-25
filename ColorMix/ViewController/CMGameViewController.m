@@ -36,14 +36,17 @@
     self.cardViewList = [[NSMutableArray alloc] initWithCapacity:3];
     self.scene = [[CMScene alloc] initWithGameMode:self.gameMode];
     CGRect frame = [UIScreen mainScreen].bounds;
+    //currentQuestionView
     self.currentQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
     [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion];
-    _currentQuestionView.delegate = self;
-    [_currentQuestionView startTimer];
+    self.currentQuestionView.delegate = self;
+    [self.currentQuestionView startTimer];
     [self.view addSubview:self.currentQuestionView];
+    //nextQuestionView
     self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
     [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
     [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
+    //scoreLabel TODO
     self.scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 50, 20, 50, 50)];
     [self.view addSubview:self.scoreLabel];
     [self addCardViews];
@@ -56,12 +59,13 @@
 }
 
 #pragma mark - Private
-- (void) updateScore {
+- (void)updateScore {
     [self.scoreLabel setText:[NSString stringWithFormat:@"%ld",self.scene.point]];
     [self.view bringSubviewToFront:self.scoreLabel];
 }
 
-- (void) addCardViews {
+- (void)addCardViews {
+    //classic模式下card和question在一个view上
     if (!self.gameMode == fantasyMode) {
         return;
     }
@@ -89,16 +93,15 @@
 }
 
 
-- (void) gameEnd {
+- (void)gameEnd {
     CMGameResultViewController *gameResultViewController = [[CMGameResultViewController alloc] initWithNibName:NSStringFromClass([CMGameResultViewController class]) bundle:nil];
-    gameResultViewController.gameMode = self.gameMode;
+    gameResultViewController.gameMode = self.gameMode ;
     [self.navigationController pushViewController:gameResultViewController animated:YES];
 }
 
 #pragma mark - ClassicQuestionViewDelegate
 - (void)answerQuestionWithResult:(BOOL)right {
     if (right) {
-        CGRect frame = [UIScreen mainScreen].bounds;
         [self.scene showNextQuestion];
         [self updateScore];
         self.currentQuestionView.delegate = nil;
@@ -106,12 +109,14 @@
         self.currentQuestionView = self.nextQuestionView;
         self.currentQuestionView.delegate = self;
         [self.currentQuestionView startTimer];
+        
         [UIView animateWithDuration:0.3 animations:^{
             lastQuestionView.transform = CGAffineTransformMakeTranslation(-self.view.frame.size.width, 0);
         } completion:^(BOOL finished) {
             [lastQuestionView removeFromSuperview];
         }];
         //生成新的nextQuestionView
+        CGRect frame = [UIScreen mainScreen].bounds;
         self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
         [self.nextQuestionView setFrame:frame question:self.scene.currentQuestion];
         [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
