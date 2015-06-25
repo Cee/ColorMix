@@ -16,10 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:kFirstLaunchKey]) {
+        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
+        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
+        [userDefaults synchronize];
+    }
     // init analytics
     [self registerUmengTraking];
-
+    
     // init views
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -28,7 +33,6 @@
     [rootNavigationController setNavigationBarHidden:YES];
     self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
-
     return YES;
 }
 

@@ -23,10 +23,13 @@ typedef enum {
 #import "UIView+ColorMix.h"
 #import "UIColor+ColorMix.h"
 #import "UILabel+ColorMix.h"
+#import "UIImage+ColorMix.h"
 #import "UIViewController+ColorMix.h"
 
 // Constants
 #import "CMConstants.h"
+
+
 
 // Umeng
 #import "MobClick.h"

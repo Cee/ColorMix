@@ -30,6 +30,14 @@
     return [self.colorArrays objectAtIndex:randomIndex];
 }
 
+- (CMColor *)createColorExcept:(NSString *)colorName {
+    CMColor *color = [self createColor];
+    while ([color.colorName isEqualToString:colorName]) {
+        color = [self createColor];
+    }
+    return color;
+}
+
 #pragma mark - Private
 - (void) initColorArrays {
     //此处从plist文件中获取

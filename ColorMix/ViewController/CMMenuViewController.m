@@ -8,28 +8,25 @@
 
 #import "CMMenuViewController.h"
 #import "CMGameViewController.h"
+#import "CMSettingViewController.h"
 
 @interface CMMenuViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *classicBtn;
 @property (weak, nonatomic) IBOutlet UIButton *fantasyBtn;
 @property (weak, nonatomic) IBOutlet UIButton *settingsBtn;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 @end
 
 @implementation CMMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.classicBtn.clipsToBounds = YES;
-    self.classicBtn.layer.masksToBounds = YES;
-    self.classicBtn.layer.cornerRadius = 25.f;
-    self.fantasyBtn.clipsToBounds = YES;
-    self.fantasyBtn.layer.masksToBounds = YES;
-    self.fantasyBtn.layer.cornerRadius = 25.f;
-    self.settingsBtn.clipsToBounds = YES;
-    self.settingsBtn.layer.masksToBounds = YES;
-    self.settingsBtn.layer.cornerRadius = 25.f;
-    self.settingsBtn.layer.borderColor = [UIColor colorWithHexString:@"2ECC71"].CGColor;
+    [self.classicBtn setToRounded];
+    [self.fantasyBtn setToRounded];
+    [self.settingsBtn setToRounded];
+    self.settingsBtn.layer.borderColor = self.settingsBtn.titleLabel.textColor.CGColor;
     self.settingsBtn.layer.borderWidth = 2.f;
+    [self.versionLabel setText:[NSString stringWithFormat:@"V %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -50,7 +47,10 @@
 }
 
 - (IBAction)onSettingButtonClicked:(id)sender {
-    
+    CMSettingViewController *settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
+    settingViewController.view.frame = self.view.bounds;
+    [self.view addSubview:settingViewController.view];
+    [self addChildViewController:settingViewController];
 }
 
 /*
