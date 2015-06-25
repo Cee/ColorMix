@@ -28,7 +28,7 @@
 - (IBAction)onReplayButtonClicked:(id)sender {
     CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:_gameMode];
     [self.navigationController pushViewController:gameViewController animated:YES];
-    self.navigationController.viewControllers = @[self.navigationController.childViewControllers[0],self.navigationController.topViewController];
+    self.navigationController.viewControllers = @[self.navigationController.childViewControllers[0], self.navigationController.topViewController];
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {

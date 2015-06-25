@@ -11,5 +11,5 @@
 
 @interface CMCardFactory : NSObject
 + (instancetype)sharedInstance;
-- (CMCard*)createCard;
+- (CMCard *)createCard;
 @end

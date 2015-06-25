@@ -34,10 +34,12 @@
         self.gameMode = fantasyMode;
         [self.cardView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
         [self.cardTextLabel setTextColor:[UIColor whiteColor]];
-        [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld",self.question.targetCardIndex+1]];
+        [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld", self.question.targetCardIndex + 1]];
     }
-       //question
+    
+    //question
     [self.questionLabel setText:[self.question getQuestion]];
+    
     //options
     NSArray *options = self.question.options;
     [options enumerateObjectsUsingBlock:^(CMColor *option, NSUInteger idx, BOOL *stop) {
@@ -51,10 +53,13 @@
 }
 
 #pragma mark - Public
-- (void) startTimer {
+- (void)startTimer {
     CGFloat interval = (CGFloat)self.question.limitTime;
-    [UIView animateWithDuration:interval delay:self.gameMode == classicMode ? 0 : 6 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.timerView.transform = CGAffineTransformMakeTranslation(-[[UIScreen mainScreen]bounds].size.width, 0);
+    [UIView animateWithDuration:interval
+                          delay:self.gameMode == classicMode ? 0 : 6
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
+        self.timerView.transform = CGAffineTransformMakeTranslation(-[[UIScreen mainScreen] bounds].size.width, 0);
     } completion:^(BOOL finished) {
         [self.timerView removeFromSuperview];
         if (self.delegate && [self.delegate respondsToSelector:@selector(timeout)]) {
@@ -65,9 +70,7 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onOptionButtonClicked:(UIControl *)sender {
-    [self.delegate answerQuestionWithResult:[_question checkAnswer:sender.tag-1]];
+    [self.delegate answerQuestionWithResult:[_question checkAnswer:sender.tag - 1]];
 }
-
-
 
 @end

@@ -8,6 +8,7 @@
 
 #import "CMCardFactory.h"
 #import "CMColorFactory.h"
+
 @implementation CMCardFactory
 
 + (instancetype)sharedInstance {
