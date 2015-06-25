@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020AD45E1DC7CC9485847E64 /* libPods-ColorMix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F985997C85A75F049DA63D19 /* libPods-ColorMix.a */; };
 		7D1BB31F1B3AC8A800C2FDDC /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */; };
 		7D1BB3221B3AC93A00C2FDDC /* CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3211B3AC93A00C2FDDC /* CMColor.m */; };
 		7D1BB3271B3ACAE200C2FDDC /* CMQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3261B3ACAE200C2FDDC /* CMQuestion.m */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F5F626241465BCBE2CD2FF /* Pods-ColorMix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMix/Pods-ColorMix.debug.xcconfig"; sourceTree = "<group>"; };
 		7D1BB31D1B3AC8A800C2FDDC /* CMCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCard.h; path = Model/CMCard.h; sourceTree = "<group>"; };
 		7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCard.m; path = Model/CMCard.m; sourceTree = "<group>"; };
 		7D1BB3201B3AC93A00C2FDDC /* CMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMColor.h; path = Model/CMColor.h; sourceTree = "<group>"; };
@@ -91,6 +93,9 @@
 		9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD731B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD741B3A805100D3FFF2 /* ColorMixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorMixTests.m; sourceTree = "<group>"; };
+		925358FE1B3BE84400C0677E /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMConstants.h; path = ColorMix/CMConstants.h; sourceTree = "<group>"; };
+		F985997C85A75F049DA63D19 /* libPods-ColorMix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ColorMix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDC5DC71783A429F41BD5F56 /* Pods-ColorMix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorMix.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorMix/Pods-ColorMix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020AD45E1DC7CC9485847E64 /* libPods-ColorMix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63BECB6C384543B8E9569D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03F5F626241465BCBE2CD2FF /* Pods-ColorMix.debug.xcconfig */,
+				FDC5DC71783A429F41BD5F56 /* Pods-ColorMix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F985997C85A75F049DA63D19 /* libPods-ColorMix.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D1BB32B1B3ACEE500C2FDDC /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,10 +207,13 @@
 		9234BD4C1B3A805100D3FFF2 = {
 			isa = PBXGroup;
 			children = (
+				925358FE1B3BE84400C0677E /* CMConstants.h */,
 				7D1BB3241B3ACA2300C2FDDC /* ColorMix-Prefix.pch */,
 				9234BD571B3A805100D3FFF2 /* ColorMix */,
 				9234BD711B3A805100D3FFF2 /* ColorMixTests */,
 				9234BD561B3A805100D3FFF2 /* Products */,
+				63BECB6C384543B8E9569D0E /* Pods */,
+				7CFAD281F2F6DB3D8D4C714E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9234BD781B3A805100D3FFF2 /* Build configuration list for PBXNativeTarget "ColorMix" */;
 			buildPhases = (
+				F615F61F54E3A7E8BF1B8CCD /* Check Pods Manifest.lock */,
 				9234BD511B3A805100D3FFF2 /* Sources */,
 				9234BD521B3A805100D3FFF2 /* Frameworks */,
 				9234BD531B3A805100D3FFF2 /* Resources */,
+				061B561EDA3AF1C98A1C193E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,6 +371,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		061B561EDA3AF1C98A1C193E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorMix/Pods-ColorMix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F615F61F54E3A7E8BF1B8CCD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9234BD511B3A805100D3FFF2 /* Sources */ = {
@@ -484,6 +545,7 @@
 		};
 		9234BD791B3A805100D3FFF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F5F626241465BCBE2CD2FF /* Pods-ColorMix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -499,6 +561,7 @@
 		};
 		9234BD7A1B3A805100D3FFF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC5DC71783A429F41BD5F56 /* Pods-ColorMix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
