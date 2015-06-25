@@ -10,5 +10,5 @@
 #import "CMColor.h"
 
 @interface UIView (ColorMix)
-- (void) cm_setBackgroundColor:(CMColor*)backgroundColor;
+- (void)cm_setBackgroundColor:(CMColor *)backgroundColor;
 @end

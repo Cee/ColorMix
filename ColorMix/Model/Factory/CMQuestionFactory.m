@@ -10,6 +10,7 @@
 #import "CMCardFactory.h"
 
 @implementation CMQuestionFactory
+
 + (instancetype)sharedInstance {
     static dispatch_once_t once;
     static id sharedInstance;
@@ -22,11 +23,12 @@
 - (CMQuestion *)createQuestionOfMode:(GameMode)mode {
     NSInteger cardCount = mode == classicMode ? 1 : 3;
     NSMutableArray *cardList = [[NSMutableArray alloc] initWithCapacity:3];
-    for (int i = 0 ; i < cardCount ; i ++) {
+    for (int i = 0 ; i < cardCount ; i++) {
         CMCard* randomCard = [[CMCardFactory sharedInstance] createCard];
         [cardList addObject:randomCard];
     }
     CMQuestion *question = [[CMQuestion alloc] initWithCardList:cardList];
     return question;
 }
+
 @end

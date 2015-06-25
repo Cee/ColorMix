@@ -76,9 +76,12 @@
     for (NSInteger i = cardList.count - 1; i >= 0; i--) {
         UIView *cardView = self.cardViewList[i];
         [self.view addSubview:cardView];
-        CGFloat delay = 1.7 * (i+1);
-        [UIView animateWithDuration:0.3 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
-            cardView.transform = CGAffineTransformMakeTranslation(-self.view.frame.size.width, 0);
+        CGFloat delay = 1.7 * (i + 1);
+        [UIView animateWithDuration:0.3
+                              delay:delay
+                            options:UIViewAnimationOptionCurveLinear
+                         animations:^{
+            cardView.transform = CGAffineTransformMakeTranslation(-self.view. frame.size.width, 0);
         } completion:^(BOOL finished) {
             [cardView removeFromSuperview];
         }];

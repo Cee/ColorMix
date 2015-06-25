@@ -24,7 +24,7 @@
         } else {
             self.targetCardIndex = arc4random() % self.cardList.count;
         }
-        CMCard* targetCard = self.cardList[self.targetCardIndex];
+        CMCard *targetCard = self.cardList[self.targetCardIndex];
         self.options = [targetCard generateOptions];
         self.targetElement = arc4random() % 3;
         self.answerIndex = [targetCard getAnswerByOptions:self.options Element:self.targetElement];
@@ -42,10 +42,10 @@
             return @"Background";
             break;
         case textColor:
-            return @"TextColor";
+            return @"Color";
             break;
         case textContent:
-            return @"TextContent";
+            return @"Text";
         default:
             break;
     }

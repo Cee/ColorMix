@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CMCard.h"
+
 @interface CMCardView : UIView
-- (void) updateViewWithCard:(CMCard*)card;
+- (void)updateViewWithCard:(CMCard *)card;
 @end

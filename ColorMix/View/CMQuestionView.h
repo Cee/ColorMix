@@ -17,6 +17,6 @@
 
 @interface CMQuestionView : UIView
 @property (nonatomic, weak) id<QuestionViewDelegate> delegate;
-- (void)setFrame:(CGRect)frame question:(CMQuestion*)question;
+- (void)setFrame:(CGRect)frame question:(CMQuestion *)question;
 - (void)startTimer;
 @end

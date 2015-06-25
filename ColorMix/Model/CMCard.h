@@ -12,7 +12,7 @@
 typedef enum {
     background = 0,
     textColor = 1,
-    textContent = 2
+    textContent = 2,
 } Element;
 
 @interface CMCard : NSObject
@@ -22,5 +22,5 @@ typedef enum {
 
 - (instancetype)initWithColorArray:(NSArray *)colorArray;
 - (NSArray *)generateOptions;
-- (NSInteger)getAnswerByOptions:(NSArray*)options Element:(Element)element;
+- (NSInteger)getAnswerByOptions:(NSArray *)options Element:(Element)element;
 @end

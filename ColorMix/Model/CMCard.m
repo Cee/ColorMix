@@ -37,7 +37,7 @@
 }
 
 - (NSInteger)getAnswerByOptions:(NSArray *)options Element:(Element)element {
-    CMColor* targetColor = self.colorArray[element];
+    CMColor *targetColor = self.colorArray[element];
     int index = 0;
     for (index = 0; index < options.count; index++) {
         CMColor *color = options[index];

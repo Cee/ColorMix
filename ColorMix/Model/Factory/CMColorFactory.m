@@ -9,10 +9,10 @@
 #import "CMColorFactory.h"
 
 @interface CMColorFactory()
-@property (nonatomic,strong) NSArray* colorArrays;
+@property (nonatomic,strong) NSArray *colorArrays;
 @end
-@implementation CMColorFactory
 
+@implementation CMColorFactory
 
 + (instancetype)sharedInstance {
     static dispatch_once_t once;
@@ -34,14 +34,12 @@
 - (void) initColorArrays {
     //此处从plist文件中获取
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ColorList" ofType:@"plist"];
-    NSArray* colorArrays = [[NSArray alloc] initWithContentsOfFile:path];
+    NSArray *colorArrays = [[NSArray alloc] initWithContentsOfFile:path];
     NSMutableArray *cmColorArray = [[NSMutableArray alloc] init];
     for (NSDictionary *dic in colorArrays) {
         [cmColorArray addObject:[[CMColor alloc] initWithDictionary:dic]];
     }
     self.colorArrays = cmColorArray;
 }
-
-
 
 @end

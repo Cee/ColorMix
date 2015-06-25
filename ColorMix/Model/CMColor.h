@@ -11,5 +11,5 @@
 @interface CMColor : NSObject
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic, strong) NSString *colorName;
-- (instancetype) initWithDictionary:(NSDictionary *)colorDic;
+- (instancetype)initWithDictionary:(NSDictionary *)colorDic;
 @end
