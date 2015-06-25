@@ -14,4 +14,9 @@
     [self setBackgroundColor:backgroundColor.color];
 }
 
+-(void)setToRounded {
+    self.layer.cornerRadius = MIN(self.frame.size.height,self.frame.size.width) / 2.0;
+    self.clipsToBounds = YES;
+}
+
 @end

@@ -19,16 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.classicBtn.clipsToBounds = YES;
-    self.classicBtn.layer.masksToBounds = YES;
-    self.classicBtn.layer.cornerRadius = 25.f;
-    self.fantasyBtn.clipsToBounds = YES;
-    self.fantasyBtn.layer.masksToBounds = YES;
-    self.fantasyBtn.layer.cornerRadius = 25.f;
-    self.settingsBtn.clipsToBounds = YES;
-    self.settingsBtn.layer.masksToBounds = YES;
-    self.settingsBtn.layer.cornerRadius = 25.f;
-    self.settingsBtn.layer.borderColor = [UIColor colorWithHexString:@"2ECC71"].CGColor;
+    [self.classicBtn setToRounded];
+    [self.fantasyBtn setToRounded];
+    [self.settingsBtn setToRounded];
+    self.settingsBtn.layer.borderColor = self.settingsBtn.titleLabel.textColor.CGColor;
     self.settingsBtn.layer.borderWidth = 2.f;
     // Do any additional setup after loading the view from its nib.
 }

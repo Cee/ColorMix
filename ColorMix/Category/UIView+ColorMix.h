@@ -11,4 +11,5 @@
 
 @interface UIView (ColorMix)
 - (void)cm_setBackgroundColor:(CMColor *)backgroundColor;
+- (void)setToRounded;
 @end
