@@ -9,6 +9,6 @@
 #ifndef ColorMix_CMConstants_h
 #define ColorMix_CMConstants_h
 
-#define kUmengAppKey                    @"5589890067e58efd64004060"
+#define kUmengAppKey                    @"558bb56c67e58ef671001f86"
 
 #endif
