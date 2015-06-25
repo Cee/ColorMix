@@ -16,13 +16,14 @@ typedef enum {
     fantasyMode
 } GameMode;
 
-
+#import <objc/runtime.h>
 #import <UIKit/UIKit.h>
 
 // Category
 #import "UIView+ColorMix.h"
 #import "UIColor+ColorMix.h"
 #import "UILabel+ColorMix.h"
+#import "UIViewController+ColorMix.h"
 
 // Constants
 #import "CMConstants.h"

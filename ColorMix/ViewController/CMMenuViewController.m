@@ -10,13 +10,26 @@
 #import "CMGameViewController.h"
 
 @interface CMMenuViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *classicBtn;
+@property (weak, nonatomic) IBOutlet UIButton *fantasyBtn;
+@property (weak, nonatomic) IBOutlet UIButton *settingsBtn;
 @end
 
 @implementation CMMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.classicBtn.clipsToBounds = YES;
+    self.classicBtn.layer.masksToBounds = YES;
+    self.classicBtn.layer.cornerRadius = 25.f;
+    self.fantasyBtn.clipsToBounds = YES;
+    self.fantasyBtn.layer.masksToBounds = YES;
+    self.fantasyBtn.layer.cornerRadius = 25.f;
+    self.settingsBtn.clipsToBounds = YES;
+    self.settingsBtn.layer.masksToBounds = YES;
+    self.settingsBtn.layer.cornerRadius = 25.f;
+    self.settingsBtn.layer.borderColor = [UIColor colorWithHexString:@"2ECC71"].CGColor;
+    self.settingsBtn.layer.borderWidth = 2.f;
     // Do any additional setup after loading the view from its nib.
 }
 
