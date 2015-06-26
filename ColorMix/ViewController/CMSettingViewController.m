@@ -30,7 +30,7 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onTutorialButtonClicked:(id)sender {
-    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithNibName:NSStringFromClass([CMTutorialViewController class]) bundle:nil];
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:fantasyMode];
     tutorialViewController.view.frame = self.view.bounds;
     [self.view addSubview:tutorialViewController.view];
     [self addChildViewController:tutorialViewController];

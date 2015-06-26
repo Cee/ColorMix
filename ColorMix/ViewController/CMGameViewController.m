@@ -77,7 +77,7 @@
 }
 
 - (void) showTutorial {
-    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithNibName:NSStringFromClass([CMTutorialViewController class]) bundle:nil];
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:self.gameMode];
     tutorialViewController.view.frame = self.view.frame;
     [self.view addSubview:tutorialViewController.view];
     [self addChildViewController:tutorialViewController];

@@ -12,16 +12,30 @@
 @interface CMTutorialViewController ()
 @property (weak, nonatomic) IBOutlet UIView *upViewInFirstTutorial;
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property (weak, nonatomic) IBOutlet UIView *redView;
 @property (nonatomic) NSInteger currentIndex;
+@property (weak, nonatomic) IBOutlet UIView *blueView;
+@property (weak, nonatomic) IBOutlet UIView *secondRedView;
+@property (weak, nonatomic) IBOutlet UIView *secondBlueView;
 @end
 
 @implementation CMTutorialViewController
+
+- (instancetype)initWithMode:(GameMode)gameMode {
+    NSString *xibName = gameMode == classicMode ? @"CMClassicTutorialViewController" : @"CMFantasyTutorialViewController";
+    self = [[CMTutorialViewController alloc] initWithNibName:xibName bundle:nil];
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _upViewInFirstTutorial.layer.borderColor = [UIColor whiteColor].CGColor;
     _upViewInFirstTutorial.layer.borderWidth = 2.0;
     _currentIndex = 1;
+    [_redView addShadowAtRight];
+    [_blueView addShadowAtRight];
+    [_secondBlueView addShadowAtRight];
+    [_secondRedView addShadowAtRight];
     // Do any additional setup after loading the view from its nib.
 }
 
