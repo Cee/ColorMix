@@ -20,9 +20,9 @@
         self.currentMode = gameMode;
         self.point = 0;
         self.questionFactory = [CMQuestionFactory sharedInstance];
-        self.currentQuestion = [self.questionFactory createQuestionOfMode:gameMode];
+        self.currentQuestion = [self.questionFactory createQuestionWithCardCount:1];
         self.currentQuestion.limitTime = [self limitTime];
-        self.nextQuestion = [self.questionFactory createQuestionOfMode:gameMode];
+        self.nextQuestion = [self.questionFactory createQuestionWithCardCount:1];
     }
     return self;
 }
@@ -31,11 +31,12 @@
     self.point++;
     self.currentQuestion = self.nextQuestion;
     self.currentQuestion.limitTime = [self limitTime];
-    self.nextQuestion = [self.questionFactory createQuestionOfMode:self.currentMode];
+    NSInteger cardCount = (self.point / 5 + 1) <=3 ? (self.point / 5 + 1) : 3;
+    self.nextQuestion = [self.questionFactory createQuestionWithCardCount:cardCount];
 }
 
 - (NSInteger)limitTime {
     NSInteger limitTime = 10 - self.point / 5;
-    return limitTime > 5 ? limitTime : 5;
+    return limitTime > 3 ? limitTime : 3;
 }
 @end

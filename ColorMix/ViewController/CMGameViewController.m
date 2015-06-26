@@ -64,13 +64,13 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     //currentQuestionView
     self.currentQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-    [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion];
+    [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion gameMode:self.gameMode];
     self.currentQuestionView.delegate = self;
 //    [self.currentQuestionView startTimer]
     [self.view addSubview:self.currentQuestionView];
     //nextQuestionView
     self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-    [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
+    [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion gameMode:self.gameMode];
     [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
     [self updateScore];
     [self addCardViews];
@@ -157,7 +157,7 @@
         //生成新的nextQuestionView
         CGRect frame = [UIScreen mainScreen].bounds;
         self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-        [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
+        [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion gameMode:self.gameMode];
         [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
         [self addCardViews];
     } else {

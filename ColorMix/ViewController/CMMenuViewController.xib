@@ -43,7 +43,7 @@
                         <action selector="onEasyButtonClicked:" destination="-1" eventType="touchUpInside" id="aZh-8g-3nA"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-Vi-fZt" userLabel="Logo">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-Vi-fZt" userLabel="Logo">
                     <rect key="frame" x="183" y="64" width="234" height="41"/>
                     <animations/>
                     <constraints>
