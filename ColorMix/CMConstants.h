@@ -11,6 +11,7 @@
 
 #define kUmengAppKey                    @"558bb56c67e58ef671001f86"
 #define kAppStoreUrl                    @"https://itunes.apple.com/app/co!ormix/id1011677035"
+#define kAppId @"1011677035"
 
 // keys
 #define kFirstLaunchKey @"firstLaunch"

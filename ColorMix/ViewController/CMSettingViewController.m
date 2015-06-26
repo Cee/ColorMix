@@ -47,7 +47,8 @@
 }
 
 - (IBAction)onRateUsButtonClicked:(id)sender {
-    
+    NSString *reviewURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", kAppId];
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURL]];
 }
 
 - (IBAction)onAboutUsButtonClicked:(id)sender {
