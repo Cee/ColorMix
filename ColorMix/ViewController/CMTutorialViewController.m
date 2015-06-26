@@ -48,7 +48,9 @@
         [nextView setHidden:NO];
     } else {
         [self.view removeFromSuperview];
-        [((CMGameViewController*)self.parentViewController) startGame];
+        if ([self.parentViewController isKindOfClass:[CMGameViewController class]]) {
+            [((CMGameViewController*)self.parentViewController) startGame];
+        }
         [self removeFromParentViewController];
     }
 }
