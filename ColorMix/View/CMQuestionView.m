@@ -30,11 +30,19 @@
         [self.cardView cm_setBackgroundColor:card.backgroundColor];
         [self.cardTextLabel cm_setTextColor:card.textColor];
         [self.cardTextLabel cm_setText:card.textContentColor];
+        if ([card.backgroundColor.colorName isEqualToString:@"BLACK"]) {
+            [self.timerView setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
+        }
+        if ([card.backgroundColor.colorName isEqualToString:@"WHITE"]) {
+            [self.questionLabel setTextColor:[UIColor blackColor]];
+        }
     } else {
         self.gameMode = fantasyMode;
         [self.cardView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
         [self.cardTextLabel setTextColor:[UIColor whiteColor]];
         [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld", self.question.targetCardIndex + 1]];
+        NSString *fontName = self.cardTextLabel.font.fontName;
+        [self.cardTextLabel setFont:[UIFont fontWithName:fontName size:56]];
     }
     
     //question

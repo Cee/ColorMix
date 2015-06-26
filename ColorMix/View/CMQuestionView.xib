@@ -139,7 +139,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-80-eGj">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
                             <animations/>
-                            <color key="backgroundColor" white="0.0" alpha="0.39030433768656714" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.39517257462686567" colorSpace="calibratedWhite"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8g-7a-f3F">
                             <rect key="frame" x="194" y="8" width="212" height="50"/>

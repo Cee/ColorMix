@@ -52,8 +52,8 @@
         self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
         [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
         [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
-        [self addCardViews];
         [self updateScore];
+        [self addCardViews];
     }
 }
 
@@ -81,6 +81,7 @@
         cardView.frame = self.view.bounds;
         [self.cardViewList addObject:cardView];
     }];
+    [self.view bringSubviewToFront:self.scoreLabel];
     for (NSInteger i = cardList.count - 1; i >= 0; i--) {
         UIView *cardView = self.cardViewList[i];
         [self.view addSubview:cardView];
@@ -94,7 +95,6 @@
             [cardView removeFromSuperview];
         }];
     }
-    [self.view bringSubviewToFront:self.scoreLabel];
 }
 
 
