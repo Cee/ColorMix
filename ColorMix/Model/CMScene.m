@@ -36,7 +36,7 @@
 }
 
 - (NSInteger)limitTime {
-    NSInteger limitTime = 10 - self.point / 5;
-    return limitTime > 3 ? limitTime : 3;
+    NSInteger limitTime = 5 - self.point / 5;
+    return limitTime > 2 ? limitTime : 2;
 }
 @end
