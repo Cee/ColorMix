@@ -10,4 +10,5 @@
 
 @interface CMGameViewController : UIViewController
 - (instancetype)initWithGameMode:(GameMode)mode;
+- (void) startGame;
 @end

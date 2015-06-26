@@ -25,6 +25,8 @@
 		7D56C0751B3B19230032FA52 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0741B3B19230032FA52 /* ColorList.plist */; };
 		7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */; };
 		7D56C07C1B3B25390032FA52 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */; };
+		7D7E9E8A1B3CD5B900DA58A5 /* CMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E9E881B3CD5B900DA58A5 /* CMTutorialViewController.m */; };
+		7D7E9E8B1B3CD5B900DA58A5 /* CMTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7E9E891B3CD5B900DA58A5 /* CMTutorialViewController.xib */; };
 		7D9B79B61B3C407F00055E24 /* CMGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */; };
 		7DCF5ADF1B3B2C2A00A85AB5 /* CMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */; };
 		7DCF5AE11B3B2C4800A85AB5 /* CMCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCF5AE01B3B2C4800A85AB5 /* CMCardView.xib */; };
@@ -88,6 +90,9 @@
 		7D56C0781B3B25330032FA52 /* CMGameResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameResultViewController.xib; path = ViewController/CMGameResultViewController.xib; sourceTree = "<group>"; };
 		7D56C07A1B3B25390032FA52 /* CMGameResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameResultViewController.h; path = ViewController/CMGameResultViewController.h; sourceTree = "<group>"; };
 		7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameResultViewController.m; path = ViewController/CMGameResultViewController.m; sourceTree = "<group>"; };
+		7D7E9E871B3CD5B900DA58A5 /* CMTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMTutorialViewController.h; path = ViewController/CMTutorialViewController.h; sourceTree = "<group>"; };
+		7D7E9E881B3CD5B900DA58A5 /* CMTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMTutorialViewController.m; path = ViewController/CMTutorialViewController.m; sourceTree = "<group>"; };
+		7D7E9E891B3CD5B900DA58A5 /* CMTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMTutorialViewController.xib; path = ViewController/CMTutorialViewController.xib; sourceTree = "<group>"; };
 		7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameViewController.xib; path = ViewController/CMGameViewController.xib; sourceTree = "<group>"; };
 		7DCF5ADD1B3B2C2A00A85AB5 /* CMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCardView.h; path = View/CMCardView.h; sourceTree = "<group>"; };
 		7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCardView.m; path = View/CMCardView.m; sourceTree = "<group>"; };
@@ -174,6 +179,9 @@
 		7D1BB3371B3ADB0300C2FDDC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7D7E9E871B3CD5B900DA58A5 /* CMTutorialViewController.h */,
+				7D7E9E881B3CD5B900DA58A5 /* CMTutorialViewController.m */,
+				7D7E9E891B3CD5B900DA58A5 /* CMTutorialViewController.xib */,
 				7D1BB33E1B3ADC9B00C2FDDC /* CMGameViewController.h */,
 				7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */,
 				7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */,
@@ -408,6 +416,7 @@
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
 				7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */,
 				7DFADB691B3C4B0300C2E8F6 /* CMSettingViewController.xib in Resources */,
+				7D7E9E8B1B3CD5B900DA58A5 /* CMTutorialViewController.xib in Resources */,
 				7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +437,7 @@
 			files = (
 				7DFADB6E1B3C530C00C2E8F6 /* AppDelegate.m in Sources */,
 				7D1BB3221B3AC93A00C2FDDC /* CMColor.m in Sources */,
+				7D7E9E8A1B3CD5B900DA58A5 /* CMTutorialViewController.m in Sources */,
 				7D1BB31F1B3AC8A800C2FDDC /* CMCard.m in Sources */,
 				7DFADB681B3C4B0300C2E8F6 /* CMSettingViewController.m in Sources */,
 				7D1BB33B1B3ADB4500C2FDDC /* CMMenuViewController.m in Sources */,

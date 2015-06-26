@@ -17,7 +17,8 @@
 #define kClassicHighScoreKey @"classicHighScore"
 #define kFantasyHighScoreKey @"fantasyHighScore"
 #define kGrayscaleSwitchKey @"grayscaleSwitch"
-#define kFirstPlayKey @"fistPlay"
+#define kFirstPlayClassicKey @"fistPlayClassic"
+#define kFirstPlayFantasyKey @"firstPlayFantasyKey"
 
 // Macros
 #define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending)

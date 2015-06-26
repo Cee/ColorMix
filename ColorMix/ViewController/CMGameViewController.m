@@ -12,6 +12,7 @@
 #import "CMCardView.h"
 #import "CMLabel.h"
 #import "CMGameResultViewController.h"
+#import "CMTutorialViewController.h"
 
 @interface CMGameViewController ()<QuestionViewDelegate>
 @property (nonatomic, strong) CMScene *scene;
@@ -34,27 +35,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cardViewList = [[NSMutableArray alloc] initWithCapacity:3];
+    if (self.gameMode == fantasyMode) {
+        self.cardViewList = [[NSMutableArray alloc] initWithCapacity:3];
+    }
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    if (!self.scene) {
+    if (self.scene == nil) {
+        NSString *firstPlayKey = self.gameMode == classicMode ? kFirstPlayClassicKey : kFirstPlayFantasyKey;
         self.scene = [[CMScene alloc] initWithGameMode:self.gameMode];
-        CGRect frame = [UIScreen mainScreen].bounds;
-        //currentQuestionView
-        self.currentQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-        [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion];
-        self.currentQuestionView.delegate = self;
-        [self.currentQuestionView startTimer];
-        [self.view addSubview:self.currentQuestionView];
-        //nextQuestionView
-        self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
-        [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
-        [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
-        [self updateScore];
-        [self addCardViews];
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:firstPlayKey]) {
+            [self.currentQuestionView startTimer];
+        } else {
+            [self showTutorial];
+            [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥好帅" forKey:firstPlayKey];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
     }
+}
+
+- (void)startGame {
+    [self.currentQuestionView startTimer];
+}
+
+- (void)setScene:(CMScene *)scene {
+    _scene = scene;
+    CGRect frame = [UIScreen mainScreen].bounds;
+    //currentQuestionView
+    self.currentQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
+    [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion];
+    self.currentQuestionView.delegate = self;
+//    [self.currentQuestionView startTimer]
+    [self.view addSubview:self.currentQuestionView];
+    //nextQuestionView
+    self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
+    [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion];
+    [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
+    [self updateScore];
+    [self addCardViews];
+}
+
+- (void) showTutorial {
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithNibName:NSStringFromClass([CMTutorialViewController class]) bundle:nil];
+    tutorialViewController.view.frame = self.view.frame;
+    [self.view addSubview:tutorialViewController.view];
+    [self addChildViewController:tutorialViewController];
 }
 
 - (void)didReceiveMemoryWarning {

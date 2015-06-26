@@ -8,6 +8,7 @@
 
 #import "CMSettingViewController.h"
 #import "CMMenuViewController.h"
+#import "CMTutorialViewController.h"
 
 @interface CMSettingViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *grayscaleBtn;
@@ -29,7 +30,10 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onTutorialButtonClicked:(id)sender {
-    
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithNibName:NSStringFromClass([CMTutorialViewController class]) bundle:nil];
+    tutorialViewController.view.frame = self.view.bounds;
+    [self.view addSubview:tutorialViewController.view];
+    [self addChildViewController:tutorialViewController];
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {
