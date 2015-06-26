@@ -44,6 +44,13 @@
     }];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (_blurView) {
+        [_blurView setFrame:self.view.bounds];
+    }
+}
+
 #pragma mark - Getter
 - (UIView *)blurView {
     if (!_blurView) {
