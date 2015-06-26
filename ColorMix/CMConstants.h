@@ -18,9 +18,11 @@
 #define kFantasyHighScoreKey @"fantasyHighScore"
 #define kGrayscaleSwitchKey @"grayscaleSwitch"
 #define kFirstPlayClassicKey @"fistPlayClassic"
-#define kFirstPlayFantasyKey @"firstPlayFantasyKey"
+#define kFirstPlayFantasyKey @"firstPlayFantasy"
+#define kVibrateSwitchKey @"vibrateSwitch"
 
 // Macros
 #define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending)
 #define IS_IPAD         UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #endif

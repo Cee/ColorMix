@@ -20,6 +20,7 @@
     if (![userDefaults objectForKey:kFirstLaunchKey]) {
         [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
         [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
+        [userDefaults setBool:NO forKey:kVibrateSwitchKey];
         [userDefaults synchronize];
     }
     // init analytics

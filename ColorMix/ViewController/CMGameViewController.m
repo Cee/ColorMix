@@ -13,6 +13,7 @@
 #import "CMLabel.h"
 #import "CMGameResultViewController.h"
 #import "CMTutorialViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface CMGameViewController ()<QuestionViewDelegate>
 @property (nonatomic, strong) CMScene *scene;
@@ -46,6 +47,7 @@
         NSString *firstPlayKey = self.gameMode == classicMode ? kFirstPlayClassicKey : kFirstPlayFantasyKey;
         self.scene = [[CMScene alloc] initWithGameMode:self.gameMode];
         if ([[NSUserDefaults standardUserDefaults] objectForKey:firstPlayKey]) {
+            [self addCardViews];
             [self.currentQuestionView startTimer];
         } else {
             [self showTutorial];
@@ -55,10 +57,6 @@
     }
 }
 
-- (void)startGame {
-    [self.currentQuestionView startTimer];
-}
-
 - (void)setScene:(CMScene *)scene {
     _scene = scene;
     CGRect frame = [UIScreen mainScreen].bounds;
@@ -66,18 +64,20 @@
     self.currentQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
     [self.currentQuestionView setFrame:frame question:self.scene.currentQuestion gameMode:self.gameMode];
     self.currentQuestionView.delegate = self;
-//    [self.currentQuestionView startTimer]
     [self.view addSubview:self.currentQuestionView];
     //nextQuestionView
     self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
     [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion gameMode:self.gameMode];
     [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
     [self updateScore];
-    [self addCardViews];
 }
 
 - (void) showTutorial {
-    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:self.gameMode];
+    WS(weakSelf);
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:self.gameMode completeBlock:^(BOOL completed) {
+        [weakSelf addCardViews];
+        [weakSelf.currentQuestionView startTimer];
+    }];
     tutorialViewController.view.frame = self.view.frame;
     [self.view addSubview:tutorialViewController.view];
     [self addChildViewController:tutorialViewController];
@@ -131,6 +131,9 @@
     if (highestPoint==nil || [highestPoint integerValue] < self.scene.point) {
         [userDefaults setObject:@(self.scene.point) forKey:key];
         [userDefaults synchronize];
+    }
+    if ([userDefaults boolForKey:kVibrateSwitchKey]) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
     CMGameResultViewController *gameResultViewController = [[CMGameResultViewController alloc] initWithNibName:NSStringFromClass([CMGameResultViewController class]) bundle:nil];
     gameResultViewController.gameMode = self.gameMode;

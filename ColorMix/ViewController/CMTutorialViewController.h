@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^CMTutorialBlock)(BOOL completed);
+
 @interface CMTutorialViewController : UIViewController
-- (instancetype)initWithMode:(GameMode)gameMode;
+- (instancetype)initWithMode:(GameMode)gameMode completeBlock:(CMTutorialBlock)block;
 @end

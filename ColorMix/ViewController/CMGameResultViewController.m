@@ -49,7 +49,7 @@
 - (IBAction)onShareButtonClicked:(id)sender {
     CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:self.score];
     UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
-    NSString *stringToShare = [NSString stringWithFormat:@"I score %ld points in the %@ mode, play Co!orMix with me: %@", self.score, self.gameMode == classicMode ? @"classic" : @"fantasy" , kAppStoreUrl ];
+    NSString *stringToShare = [NSString stringWithFormat:@"I score %ld points in the %@ mode, play #Co!orMix with me: %@", self.score, self.gameMode == classicMode ? @"classic" : @"fantasy" , kAppStoreUrl ];
     NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare,stringToShare, nil];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];

@@ -29,6 +29,7 @@
 		7D7E9E8B1B3CD5B900DA58A5 /* CMClassicTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D7E9E891B3CD5B900DA58A5 /* CMClassicTutorialViewController.xib */; };
 		7D9B79B61B3C407F00055E24 /* CMGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */; };
 		7DC542631B3D811200830567 /* CMFantasyTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC542621B3D811200830567 /* CMFantasyTutorialViewController.xib */; };
+		7DC542671B3DB29300830567 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC542661B3DB29300830567 /* AudioToolbox.framework */; };
 		7DCF5ADF1B3B2C2A00A85AB5 /* CMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */; };
 		7DCF5AE11B3B2C4800A85AB5 /* CMCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCF5AE01B3B2C4800A85AB5 /* CMCardView.xib */; };
 		7DFADB681B3C4B0300C2E8F6 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB661B3C4B0300C2E8F6 /* CMSettingViewController.m */; };
@@ -95,6 +96,7 @@
 		7D7E9E891B3CD5B900DA58A5 /* CMClassicTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMClassicTutorialViewController.xib; path = ViewController/CMClassicTutorialViewController.xib; sourceTree = "<group>"; };
 		7D9B79B51B3C407F00055E24 /* CMGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameViewController.xib; path = ViewController/CMGameViewController.xib; sourceTree = "<group>"; };
 		7DC542621B3D811200830567 /* CMFantasyTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMFantasyTutorialViewController.xib; path = ViewController/CMFantasyTutorialViewController.xib; sourceTree = "<group>"; };
+		7DC542661B3DB29300830567 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7DCF5ADD1B3B2C2A00A85AB5 /* CMCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMCardView.h; path = View/CMCardView.h; sourceTree = "<group>"; };
 		7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMCardView.m; path = View/CMCardView.m; sourceTree = "<group>"; };
 		7DCF5AE01B3B2C4800A85AB5 /* CMCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMCardView.xib; path = View/CMCardView.xib; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC542671B3DB29300830567 /* AudioToolbox.framework in Frameworks */,
 				923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */,
 				923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */,
 			);
@@ -157,6 +160,7 @@
 		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DC542661B3DB29300830567 /* AudioToolbox.framework */,
 				923B6D731B3BEDC4005386A4 /* libz.dylib */,
 				923B6D721B3BED9D005386A4 /* Umeng */,
 			);

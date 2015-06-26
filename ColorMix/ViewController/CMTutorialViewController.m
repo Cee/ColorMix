@@ -7,7 +7,6 @@
 //
 
 #import "CMTutorialViewController.h"
-#import "CMGameViewController.h"
 
 @interface CMTutorialViewController ()
 @property (weak, nonatomic) IBOutlet UIView *upViewInFirstTutorial;
@@ -17,13 +16,19 @@
 @property (weak, nonatomic) IBOutlet UIView *blueView;
 @property (weak, nonatomic) IBOutlet UIView *secondRedView;
 @property (weak, nonatomic) IBOutlet UIView *secondBlueView;
+@property (nonatomic, strong) CMTutorialBlock block;
 @end
 
 @implementation CMTutorialViewController
 
-- (instancetype)initWithMode:(GameMode)gameMode {
+- (instancetype)initWithMode:(GameMode)gameMode completeBlock:(CMTutorialBlock)block {
     NSString *xibName = gameMode == classicMode ? @"CMClassicTutorialViewController" : @"CMFantasyTutorialViewController";
     self = [[CMTutorialViewController alloc] initWithNibName:xibName bundle:nil];
+    if (self) {
+        if (block) {
+            self.block = block;
+        }
+    }
     return self;
 }
 
@@ -62,10 +67,10 @@
         [nextView setHidden:NO];
     } else {
         [self.view removeFromSuperview];
-        if ([self.parentViewController isKindOfClass:[CMGameViewController class]]) {
-            [((CMGameViewController*)self.parentViewController) startGame];
-        }
         [self removeFromParentViewController];
+        if (self.block) {
+            self.block(YES);
+        }
     }
 }
 

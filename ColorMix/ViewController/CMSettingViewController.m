@@ -11,7 +11,7 @@
 #import "CMTutorialViewController.h"
 
 @interface CMSettingViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *grayscaleBtn;
+@property (weak, nonatomic) IBOutlet UIButton *vibrateBtn;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @end
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.alpha = 0;
-    [self.grayscaleBtn setSelected:[[NSUserDefaults standardUserDefaults] boolForKey:kGrayscaleSwitchKey]];
+    [self.vibrateBtn setSelected:[[NSUserDefaults standardUserDefaults] boolForKey:kVibrateSwitchKey]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +30,13 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onTutorialButtonClicked:(id)sender {
-    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:fantasyMode];
+    WS(weakSelf);
+    CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:classicMode completeBlock:^(BOOL completed) {
+        CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:fantasyMode completeBlock:nil];
+        tutorialViewController.view.frame = self.view.bounds;
+        [weakSelf.view addSubview:tutorialViewController.view];
+        [weakSelf addChildViewController:tutorialViewController];
+    }];
     tutorialViewController.view.frame = self.view.bounds;
     [self.view addSubview:tutorialViewController.view];
     [self addChildViewController:tutorialViewController];
@@ -48,9 +54,9 @@
     
 }
 
-- (IBAction)onGrayscaleButtonClicked:(UIButton *)sender {
+- (IBAction)onVibrateButtonClicked:(UIButton *)sender {
     [sender setSelected:!sender.selected];
-    [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:kGrayscaleSwitchKey];
+    [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:kVibrateSwitchKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
