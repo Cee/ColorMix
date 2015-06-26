@@ -31,7 +31,10 @@
     self.point++;
     self.currentQuestion = self.nextQuestion;
     self.currentQuestion.limitTime = [self limitTime];
-    NSInteger cardCount = (self.point / 5 + 1) <=3 ? (self.point / 5 + 1) : 3;
+    NSInteger cardCount = 1;
+    if (self.currentMode == fantasyMode) {
+       cardCount  = (self.point / 5 + 1) <=3 ? (self.point / 5 + 1) : 3;
+    }
     self.nextQuestion = [self.questionFactory createQuestionWithCardCount:cardCount];
 }
 

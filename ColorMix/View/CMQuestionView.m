@@ -33,7 +33,8 @@
         if ([card.backgroundColor.colorName isEqualToString:@"BLACK"]) {
             [self.timerView setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
         }
-        if ([card.backgroundColor.colorName isEqualToString:@"WHITE"]) {
+        if ([card.backgroundColor.colorName isEqualToString:@"WHITE"] ||
+            [card.backgroundColor.colorName isEqualToString:@"YELLOW"]) {
             [self.questionLabel setTextColor:[UIColor blackColor]];
         }
     } else {
