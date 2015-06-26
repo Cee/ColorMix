@@ -21,5 +21,5 @@
 
 // Macros
 #define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending)
-
+#define IS_IPAD         UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone
 #endif

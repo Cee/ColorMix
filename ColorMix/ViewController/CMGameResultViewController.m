@@ -52,8 +52,14 @@
     NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare, nil];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
-    [self presentViewController:activityVC animated:YES completion:nil];
+    if (IS_IPAD) {
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityVC];
+        [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width / 2, self.shareBtn.frame.size.height + self.shareBtn.frame.origin.y , 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    } else {
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
+
 - (IBAction)onHomeButtonClicked:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
