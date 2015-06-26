@@ -11,19 +11,21 @@
 
 #define kUmengAppKey                    @"558bb56c67e58ef671001f86"
 #define kAppStoreUrl                    @"https://itunes.apple.com/app/co!ormix/id1011677035"
-#define kAppId @"1011677035"
+#define kAppId                          @"1011677035"
 
-// keys
-#define kFirstLaunchKey @"firstLaunch"
-#define kClassicHighScoreKey @"classicHighScore"
-#define kFantasyHighScoreKey @"fantasyHighScore"
-#define kGrayscaleSwitchKey @"grayscaleSwitch"
-#define kFirstPlayClassicKey @"fistPlayClassic"
-#define kFirstPlayFantasyKey @"firstPlayFantasy"
-#define kVibrateSwitchKey @"vibrateSwitch"
+// Keys
+#define kFirstLaunchKey                 @"firstLaunch"
+#define kClassicHighScoreKey            @"classicHighScore"
+#define kFantasyHighScoreKey            @"fantasyHighScore"
+#define kGrayscaleSwitchKey             @"grayscaleSwitch"
+#define kFirstPlayClassicKey            @"fistPlayClassic"
+#define kFirstPlayFantasyKey            @"firstPlayFantasy"
+#define kVibrateSwitchKey               @"vibrateSwitch"
+#define kClassicRankIdentifier          @"1"
+#define kFantasyRankIdentifier          @"2"
 
 // Macros
-#define IOS8_OR_LATER   ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending)
-#define IS_IPAD         UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define IS_IPAD                         UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPhone
+#define WS(weakSelf)                    __weak __typeof(&*self)weakSelf = self;
+
 #endif

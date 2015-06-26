@@ -39,6 +39,8 @@
 		7DFADB731B3C57F200C2E8F6 /* CMScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB721B3C57F200C2E8F6 /* CMScoreView.m */; };
 		7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */; };
 		7DFADB791B3C5C6100C2E8F6 /* UIImage+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */; };
+		9229E8E01B3DD43F00290828 /* CMGameCenterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */; };
+		922FA0821B3DBDCE00E3FC75 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FA0811B3DBDCE00E3FC75 /* GameKit.framework */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
@@ -111,6 +113,9 @@
 		7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMScoreView.xib; path = View/CMScoreView.xib; sourceTree = "<group>"; };
 		7DFADB771B3C5C6100C2E8F6 /* UIImage+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorMix.h"; path = "Category/UIImage+ColorMix.h"; sourceTree = "<group>"; };
 		7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorMix.m"; path = "Category/UIImage+ColorMix.m"; sourceTree = "<group>"; };
+		9229E8DE1B3DD43F00290828 /* CMGameCenterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameCenterHelper.h; path = Helper/CMGameCenterHelper.h; sourceTree = "<group>"; };
+		9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameCenterHelper.m; path = Helper/CMGameCenterHelper.m; sourceTree = "<group>"; };
+		922FA0811B3DBDCE00E3FC75 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 				7DC542671B3DB29300830567 /* AudioToolbox.framework in Frameworks */,
 				923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */,
 				923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */,
+				922FA0821B3DBDCE00E3FC75 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +166,7 @@
 		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				922FA0811B3DBDCE00E3FC75 /* GameKit.framework */,
 				7DC542661B3DB29300830567 /* AudioToolbox.framework */,
 				923B6D731B3BEDC4005386A4 /* libz.dylib */,
 				923B6D721B3BED9D005386A4 /* Umeng */,
@@ -287,6 +294,8 @@
 				7DFADB6D1B3C530C00C2E8F6 /* AppDelegate.m */,
 				9234BD651B3A805100D3FFF2 /* Images.xcassets */,
 				9234BD581B3A805100D3FFF2 /* Supporting Files */,
+				9229E8DE1B3DD43F00290828 /* CMGameCenterHelper.h */,
+				9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */,
 			);
 			path = ColorMix;
 			sourceTree = "<group>";
@@ -380,6 +389,11 @@
 					9234BD541B3A805100D3FFF2 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = BJJYLFU3B7;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					9234BD6D1B3A805100D3FFF2 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -457,6 +471,7 @@
 				7DFADB731B3C57F200C2E8F6 /* CMScoreView.m in Sources */,
 				7D1BB3361B3AD31500C2FDDC /* CMQuestionFactory.m in Sources */,
 				9234BD5B1B3A805100D3FFF2 /* main.m in Sources */,
+				9229E8E01B3DD43F00290828 /* CMGameCenterHelper.m in Sources */,
 				7D56C0681B3B0CFD0032FA52 /* UIView+ColorMix.m in Sources */,
 				7D1BB3411B3ADC9B00C2FDDC /* CMGameViewController.m in Sources */,
 				7D1BB32A1B3ACC2C00C2FDDC /* CMScene.m in Sources */,
@@ -576,7 +591,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tianyu Wang (8H8FNZFPPU)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
@@ -589,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2d2bcc7f-b970-42cb-b3d7-b95df6c82a25";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -598,8 +614,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianyu Wang (BJJYLFU3B7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tianyu Wang (BJJYLFU3B7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
@@ -612,7 +628,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32bc0792-84ed-479e-8b90-c6a78bd8e9b8";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

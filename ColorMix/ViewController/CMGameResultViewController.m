@@ -10,6 +10,7 @@
 #import "CMMenuViewController.h"
 #import "CMGameViewController.h"
 #import "CMScoreView.h"
+#import "CMGameCenterHelper.h"
 
 @interface CMGameResultViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *homeBtn;
@@ -31,6 +32,8 @@
     [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",self.score]];
     NSInteger highestScore = [[[NSUserDefaults standardUserDefaults] objectForKey:self.gameMode == classicMode ? kClassicHighScoreKey : kFantasyHighScoreKey] integerValue];
     [_highScoreLabel setText:[NSString stringWithFormat:@"Best: %ld",highestScore]];
+    [CMGameCenterHelper submitScore:highestScore
+                           category:self.gameMode == classicMode ? kClassicRankIdentifier : kFantasyRankIdentifier];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -64,15 +67,5 @@
 - (IBAction)onHomeButtonClicked:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

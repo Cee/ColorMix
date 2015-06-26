@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "CMMenuViewController.h"
-@interface AppDelegate ()
+#import "CMGameCenterHelper.h"
+
+@interface AppDelegate () <GKGameCenterControllerDelegate>
 
 @end
 
@@ -26,6 +28,7 @@
     // init analytics
     [self registerUmengTraking];
     
+    [self authenticateLocalUser];
     // init views
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -63,6 +66,73 @@
 - (void)registerUmengTraking
 {
     [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:@"Test"];
+}
+
+#pragma mark - Game Center
+- (void)authenticateLocalUser
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    __weak __typeof__(self) weakSelf = self;
+    
+    if (!localPlayer.authenticateHandler) {
+        [localPlayer setAuthenticateHandler:(^(UIViewController* viewcontroller, NSError* error) {
+            if (error) {
+                NSLog(@"Game Center Error: %@", [error localizedDescription]);
+            }
+            if (viewcontroller) {
+                [weakSelf presentGameCenterController:viewcontroller];
+            } else if ([[GKLocalPlayer localPlayer] isAuthenticated]) {
+                // Enable GameKit features
+                NSLog(@"Player already authenticated");
+            } else {
+                // Disable GameKit features
+                NSLog(@"Player not authenticated");
+            }
+        })];
+    } else {
+        NSLog(@"Authentication Handler already set");
+    }
+}
+
+- (void)testForGameCenterDismissal
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        if ([UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController) {
+            NSLog(@"Still presenting game center login");
+            [self testForGameCenterDismissal];
+        }
+        else {
+            NSLog(@"Done presenting, clean up");
+            [self gameCenterViewControllerCleanUp];
+        }
+    });
+}
+
+- (void)presentGameCenterController:(UIViewController *)viewController
+{
+    BOOL testForGameCenterDismissalInBackground = YES;
+    if ([viewController isKindOfClass:[GKGameCenterViewController class]]) {
+        [(GKGameCenterViewController *)viewController setGameCenterDelegate:self];
+        testForGameCenterDismissalInBackground = NO;
+    }
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController
+                                                                                 animated:YES
+                                                                               completion:^{
+        if (testForGameCenterDismissalInBackground) {
+            [self testForGameCenterDismissal];
+        }
+    }];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [self gameCenterViewControllerCleanUp];
+}
+
+- (void)gameCenterViewControllerCleanUp
+{
+    // Do whatever needs to be done here, resume game etc
 }
 
 @end

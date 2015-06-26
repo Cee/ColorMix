@@ -47,16 +47,10 @@
 #pragma mark - Getter
 - (UIView *)blurView {
     if (!_blurView) {
-        if (IOS8_OR_LATER) {
-            _blurView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
-            _blurView.frame = [[UIScreen mainScreen] bounds];
-        } else {
-            _blurView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-            [_blurView setBackgroundColor:[UIColor blackColor]];
-            [_blurView setAlpha:0.6];
-        }
+        _blurView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+        _blurView.frame = [[UIScreen mainScreen] bounds];
+        _blurView.alpha = 0;
     }
-    _blurView.alpha = 0;
     return _blurView;
 }
 
