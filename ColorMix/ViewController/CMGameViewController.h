@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CMGameViewController : UIViewController
-- (instancetype) initWithGameMode:(GameMode)gameMode;
+- (instancetype)initWithGameMode:(GameMode)mode;
 @end

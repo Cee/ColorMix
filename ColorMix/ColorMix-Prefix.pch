@@ -12,12 +12,28 @@
 
 //enum
 typedef enum {
-    easy,
-    expert
+    classicMode,
+    fantasyMode
 } GameMode;
 
-
+#import <objc/runtime.h>
 #import <UIKit/UIKit.h>
+
+// Category
+#import "UIView+ColorMix.h"
+#import "UIColor+ColorMix.h"
+#import "UILabel+ColorMix.h"
+#import "UIImage+ColorMix.h"
+#import "UIViewController+ColorMix.h"
+
+// Constants
+#import "CMConstants.h"
+
+
+
+// Umeng
+#import "MobClick.h"
+#import "MobClickGameAnalytics.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

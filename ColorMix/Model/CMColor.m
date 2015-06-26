@@ -9,13 +9,11 @@
 #import "CMColor.h"
 
 @implementation CMColor
-- (instancetype)initWithDictionary:(NSDictionary *)dic {
+- (instancetype)initWithDictionary:(NSDictionary *)colorDic {
     self = [super init];
     if (self) {
-        if (dic) {
-            self.color = dic[@"color"];
-            self.colorName = dic[@"colorName"];
-        }
+        self.color = [UIColor colorWithHexString:colorDic[@"Color"]];
+        self.colorName = colorDic[@"Name"];
     }
     return self;
 }

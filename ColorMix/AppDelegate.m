@@ -16,12 +16,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:kFirstLaunchKey]) {
+        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
+        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
+        [userDefaults synchronize];
+    }
+    // init analytics
+    [self registerUmengTraking];
+    
+    // init views
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     CMMenuViewController *menuViewController = [[CMMenuViewController alloc] initWithNibName:NSStringFromClass([CMMenuViewController class]) bundle:nil];
-    UINavigationController *rootNav = [[UINavigationController alloc] initWithRootViewController:menuViewController];
-    [rootNav setNavigationBarHidden:YES];
-    self.window.rootViewController = rootNav;
+    UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+    [rootNavigationController setNavigationBarHidden:YES];
+    self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -46,6 +56,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Private Method
+- (void)registerUmengTraking
+{
+    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:@"Test"];
 }
 
 @end

@@ -7,11 +7,8 @@
 //
 
 #import "CMCard.h"
-#import "CMColor.h"
+
 @interface CMCard()
-@property (nonatomic, strong) CMColor *backgroundColor;
-@property (nonatomic, strong) CMColor *textColor;
-@property (nonatomic, strong) CMColor *textContentColor;
 @property (nonatomic, strong) NSArray *colorArray;
 @end
 
@@ -19,17 +16,15 @@
 - (instancetype)initWithColorArray:(NSArray *)colorArray {
     self = [super init];
     if (self) {
-        if (colorArray.count == 3) {
-            self.backgroundColor = colorArray[0];
-            self.textColor = colorArray[1];
-            self.textContentColor = colorArray[2];
-            self.colorArray = colorArray;
-        }
+        self.backgroundColor = colorArray[0];
+        self.textColor = colorArray[1];
+        self.textContentColor = colorArray[2];
+        self.colorArray = colorArray;
     }
     return self;
 }
 
-- (NSArray *)generateOptions {
+- (NSArray*)generateOptions {
     NSMutableArray *mutableOptions = [[NSMutableArray alloc] initWithArray:self.colorArray];
     NSUInteger count = [mutableOptions count];
     //乱序
@@ -41,15 +36,16 @@
     return mutableOptions;
 }
 
-- (NSInteger)getAnswerByOptions:(NSArray *)options andElement:(Element)element {
-    CMColor* targetColor = self.colorArray[element];
+- (NSInteger)getAnswerByOptions:(NSArray *)options Element:(Element)element {
+    CMColor *targetColor = self.colorArray[element];
     int index = 0;
-    for (index = 0; index < options.count; index ++) {
-        CMColor* color = options[index];
+    for (index = 0; index < options.count; index++) {
+        CMColor *color = options[index];
         if ([targetColor.colorName isEqualToString:color.colorName]) {
-            break;
+            return index;
         }
     }
     return index;
 }
+
 @end
