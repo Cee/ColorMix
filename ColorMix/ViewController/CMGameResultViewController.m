@@ -29,7 +29,7 @@
     [_homeBtn setToRounded];
     _homeBtn.layer.borderColor = _homeBtn.titleLabel.textColor.CGColor;
     _homeBtn.layer.borderWidth = 2.0;
-    [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",self.score]];
+    [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",(long)self.score]];
     NSInteger highestScore = [[[NSUserDefaults standardUserDefaults] objectForKey:self.gameMode == classicMode ? kClassicHighScoreKey : kFantasyHighScoreKey] integerValue];
     [_highScoreLabel setText:[NSString stringWithFormat:@"Best: %ld",(long)highestScore]];
     [CMGameCenterHelper submitScore:highestScore
