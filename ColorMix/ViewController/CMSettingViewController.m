@@ -42,6 +42,10 @@
     tutorialViewController.view.frame = self.view.bounds;
     [self.view addSubview:tutorialViewController.view];
     [self addChildViewController:tutorialViewController];
+    tutorialViewController.view.alpha = 0.0;
+    [UIView animateWithDuration:0.3 animations:^{
+        tutorialViewController.view.alpha = 1.0;
+    } completion:nil];
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {
