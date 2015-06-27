@@ -11,8 +11,9 @@
 #import "CMTutorialViewController.h"
 #import "CMScoreView.h"
 
-@interface CMSettingViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+@interface CMSettingViewController ()<UIPopoverControllerDelegate>
+@property (nonatomic, strong) UIButton *shareBtn;
+@property (nonatomic, strong) UIPopoverController *shareController;
 @property (weak, nonatomic) IBOutlet UIButton *vibrateBtn;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @end
@@ -28,6 +29,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    if (self.shareController) {
+        [self.shareController dismissPopoverAnimated:NO];
+        [self.shareController presentPopoverFromRect:CGRectMake(self.view.frame.size.width / 2, self.shareBtn.frame.size.height +self.shareBtn.frame.origin.y , 0, 0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:NO];
+    }
 }
 
 #pragma mark - ButtonAction
@@ -58,8 +67,12 @@
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
     if (IS_IPAD) {
+        UIButton *shareBtn = (UIButton*)sender;
+        self.shareBtn = shareBtn;
         UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityVC];
-        [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width / 2, self.shareBtn.frame.size.height + self.shareBtn.frame.origin.y , 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+        self.shareController = popup;
+        self.shareController.delegate = self;
+        [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width / 2, shareBtn.frame.size.height +shareBtn.frame.origin.y , 0, 0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     } else {
         [self presentViewController:activityVC animated:YES completion:nil];
     }
@@ -91,6 +104,11 @@
         [self removeFromParentViewController];
         [self.view removeFromSuperview];
     }];
+}
+
+#pragma mark - UIPopoverViewController 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.shareController = nil;
 }
 /*
 #pragma mark - Navigation
