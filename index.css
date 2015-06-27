@@ -1,0 +1,62 @@
+.screen-shoot {
+  min-height: 670px;
+  background-image: url("images/Scene.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.screen-gallery, .content {
+  margin-top: 3em;
+}
+
+h1.icon-title {
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.description p {
+  font-size: 1.6em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.footer {
+  margin-top: 7em;
+  text-align: center;
+}
+
+.footer p {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.footer p a.twitter {
+  color:#ccc;
+
+}
+
+.footer p a.twitter:hover {
+  color: #468ae9;
+}
+
+.twitter i {
+  color:#ccc;
+  transition: transform .8s,color 1s;
+  -moz-transition: -moz-transform .8s,color 1s;	/* Firefox 4 */
+  -webkit-transition: -webkit-transform .8s,color 1s;	/* Safari 和 Chrome */
+  -o-transition: -o-transform .8s,color 1s;	/* Opera */
+}
+
+.twitter i:hover {
+  color: #468ae9;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);	/* Firefox 4 */
+  -webkit-transform: rotate(360deg);	/* Safari 和 Chrome */
+  -o-transform: rotate(360deg);	/* Opera */
+}
+
+.footer p:first-of-type {
+  margin-bottom: -1em;
+}
