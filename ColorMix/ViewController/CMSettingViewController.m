@@ -51,7 +51,7 @@
 
 - (IBAction)onShareButtonClicked:(id)sender {
     [MobClick event:@"Setting_Share"];
-    CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:0];
+    CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:-1];
     UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
     NSString *stringToShare = [NSString stringWithFormat:@"Think you know color? Come and play #Co!orMix, a game about color and your reflection. And please be nice to your phone. %@" , kAppStoreUrl ];
     NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare,stringToShare, nil];
