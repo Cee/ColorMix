@@ -33,13 +33,18 @@
     self.currentQuestion.limitTime = [self limitTime];
     NSInteger cardCount = 1;
     if (self.currentMode == fantasyMode) {
+        if (self.point > 25) {
+            cardCount = 3;
+        } else if (self.point > 10) {
+            cardCount = 2;
+        }
        cardCount  = (self.point / 5 + 1) <=3 ? (self.point / 5 + 1) : 3;
     }
     self.nextQuestion = [self.questionFactory createQuestionWithCardCount:cardCount];
 }
 
-- (NSInteger)limitTime {
-    NSInteger limitTime = 5 - self.point / 5;
-    return limitTime > 2 ? limitTime : 2;
+- (CGFloat)limitTime {
+    CGFloat limitTime = 7 - self.point * 0.05 ;
+    return limitTime > 1.6 ? limitTime : 1.6;
 }
 @end

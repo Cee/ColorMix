@@ -63,7 +63,7 @@
 
 #pragma mark - Public
 - (void)startTimer {
-    CGFloat interval = (CGFloat)self.question.limitTime;
+    CGFloat interval = self.question.limitTime;
     [UIView animateWithDuration:interval
                           delay:self.gameMode == classicMode ? 0 : self.question.cardList.count * 2
                         options:UIViewAnimationOptionCurveLinear
