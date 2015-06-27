@@ -17,6 +17,7 @@
 
 @interface CMGameViewController ()<QuestionViewDelegate>
 @property (nonatomic, strong) CMScene *scene;
+@property (nonatomic, strong) CMQuestionView *lastQuestionView;
 @property (nonatomic, strong) CMQuestionView *currentQuestionView;
 @property (nonatomic, strong) CMQuestionView *nextQuestionView;
 @property (nonatomic, strong) NSMutableArray *cardViewList;
@@ -111,6 +112,9 @@
     for (NSInteger i = cardList.count - 1; i >= 0; i--) {
         UIView *cardView = self.cardViewList[i];
         [self.view addSubview:cardView];
+        if (self.lastQuestionView) {
+            [self.view bringSubviewToFront:self.lastQuestionView];
+        }
         CGFloat delay = 1.7 * (i + 1);
         [UIView animateWithDuration:0.3
                               delay:delay
@@ -147,22 +151,21 @@
         [self.scene showNextQuestion];
         [self updateScore];
         self.currentQuestionView.delegate = nil;
-        CMQuestionView *lastQuestionView = self.currentQuestionView;
+        self.lastQuestionView = self.currentQuestionView;
         self.currentQuestionView = self.nextQuestionView;
         self.currentQuestionView.delegate = self;
         [self.currentQuestionView startTimer];
-        
+        [self addCardViews];
         [UIView animateWithDuration:0.3 animations:^{
-            lastQuestionView.transform = CGAffineTransformMakeTranslation(-self.view.frame.size.width, 0);
+            self.lastQuestionView.transform = CGAffineTransformMakeTranslation(-self.view.frame.size.width, 0);
         } completion:^(BOOL finished) {
-            [lastQuestionView removeFromSuperview];
+            [self.lastQuestionView removeFromSuperview];
         }];
         //生成新的nextQuestionView
         CGRect frame = [UIScreen mainScreen].bounds;
         self.nextQuestionView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CMQuestionView class]) owner:nil options:nil] objectAtIndex:0];
         [self.nextQuestionView setFrame:frame question:self.scene.nextQuestion gameMode:self.gameMode];
         [self.view insertSubview:self.nextQuestionView belowSubview:self.currentQuestionView];
-        [self addCardViews];
     } else {
         self.currentQuestionView.delegate = nil;
         [self gameEnd];

@@ -9,8 +9,10 @@
 #import "CMSettingViewController.h"
 #import "CMMenuViewController.h"
 #import "CMTutorialViewController.h"
+#import "CMScoreView.h"
 
 @interface CMSettingViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UIButton *vibrateBtn;
 @property (weak, nonatomic) IBOutlet UIView *backgroundView;
 @end
@@ -43,7 +45,18 @@
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {
-    
+    CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:0];
+    UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
+    NSString *stringToShare = [NSString stringWithFormat:@"Think you know color? Come and play Co!orMix, a game about color and your reflection. And please be nice to your phone. %@" , kAppStoreUrl ];
+    NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare,stringToShare, nil];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
+    if (IS_IPAD) {
+        UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityVC];
+        [popup presentPopoverFromRect:CGRectMake(self.view.frame.size.width / 2, self.shareBtn.frame.size.height + self.shareBtn.frame.origin.y , 0, 0)inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    } else {
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
 
 - (IBAction)onRateUsButtonClicked:(id)sender {

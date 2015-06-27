@@ -87,8 +87,6 @@
                 if (![[NSUserDefaults standardUserDefaults] objectForKey:kGameCenterEntryKey]) {
                     [weakSelf presentGameCenterController:viewcontroller];
                 }
-                [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥才不帅" forKey:kGameCenterEntryKey];
-                [[NSUserDefaults standardUserDefaults] synchronize];
             } else if ([[GKLocalPlayer localPlayer] isAuthenticated]) {
                 NSLog(@"Player already authenticated");
             } else {
@@ -98,6 +96,8 @@
     } else {
         NSLog(@"Authentication Handler already set");
     }
+    [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥才不帅" forKey:kGameCenterEntryKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)presentGameCenterController:(UIViewController *)viewController

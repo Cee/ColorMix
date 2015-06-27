@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -355,19 +354,6 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0df-JU-zIb">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start" translatesAutoresizingMaskIntoConstraints="NO" id="LyD-Uz-XTG">
-                                    <rect key="frame" x="213" y="237" width="107" height="29"/>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="I35-pS-7Um"/>
-                                        <constraint firstAttribute="width" secondItem="LyD-Uz-XTG" secondAttribute="height" multiplier="138:37" id="jfm-gJ-W5i"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="I35-pS-7Um"/>
-                                        </mask>
-                                    </variation>
-                                </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="w0o-T0-rwI">
                                     <rect key="frame" x="19" y="308" width="222" height="73"/>
                                     <animations/>
@@ -405,7 +391,6 @@
                                 <constraint firstItem="LMk-Qf-W88" firstAttribute="height" secondItem="cqY-ki-3UO" secondAttribute="height" id="Ntw-hp-Asz"/>
                                 <constraint firstAttribute="bottom" secondItem="YjZ-U9-EDN" secondAttribute="bottom" constant="30" id="Rfb-4j-1xG"/>
                                 <constraint firstItem="LMk-Qf-W88" firstAttribute="width" secondItem="cqY-ki-3UO" secondAttribute="width" id="VAE-OM-0dd"/>
-                                <constraint firstAttribute="trailing" secondItem="LyD-Uz-XTG" secondAttribute="trailing" id="aej-gJ-QR4"/>
                                 <constraint firstItem="LMk-Qf-W88" firstAttribute="leading" secondItem="YjZ-U9-EDN" secondAttribute="trailing" id="c3k-iy-n4x"/>
                                 <constraint firstAttribute="trailing" secondItem="LMk-Qf-W88" secondAttribute="trailing" id="d4d-MA-BEM"/>
                                 <constraint firstItem="LMk-Qf-W88" firstAttribute="top" secondItem="0df-JU-zIb" secondAttribute="top" id="h3f-JC-VVp"/>
@@ -413,7 +398,6 @@
                                 <constraint firstAttribute="bottom" secondItem="cqY-ki-3UO" secondAttribute="bottom" constant="142" id="mJ8-a7-XmQ"/>
                                 <constraint firstItem="YjZ-U9-EDN" firstAttribute="leading" secondItem="cqY-ki-3UO" secondAttribute="trailing" id="moq-wy-rrZ"/>
                                 <constraint firstItem="T9v-pw-VsH" firstAttribute="centerX" secondItem="YjZ-U9-EDN" secondAttribute="centerX" constant="20" id="p4A-IX-rAf"/>
-                                <constraint firstAttribute="width" secondItem="LyD-Uz-XTG" secondAttribute="width" multiplier="3:1" id="qZZ-bL-99R"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
@@ -460,7 +444,6 @@
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="width" secondItem="9bp-xE-XdL" secondAttribute="width" id="2hE-oO-ASV"/>
                 <constraint firstAttribute="trailing" secondItem="d95-vp-Ifx" secondAttribute="trailing" id="3fP-QJ-ylM"/>
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="height" secondItem="a2p-aN-8MG" secondAttribute="height" multiplier="1:2" id="5vI-I4-RyT"/>
-                <constraint firstItem="LyD-Uz-XTG" firstAttribute="centerY" secondItem="RlS-Bf-AC4" secondAttribute="centerY" id="6DD-r3-aU9"/>
                 <constraint firstItem="hGG-el-p4b" firstAttribute="leading" secondItem="kLp-7a-KrL" secondAttribute="leading" id="6Lu-0d-6lr"/>
                 <constraint firstItem="a2p-aN-8MG" firstAttribute="leading" secondItem="HB5-H8-81Y" secondAttribute="leading" id="6hg-0A-hos"/>
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="trailing" secondItem="9bp-xE-XdL" secondAttribute="trailing" id="7Sx-XJ-FA3"/>
@@ -488,7 +471,6 @@
                 <constraint firstAttribute="bottom" secondItem="ZIf-lZ-lDK" secondAttribute="bottom" id="Qer-8F-YGr"/>
                 <constraint firstItem="4aF-mb-kHz" firstAttribute="bottom" secondItem="ty0-9x-qrs" secondAttribute="bottom" constant="-61" id="RMF-EO-RvC"/>
                 <constraint firstAttribute="bottom" secondItem="Ilg-Id-Q46" secondAttribute="bottom" id="RYI-j0-zmc"/>
-                <constraint firstItem="LyD-Uz-XTG" firstAttribute="leading" secondItem="RlS-Bf-AC4" secondAttribute="trailing" constant="-60" id="Sl8-Ko-8wS"/>
                 <constraint firstItem="hGG-el-p4b" firstAttribute="trailing" secondItem="kLp-7a-KrL" secondAttribute="trailing" id="SuY-DV-v5A"/>
                 <constraint firstItem="Z9Y-nI-P8H" firstAttribute="top" secondItem="ty0-9x-qrs" secondAttribute="top" id="TCS-O3-Zoj"/>
                 <constraint firstItem="CAS-B3-rqP" firstAttribute="top" secondItem="HB5-H8-81Y" secondAttribute="top" id="VNb-do-iAU"/>
@@ -538,7 +520,6 @@
                     <exclude reference="RMF-EO-RvC"/>
                     <exclude reference="gGW-KC-hC4"/>
                     <exclude reference="GpB-pf-uAl"/>
-                    <exclude reference="Sl8-Ko-8wS"/>
                     <exclude reference="iB1-Rb-pu3"/>
                     <exclude reference="m4H-Sn-YHA"/>
                 </mask>
@@ -554,7 +535,6 @@
         <image name="choice_circle" width="325" height="65"/>
         <image name="meaning" width="296" height="18"/>
         <image name="question_underscore" width="227" height="28"/>
-        <image name="start" width="138" height="37"/>
         <image name="word" width="263" height="18"/>
         <image name="word_underscore" width="164" height="18"/>
     </resources>
