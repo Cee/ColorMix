@@ -13,7 +13,7 @@
 @property (nonatomic, strong) NSArray *cardList;
 @property (nonatomic, strong) NSArray *options;
 @property (nonatomic) NSUInteger targetCardIndex;
-@property (nonatomic) NSInteger limitTime;
+@property (nonatomic) CGFloat limitTime;
 - (BOOL)checkAnswer:(NSInteger)answerIndex;
 - (NSString *)getQuestion;
 - (instancetype)initWithCardList:(NSArray *)cardList;

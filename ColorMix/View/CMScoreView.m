@@ -10,6 +10,7 @@
 #import "CMColorFactory.h"
 
 @interface CMScoreView()
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @end
 @implementation CMScoreView
@@ -25,11 +26,12 @@
 
 #pragma mark - Private
 - (void)setScore:(NSInteger)score {
-    if (score == 0) {
+    if (score == -1) {
         [self.scoreLabel setHidden:YES];
+        [self.logoImageView setHidden:NO];
         return;
     }
-    NSMutableAttributedString *scoreAttributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", score] attributes:@{NSStrokeWidthAttributeName : @(10.f) , NSFontAttributeName : self.scoreLabel.font}];
+    NSMutableAttributedString *scoreAttributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", (long)score] attributes:@{NSStrokeWidthAttributeName : @(10.f) , NSFontAttributeName : self.scoreLabel.font}];
     for (int i = 0 ; i < scoreAttributedString.length; i ++) {
         CMColor *randomColor = [[CMColorFactory sharedInstance] createColorExcept:@"WHITE"];
         [scoreAttributedString addAttribute:NSStrokeColorAttributeName value:randomColor.color range:NSMakeRange(i, 1)];

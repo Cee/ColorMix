@@ -29,9 +29,9 @@
     [_homeBtn setToRounded];
     _homeBtn.layer.borderColor = _homeBtn.titleLabel.textColor.CGColor;
     _homeBtn.layer.borderWidth = 2.0;
-    [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",self.score]];
+    [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",(long)self.score]];
     NSInteger highestScore = [[[NSUserDefaults standardUserDefaults] objectForKey:self.gameMode == classicMode ? kClassicHighScoreKey : kFantasyHighScoreKey] integerValue];
-    [_highScoreLabel setText:[NSString stringWithFormat:@"Best: %ld",highestScore]];
+    [_highScoreLabel setText:[NSString stringWithFormat:@"Best: %ld",(long)highestScore]];
     [CMGameCenterHelper submitScore:highestScore
                            category:self.gameMode == classicMode ? kClassicRankIdentifier : kFantasyRankIdentifier];
     // Do any additional setup after loading the view from its nib.
@@ -44,15 +44,17 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onReplayButtonClicked:(id)sender {
+    [MobClick event:@"Replay"];
     CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:_gameMode];
     [self.navigationController pushViewController:gameViewController animated:YES];
     self.navigationController.viewControllers = @[self.navigationController.childViewControllers[0], self.navigationController.topViewController];
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {
+    [MobClick event:@"Share"];
     CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:self.score];
     UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
-    NSString *stringToShare = [NSString stringWithFormat:@"I score %ld points in the %@ mode, play #Co!orMix with me: %@", self.score, self.gameMode == classicMode ? @"classic" : @"fantasy" , kAppStoreUrl ];
+    NSString *stringToShare = [NSString stringWithFormat:@"I score %ld points in the %@ mode, play #Co!orMix with me: %@", (long)self.score, self.gameMode == classicMode ? @"classic" : @"fantasy" , kAppStoreUrl ];
     NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare,stringToShare, nil];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
@@ -65,6 +67,7 @@
 }
 
 - (IBAction)onHomeButtonClicked:(id)sender {
+    [MobClick event:@"Home"];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

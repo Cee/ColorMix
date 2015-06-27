@@ -41,7 +41,7 @@
         self.gameMode = fantasyMode;
         [self.cardView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]];
         [self.cardTextLabel setTextColor:[UIColor whiteColor]];
-        [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld", self.question.targetCardIndex + 1]];
+        [self.cardTextLabel setText:[NSString stringWithFormat:@"#%ld", (long)(self.question.targetCardIndex + 1)]];
         NSString *fontName = self.cardTextLabel.font.fontName;
         [self.cardTextLabel setFont:[UIFont fontWithName:fontName size:56]];
     }
@@ -63,7 +63,7 @@
 
 #pragma mark - Public
 - (void)startTimer {
-    CGFloat interval = (CGFloat)self.question.limitTime;
+    CGFloat interval = self.question.limitTime;
     [UIView animateWithDuration:interval
                           delay:self.gameMode == classicMode ? 0 : self.question.cardList.count * 2
                         options:UIViewAnimationOptionCurveLinear

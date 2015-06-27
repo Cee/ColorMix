@@ -91,7 +91,7 @@
 
 #pragma mark - Private
 - (void)updateScore {
-    [self.scoreLabel setText:[NSString stringWithFormat:@"%ld\t",self.scene.point]];
+    [self.scoreLabel setText:[NSString stringWithFormat:@"%ld\t",(long)self.scene.point]];
     [self.view bringSubviewToFront:self.scoreLabel];
 }
 
