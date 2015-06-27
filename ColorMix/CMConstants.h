@@ -15,6 +15,7 @@
 
 // Keys
 #define kFirstLaunchKey                 @"firstLaunch"
+#define kGameCenterEntryKey             @"gameCenterEntryKey"
 #define kClassicHighScoreKey            @"classicHighScore"
 #define kFantasyHighScoreKey            @"fantasyHighScore"
 #define kGrayscaleSwitchKey             @"grayscaleSwitch"

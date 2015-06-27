@@ -18,14 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if (![userDefaults objectForKey:kFirstLaunchKey]) {
-        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
-        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
-        [userDefaults setBool:NO forKey:kVibrateSwitchKey];
-        [userDefaults synchronize];
-    }
-    // init analytics
+        // init analytics
     [self registerUmengTraking];
     
     [self authenticateLocalUser];
@@ -63,6 +56,17 @@
 }
 
 #pragma mark - Private Method
+- (void)checkDefaults
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:kFirstLaunchKey]) {
+        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
+        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
+        [userDefaults setBool:NO forKey:kVibrateSwitchKey];
+        [userDefaults synchronize];
+    }
+}
+
 - (void)registerUmengTraking
 {
     [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:@"Test"];
@@ -80,32 +84,20 @@
                 NSLog(@"Game Center Error: %@", [error localizedDescription]);
             }
             if (viewcontroller) {
-                [weakSelf presentGameCenterController:viewcontroller];
+                if (![[NSUserDefaults standardUserDefaults] objectForKey:kGameCenterEntryKey]) {
+                    [weakSelf presentGameCenterController:viewcontroller];
+                }
+                [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥才不帅" forKey:kGameCenterEntryKey];
+                [[NSUserDefaults standardUserDefaults] synchronize];
             } else if ([[GKLocalPlayer localPlayer] isAuthenticated]) {
-                // Enable GameKit features
                 NSLog(@"Player already authenticated");
             } else {
-                // Disable GameKit features
                 NSLog(@"Player not authenticated");
             }
         })];
     } else {
         NSLog(@"Authentication Handler already set");
     }
-}
-
-- (void)testForGameCenterDismissal
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        if ([UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController) {
-            NSLog(@"Still presenting game center login");
-            [self testForGameCenterDismissal];
-        }
-        else {
-            NSLog(@"Done presenting, clean up");
-            [self gameCenterViewControllerCleanUp];
-        }
-    });
 }
 
 - (void)presentGameCenterController:(UIViewController *)viewController
@@ -118,11 +110,7 @@
     
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController
                                                                                  animated:YES
-                                                                               completion:^{
-        if (testForGameCenterDismissalInBackground) {
-            [self testForGameCenterDismissal];
-        }
-    }];
+                                                                               completion:nil];
 }
 
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
@@ -132,7 +120,7 @@
 
 - (void)gameCenterViewControllerCleanUp
 {
-    // Do whatever needs to be done here, resume game etc
+    // Do nothing here
 }
 
 @end
