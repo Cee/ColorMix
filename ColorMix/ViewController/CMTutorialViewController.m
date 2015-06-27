@@ -41,6 +41,7 @@
     [_blueView addShadowAtRight];
     [_secondBlueView addShadowAtRight];
     [_secondRedView addShadowAtRight];
+    [self.questionLabel setText:@"Background"];
     // Do any additional setup after loading the view from its nib.
 }
 

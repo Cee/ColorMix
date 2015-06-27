@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "JUST TRY YOUR BEST T.png"
+      "filename" : "JUST TRY YOUR BEST T.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "JUST TRY YOUR BEST T@2x.png"
+      "filename" : "JUST TRY YOUR BEST T@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "JUST TRY YOUR BEST T@3x.png"
+      "filename" : "JUST TRY YOUR BEST T@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

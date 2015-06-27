@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "choice.png"
+      "filename" : "THEN CHOOSE THE MATC.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "choice@2x.png"
+      "filename" : "THEN CHOOSE THE MATC@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "choice@3x.png"
+      "filename" : "THEN CHOOSE THE MATC@3x.png",
+      "scale" : "3x"
     }
   ],
   "info" : {
