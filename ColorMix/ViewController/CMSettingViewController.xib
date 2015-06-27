@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CMSettingViewController">
             <connections>
                 <outlet property="backgroundView" destination="k59-8i-wSP" id="6QG-Ac-g0D"/>
-                <outlet property="shareBtn" destination="4Tq-PB-RvB" id="vby-TA-pUo"/>
                 <outlet property="vibrateBtn" destination="KoP-lu-FWP" id="WE6-C9-xjl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
