@@ -69,7 +69,9 @@
 
 - (void)registerUmengTraking
 {
-    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:@"Test"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:kChannelId];
 }
 
 #pragma mark - Game Center

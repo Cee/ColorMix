@@ -32,6 +32,7 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onTutorialButtonClicked:(id)sender {
+    [MobClick event:@"Setting_Tutorial"];
     WS(weakSelf);
     CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:classicMode completeBlock:^(BOOL completed) {
         CMTutorialViewController *tutorialViewController = [[CMTutorialViewController alloc] initWithMode:fantasyMode completeBlock:nil];
@@ -49,6 +50,7 @@
 }
 
 - (IBAction)onShareButtonClicked:(id)sender {
+    [MobClick event:@"Setting_Share"];
     CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:0];
     UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
     NSString *stringToShare = [NSString stringWithFormat:@"Think you know color? Come and play #Co!orMix, a game about color and your reflection. And please be nice to your phone. %@" , kAppStoreUrl ];
@@ -64,6 +66,7 @@
 }
 
 - (IBAction)onRateUsButtonClicked:(id)sender {
+    [MobClick event:@"Setting_Rate"];
     NSString *reviewURL = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", kAppId];
      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewURL]];
 }
@@ -73,6 +76,7 @@
 }
 
 - (IBAction)onVibrateButtonClicked:(UIButton *)sender {
+    [MobClick event:@"Setting_Vibrate"];
     [sender setSelected:!sender.selected];
     [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:kVibrateSwitchKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
