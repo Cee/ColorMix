@@ -25,6 +25,10 @@
 
 #pragma mark - Private
 - (void)setScore:(NSInteger)score {
+    if (score == 0) {
+        [self.scoreLabel setHidden:YES];
+        return;
+    }
     NSMutableAttributedString *scoreAttributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", score] attributes:@{NSStrokeWidthAttributeName : @(10.f) , NSFontAttributeName : self.scoreLabel.font}];
     for (int i = 0 ; i < scoreAttributedString.length; i ++) {
         CMColor *randomColor = [[CMColorFactory sharedInstance] createColorExcept:@"WHITE"];

@@ -8,8 +8,6 @@
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-DemiBold</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -28,29 +26,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4g-2Z-bRL">
-                    <rect key="frame" x="200" y="241" width="200" height="50"/>
-                    <animations/>
-                    <color key="backgroundColor" red="1" green="0.15686274510000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="fWH-XY-4RQ"/>
-                        <constraint firstAttribute="width" constant="200" id="i4U-Iu-lHp"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                    <state key="normal" title="Replay">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onReplayButtonClicked:" destination="-1" eventType="touchUpInside" id="dow-Hv-mqJ"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColorMix" translatesAutoresizingMaskIntoConstraints="NO" id="kb2-XH-HGM" userLabel="Logo">
                     <rect key="frame" x="183" y="64" width="234" height="41"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="234" id="BaU-Ag-5Pi"/>
                         <constraint firstAttribute="height" constant="42" id="opy-ZL-eiY"/>
+                        <constraint firstAttribute="height" constant="41" id="teC-sD-Dix"/>
+                        <constraint firstAttribute="width" constant="234" id="thH-2s-zAW"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
@@ -60,7 +43,7 @@
                     </variation>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oK5-fe-fwB">
-                    <rect key="frame" x="200" y="305" width="200" height="50"/>
+                    <rect key="frame" x="200" y="364" width="200" height="50"/>
                     <animations/>
                     <color key="backgroundColor" red="0.3294117647" green="0.78039215689999997" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -76,7 +59,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihv-0d-VuA">
-                    <rect key="frame" x="200" y="369" width="200" height="50"/>
+                    <rect key="frame" x="200" y="428" width="200" height="50"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="lAz-cb-u6w"/>
@@ -92,20 +75,6 @@
                         <action selector="onHomeButtonClicked:" destination="-1" eventType="touchUpInside" id="aKP-yu-YVc"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-V4-5ub">
-                    <rect key="frame" x="255" y="182" width="91" height="33"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
-                    <rect key="frame" x="248" y="144" width="105" height="33"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-wX-Ku0">
                     <rect key="frame" x="194" y="555" width="213" height="25"/>
                     <animations/>
@@ -153,6 +122,56 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08u-dc-qMO">
+                    <rect key="frame" x="0.0" y="105" width="600" height="195"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-r7-deW">
+                            <rect key="frame" x="237" y="53" width="126" height="40"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="29"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1g-V4-5ub">
+                            <rect key="frame" x="245" y="108" width="109" height="40"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="29"/>
+                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="uMo-r7-deW" secondAttribute="centerY" constant="25" id="EdQ-a4-PyW"/>
+                        <constraint firstAttribute="centerX" secondItem="uMo-r7-deW" secondAttribute="centerX" id="UBY-zA-vPE"/>
+                        <constraint firstItem="uMo-r7-deW" firstAttribute="top" secondItem="Z1g-V4-5ub" secondAttribute="bottom" constant="15" id="bBs-hZ-t2A"/>
+                        <constraint firstItem="Z1g-V4-5ub" firstAttribute="top" secondItem="uMo-r7-deW" secondAttribute="bottom" constant="15" id="ijk-hz-yHJ"/>
+                        <constraint firstItem="Z1g-V4-5ub" firstAttribute="centerX" secondItem="uMo-r7-deW" secondAttribute="centerX" id="rJN-jK-wuE"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bBs-hZ-t2A"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4g-2Z-bRL">
+                    <rect key="frame" x="200" y="300" width="200" height="50"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.15686274510000001" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fWH-XY-4RQ"/>
+                        <constraint firstAttribute="width" constant="200" id="i4U-Iu-lHp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                    <state key="normal" title="Replay">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onReplayButtonClicked:" destination="-1" eventType="touchUpInside" id="dow-Hv-mqJ"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -161,18 +180,20 @@
                 <constraint firstAttribute="bottom" secondItem="mh4-wX-Ku0" secondAttribute="bottom" constant="20" id="7Gl-jz-ywt"/>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="top" secondItem="ovD-eN-FDb" secondAttribute="top" constant="64" id="AU2-zi-yF1"/>
                 <constraint firstItem="kb2-XH-HGM" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="D9T-Wf-fvZ"/>
+                <constraint firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="H4F-HE-dOm"/>
                 <constraint firstItem="ihv-0d-VuA" firstAttribute="top" secondItem="oK5-fe-fwB" secondAttribute="bottom" constant="14" id="Ky8-6B-SjL"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="top" secondItem="o4g-2Z-bRL" secondAttribute="bottom" constant="14" id="LLD-8d-yiS"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="centerX" secondItem="ihv-0d-VuA" secondAttribute="centerX" id="Qaf-zh-ZdJ"/>
+                <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="08u-dc-qMO" secondAttribute="bottom" id="Ruy-ou-VTZ"/>
+                <constraint firstItem="08u-dc-qMO" firstAttribute="leading" secondItem="ovD-eN-FDb" secondAttribute="leading" id="W8u-SY-ig5"/>
                 <constraint firstItem="oK5-fe-fwB" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="Whh-5R-keL"/>
-                <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="Z1g-V4-5ub" secondAttribute="bottom" constant="26" id="Z6t-jt-8eC"/>
-                <constraint firstItem="Z1g-V4-5ub" firstAttribute="top" secondItem="uMo-r7-deW" secondAttribute="bottom" constant="5" id="eQ7-ng-puf"/>
-                <constraint firstItem="uMo-r7-deW" firstAttribute="centerX" secondItem="Z1g-V4-5ub" secondAttribute="centerX" id="fpc-dD-Avn"/>
+                <constraint firstItem="08u-dc-qMO" firstAttribute="top" secondItem="kb2-XH-HGM" secondAttribute="bottom" id="ghV-At-zPm"/>
                 <constraint firstAttribute="centerY" secondItem="oK5-fe-fwB" secondAttribute="centerY" constant="-30" id="kBV-dG-X91"/>
                 <constraint firstAttribute="centerX" secondItem="oK5-fe-fwB" secondAttribute="centerX" id="lMa-4o-kr7"/>
-                <constraint firstItem="Z1g-V4-5ub" firstAttribute="centerX" secondItem="o4g-2Z-bRL" secondAttribute="centerX" id="pPQ-lI-7Hm"/>
+                <constraint firstAttribute="trailing" secondItem="08u-dc-qMO" secondAttribute="trailing" id="mEB-Zz-P6F"/>
                 <constraint firstAttribute="centerX" secondItem="mh4-wX-Ku0" secondAttribute="centerX" id="rbm-ns-RQs"/>
                 <constraint firstItem="o4g-2Z-bRL" firstAttribute="top" secondItem="kb2-XH-HGM" secondAttribute="bottom" constant="50" id="roZ-VQ-RkX"/>
+                <constraint firstAttribute="centerY" secondItem="o4g-2Z-bRL" secondAttribute="centerY" constant="-25" id="xmT-sS-Gtc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -182,6 +203,8 @@
                 <mask key="constraints">
                     <exclude reference="4N8-PK-VS8"/>
                     <exclude reference="roZ-VQ-RkX"/>
+                    <exclude reference="kBV-dG-X91"/>
+                    <exclude reference="lMa-4o-kr7"/>
                 </mask>
             </variation>
         </view>

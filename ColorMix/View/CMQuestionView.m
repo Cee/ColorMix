@@ -20,11 +20,11 @@
 
 @implementation CMQuestionView
 
-- (void)setFrame:(CGRect)frame question:(CMQuestion *)question {
+- (void)setFrame:(CGRect)frame question:(CMQuestion *)question gameMode:(GameMode)gameMode{
     [self setFrame:frame];
+    self.gameMode = gameMode;
     self.question = question;
-    if (question.cardList.count == 1) {
-        self.gameMode = classicMode;
+    if (self.gameMode == classicMode) {
         CMCard *card = question.cardList[0];
         //card
         [self.cardView cm_setBackgroundColor:card.backgroundColor];
@@ -33,7 +33,8 @@
         if ([card.backgroundColor.colorName isEqualToString:@"BLACK"]) {
             [self.timerView setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.6]];
         }
-        if ([card.backgroundColor.colorName isEqualToString:@"WHITE"]) {
+        if ([card.backgroundColor.colorName isEqualToString:@"WHITE"] ||
+            [card.backgroundColor.colorName isEqualToString:@"YELLOW"]) {
             [self.questionLabel setTextColor:[UIColor blackColor]];
         }
     } else {
@@ -64,7 +65,7 @@
 - (void)startTimer {
     CGFloat interval = (CGFloat)self.question.limitTime;
     [UIView animateWithDuration:interval
-                          delay:self.gameMode == classicMode ? 0 : 6
+                          delay:self.gameMode == classicMode ? 0 : self.question.cardList.count * 2
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
         self.timerView.transform = CGAffineTransformMakeTranslation(-[[UIScreen mainScreen] bounds].size.width, 0);

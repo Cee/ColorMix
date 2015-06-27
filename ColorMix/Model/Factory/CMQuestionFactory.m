@@ -20,9 +20,8 @@
     return sharedInstance;
 }
 
-- (CMQuestion *)createQuestionOfMode:(GameMode)mode {
-    NSInteger cardCount = mode == classicMode ? 1 : 3;
-    NSMutableArray *cardList = [[NSMutableArray alloc] initWithCapacity:3];
+- (CMQuestion *)createQuestionWithCardCount:(NSInteger)cardCount{
+    NSMutableArray *cardList = [[NSMutableArray alloc] initWithCapacity:cardCount];
     for (int i = 0 ; i < cardCount ; i++) {
         CMCard* randomCard = [[CMCardFactory sharedInstance] createCard];
         [cardList addObject:randomCard];

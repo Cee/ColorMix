@@ -18,7 +18,7 @@
 		<key>Name</key>
 		<string>YELLOW</string>
 		<key>Color</key>
-		<string>FFCD00</string>
+		<string>FFEE24</string>
 	</dict>
 	<dict>
 		<key>Name</key>
@@ -36,19 +36,19 @@
 		<key>Name</key>
 		<string>PINK</string>
 		<key>Color</key>
-		<string>FF2851</string>
+		<string>FF99AC</string>
 	</dict>
 	<dict>
 		<key>Name</key>
 		<string>BROWN</string>
 		<key>Color</key>
-		<string>8B572A</string>
+		<string>6A4320</string>
 	</dict>
 	<dict>
 		<key>Name</key>
 		<string>RED</string>
 		<key>Color</key>
-		<string>FF3824</string>
+		<string>FF220C</string>
 	</dict>
 	<dict>
 		<key>Name</key>

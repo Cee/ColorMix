@@ -19,4 +19,9 @@
     self.clipsToBounds = YES;
 }
 
+-(void)addShadowAtRight {
+    self.layer.shadowOffset = CGSizeMake(0, 20);
+    self.layer.shadowRadius = 10;
+    self.layer.shadowOpacity = 0.5;
+}
 @end

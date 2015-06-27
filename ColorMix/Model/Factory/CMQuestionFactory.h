@@ -11,5 +11,5 @@
 
 @interface CMQuestionFactory : NSObject
 + (instancetype)sharedInstance;
-- (CMQuestion *)createQuestionOfMode:(GameMode)mode;
+- (CMQuestion *)createQuestionWithCardCount:(NSInteger)cardCount;
 @end

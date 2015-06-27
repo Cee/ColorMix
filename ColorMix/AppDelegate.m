@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "CMMenuViewController.h"
-@interface AppDelegate ()
+#import "CMGameCenterHelper.h"
+
+@interface AppDelegate () <GKGameCenterControllerDelegate>
 
 @end
 
@@ -16,15 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if (![userDefaults objectForKey:kFirstLaunchKey]) {
-        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
-        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
-        [userDefaults synchronize];
-    }
-    // init analytics
+        // init analytics
     [self registerUmengTraking];
     
+    [self authenticateLocalUser];
     // init views
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -59,9 +56,71 @@
 }
 
 #pragma mark - Private Method
+- (void)checkDefaults
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:kFirstLaunchKey]) {
+        [userDefaults setObject:@"钦哥哥好帅" forKey:kFirstLaunchKey];
+        [userDefaults setBool:NO forKey:kGrayscaleSwitchKey];
+        [userDefaults setBool:NO forKey:kVibrateSwitchKey];
+        [userDefaults synchronize];
+    }
+}
+
 - (void)registerUmengTraking
 {
     [MobClick startWithAppkey:kUmengAppKey reportPolicy:BATCH channelId:@"Test"];
+}
+
+#pragma mark - Game Center
+- (void)authenticateLocalUser
+{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    __weak __typeof__(self) weakSelf = self;
+    
+    if (!localPlayer.authenticateHandler) {
+        [localPlayer setAuthenticateHandler:(^(UIViewController* viewcontroller, NSError* error) {
+            if (error) {
+                NSLog(@"Game Center Error: %@", [error localizedDescription]);
+            }
+            if (viewcontroller) {
+                if (![[NSUserDefaults standardUserDefaults] objectForKey:kGameCenterEntryKey]) {
+                    [weakSelf presentGameCenterController:viewcontroller];
+                }
+            } else if ([[GKLocalPlayer localPlayer] isAuthenticated]) {
+                NSLog(@"Player already authenticated");
+            } else {
+                NSLog(@"Player not authenticated");
+            }
+        })];
+    } else {
+        NSLog(@"Authentication Handler already set");
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥才不帅" forKey:kGameCenterEntryKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)presentGameCenterController:(UIViewController *)viewController
+{
+    BOOL testForGameCenterDismissalInBackground = YES;
+    if ([viewController isKindOfClass:[GKGameCenterViewController class]]) {
+        [(GKGameCenterViewController *)viewController setGameCenterDelegate:self];
+        testForGameCenterDismissalInBackground = NO;
+    }
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:viewController
+                                                                                 animated:YES
+                                                                               completion:nil];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [self gameCenterViewControllerCleanUp];
+}
+
+- (void)gameCenterViewControllerCleanUp
+{
+    // Do nothing here
 }
 
 @end
