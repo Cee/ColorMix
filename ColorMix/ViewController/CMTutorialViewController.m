@@ -56,7 +56,7 @@
             [_questionLabel setText:@"Color"];
             break;
         case 2:
-            [_questionLabel setText:@"Text"];
+            [_questionLabel setText:@"Meaning"];
             break;
         default:
             break;

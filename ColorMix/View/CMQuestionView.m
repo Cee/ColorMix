@@ -15,6 +15,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *questionLabel;
 @property (nonatomic, weak) IBOutlet UIView *optionView;
 @property (nonatomic, strong) CMQuestion *question;
+@property (nonatomic) BOOL isAnswered;
 @property (nonatomic) GameMode gameMode;
 @end
 
@@ -24,6 +25,7 @@
     [self setFrame:frame];
     self.gameMode = gameMode;
     self.question = question;
+    self.isAnswered = NO;
     if (self.gameMode == classicMode) {
         CMCard *card = question.cardList[0];
         //card
@@ -79,7 +81,10 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onOptionButtonClicked:(UIControl *)sender {
-    [self.delegate answerQuestionWithResult:[_question checkAnswer:sender.tag - 1]];
+    if (!self.isAnswered) {
+        self.isAnswered = YES;
+        [self.delegate answerQuestionWithResult:[_question checkAnswer:sender.tag - 1]];
+    }
 }
 
 @end

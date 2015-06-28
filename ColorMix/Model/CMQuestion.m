@@ -45,7 +45,7 @@
             return @"Color";
             break;
         case textContent:
-            return @"Text";
+            return @"Meaning";
         default:
             break;
     }

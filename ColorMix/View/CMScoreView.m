@@ -31,7 +31,7 @@
         [self.logoImageView setHidden:NO];
         return;
     }
-    NSMutableAttributedString *scoreAttributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", (long)score] attributes:@{NSStrokeWidthAttributeName : @(10.f) , NSFontAttributeName : self.scoreLabel.font}];
+    NSMutableAttributedString *scoreAttributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", (long)score] attributes:@{NSStrokeWidthAttributeName : @(8) , NSFontAttributeName : self.scoreLabel.font}];
     for (int i = 0 ; i < scoreAttributedString.length; i ++) {
         CMColor *randomColor = [[CMColorFactory sharedInstance] createColorExcept:@"WHITE"];
         [scoreAttributedString addAttribute:NSStrokeColorAttributeName value:randomColor.color range:NSMakeRange(i, 1)];
