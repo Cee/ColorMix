@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *fantasyBtn;
 @property (weak, nonatomic) IBOutlet UIButton *settingsBtn;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+@property (nonatomic, strong) CMSettingViewController *settingViewController;
 @property (nonatomic, strong) UIView *blurView;
 @end
 
@@ -29,6 +30,14 @@
     self.settingsBtn.layer.borderWidth = 2.f;
     [self.versionLabel setText:[NSString stringWithFormat:@"v %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.blurView.alpha = 0;
+    [self.settingViewController.view removeFromSuperview];
+    [self.settingViewController removeFromParentViewController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,15 +86,15 @@
 
 - (IBAction)onSettingButtonClicked:(id)sender {
     [MobClick event:@"Setting"];
-    CMSettingViewController *settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
-    settingViewController.view.frame = self.view.bounds;
-    settingViewController.view.alpha = 0;
+    self.settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
+    self.settingViewController.view.frame = self.view.bounds;
+    self.settingViewController.view.alpha = 0;
     [self.view addSubview:self.blurView];
-    [self.view addSubview:settingViewController.view];
-    [self addChildViewController:settingViewController];
+    [self.view addSubview:self.settingViewController.view];
+    [self addChildViewController:self.settingViewController];
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _blurView.alpha = 1;
-        settingViewController.view.alpha = 1;
+        self.settingViewController.view.alpha = 1;
     } completion:nil];
 }
 
