@@ -32,9 +32,12 @@ h1.icon-title {
   color: #ccc;
 }
 
-.footer p a.twitter {
-  color:#ccc;
+.footer p strong {
+  color: #FF2851;
+}
 
+.footer p a.twitter {
+  color: #ccc;
 }
 
 .footer p a.twitter:hover {
@@ -42,19 +45,19 @@ h1.icon-title {
 }
 
 .twitter i {
-  color:#ccc;
-  transition: transform .8s,color 1s;
-  -moz-transition: -moz-transform .8s,color 1s;	/* Firefox 4 */
+  color: #ccc;
   -webkit-transition: -webkit-transform .8s,color 1s;	/* Safari 和 Chrome */
   -o-transition: -o-transform .8s,color 1s;	/* Opera */
+  -moz-transition: -moz-transform .8s,color 1s; /* Firefox 4 */
+  transition: transform .8s,color 1s;
 }
 
 .twitter i:hover {
   color: #468ae9;
-  transform: rotate(360deg);
-  -moz-transform: rotate(360deg);	/* Firefox 4 */
   -webkit-transform: rotate(360deg);	/* Safari 和 Chrome */
   -o-transform: rotate(360deg);	/* Opera */
+  -moz-transform: rotate(360deg); /* Firefox 4 */
+  transform: rotate(360deg);
 }
 
 .footer p:first-of-type {
