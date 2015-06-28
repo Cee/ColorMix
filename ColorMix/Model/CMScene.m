@@ -44,7 +44,7 @@
 }
 
 - (CGFloat)limitTime {
-    CGFloat limitTime = 7 - self.point * 0.05 ;
+    CGFloat limitTime = 5 - self.point * 0.05 ;
     return limitTime > 1.6 ? limitTime : 1.6;
 }
 @end
