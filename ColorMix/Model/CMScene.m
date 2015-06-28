@@ -38,7 +38,6 @@
         } else if (self.point > 10) {
             cardCount = 2;
         }
-       cardCount  = (self.point / 5 + 1) <=3 ? (self.point / 5 + 1) : 3;
     }
     self.nextQuestion = [self.questionFactory createQuestionWithCardCount:cardCount];
 }
