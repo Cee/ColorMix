@@ -10,8 +10,8 @@
 #define ColorMix_CMConstants_h
 
 // Channel ID
-//#define kChannelId                      @"AppStore"
-#define kChannelId                      @"Test"
+#define kChannelId                      @"AppStore"
+//#define kChannelId                      @"Test"
 
 #define kUmengAppKey                    @"558bb56c67e58ef671001f86"
 #define kAppStoreUrl                    @"https://itunes.apple.com/us/app/co!ormix/id1011677035?ls=1&mt=8"
