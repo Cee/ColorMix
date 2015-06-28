@@ -14,6 +14,9 @@
             <string>AvenirNext-Bold</string>
             <string>AvenirNext-Bold</string>
             <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Bold</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -354,6 +357,27 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0df-JU-zIb">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba0-Vp-sBr">
+                                    <rect key="frame" x="36" y="472" width="35" height="66"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT0-VL-jlk">
+                                    <rect key="frame" x="250" y="472" width="34" height="66"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-9y-G1e">
+                                    <rect key="frame" x="144" y="472" width="32" height="66"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choice" translatesAutoresizingMaskIntoConstraints="NO" id="w0o-T0-rwI">
                                     <rect key="frame" x="19" y="308" width="222" height="73"/>
                                     <animations/>
@@ -458,6 +482,7 @@
                 <constraint firstItem="RlS-Bf-AC4" firstAttribute="leading" secondItem="DpX-z5-Yt2" secondAttribute="leading" constant="25" id="Fwk-xb-09A"/>
                 <constraint firstItem="HTp-rh-6Gy" firstAttribute="bottom" secondItem="4aF-mb-kHz" secondAttribute="bottom" id="Gba-h7-tHy"/>
                 <constraint firstItem="hGG-el-p4b" firstAttribute="top" secondItem="RlS-Bf-AC4" secondAttribute="top" id="GpB-pf-uAl"/>
+                <constraint firstItem="9Hd-Wg-fWw" firstAttribute="centerX" secondItem="Ba0-Vp-sBr" secondAttribute="centerX" id="Isy-lw-jnw"/>
                 <constraint firstItem="4aF-mb-kHz" firstAttribute="trailing" secondItem="EaX-z7-gYg" secondAttribute="trailing" id="JhL-vC-0Rg"/>
                 <constraint firstItem="Z9Y-nI-P8H" firstAttribute="trailing" secondItem="ty0-9x-qrs" secondAttribute="trailing" id="KLd-ei-dYc"/>
                 <constraint firstAttribute="trailing" secondItem="a2p-aN-8MG" secondAttribute="trailing" id="Khg-uV-eLZ"/>
@@ -484,13 +509,16 @@
                 <constraint firstAttribute="bottom" secondItem="CAS-B3-rqP" secondAttribute="bottom" id="ctG-J2-0yg"/>
                 <constraint firstItem="hGG-el-p4b" firstAttribute="top" secondItem="kLp-7a-KrL" secondAttribute="top" id="e7X-MX-5Hx"/>
                 <constraint firstItem="Z9Y-nI-P8H" firstAttribute="leading" secondItem="ty0-9x-qrs" secondAttribute="leading" id="f4b-jJ-GDs"/>
+                <constraint firstItem="y2r-9y-G1e" firstAttribute="centerX" secondItem="guW-Hr-kwv" secondAttribute="centerX" id="fhH-va-vAI"/>
                 <constraint firstItem="ZIf-lZ-lDK" firstAttribute="leading" secondItem="HB5-H8-81Y" secondAttribute="leading" id="fnf-Iz-g1p"/>
                 <constraint firstItem="RlS-Bf-AC4" firstAttribute="bottom" secondItem="wPN-Xa-eyD" secondAttribute="bottom" id="gGW-KC-hC4"/>
                 <constraint firstItem="hOu-cg-4cn" firstAttribute="top" secondItem="9bp-xE-XdL" secondAttribute="bottom" constant="-66" id="gNN-UC-13f"/>
                 <constraint firstItem="97R-1E-9FP" firstAttribute="top" secondItem="HB5-H8-81Y" secondAttribute="top" id="gxO-kj-7Ve"/>
                 <constraint firstItem="4aF-mb-kHz" firstAttribute="top" secondItem="EaX-z7-gYg" secondAttribute="top" id="hRN-P8-zU8"/>
                 <constraint firstItem="DmT-Y2-HEc" firstAttribute="top" secondItem="HB5-H8-81Y" secondAttribute="top" id="hkb-AF-0m2"/>
+                <constraint firstItem="9Hd-Wg-fWw" firstAttribute="centerY" secondItem="Ba0-Vp-sBr" secondAttribute="centerY" id="hoM-g6-OrL"/>
                 <constraint firstItem="T9v-pw-VsH" firstAttribute="leading" secondItem="PVK-Ui-22x" secondAttribute="trailing" constant="-199" id="iB1-Rb-pu3"/>
+                <constraint firstItem="y2r-9y-G1e" firstAttribute="centerY" secondItem="guW-Hr-kwv" secondAttribute="centerY" id="jNV-1z-LTN"/>
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="top" secondItem="HB5-H8-81Y" secondAttribute="top" id="joQ-1f-8CB"/>
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="bottom" secondItem="9bp-xE-XdL" secondAttribute="bottom" id="k1N-hg-551"/>
                 <constraint firstItem="d95-vp-Ifx" firstAttribute="leading" secondItem="HB5-H8-81Y" secondAttribute="leading" id="kzU-ln-n03"/>
@@ -504,8 +532,10 @@
                 <constraint firstItem="hGG-el-p4b" firstAttribute="leading" secondItem="RlS-Bf-AC4" secondAttribute="leading" id="qEF-sP-C1f"/>
                 <constraint firstItem="vUB-UP-tkS" firstAttribute="bottom" secondItem="kLp-7a-KrL" secondAttribute="bottom" id="qGV-BC-fC8"/>
                 <constraint firstItem="RlS-Bf-AC4" firstAttribute="centerY" secondItem="FtG-b6-dn0" secondAttribute="centerY" id="qLy-yo-FgM"/>
+                <constraint firstItem="ukd-3B-nYN" firstAttribute="centerX" secondItem="XT0-VL-jlk" secondAttribute="centerX" id="rTk-BI-QHy"/>
                 <constraint firstItem="vUB-UP-tkS" firstAttribute="top" secondItem="kLp-7a-KrL" secondAttribute="top" id="rgu-6F-4e5"/>
                 <constraint firstItem="DmT-Y2-HEc" firstAttribute="leading" secondItem="HB5-H8-81Y" secondAttribute="leading" id="s7U-Z5-wQW"/>
+                <constraint firstItem="ukd-3B-nYN" firstAttribute="centerY" secondItem="XT0-VL-jlk" secondAttribute="centerY" id="te4-6I-3bC"/>
                 <constraint firstAttribute="trailing" secondItem="ZIf-lZ-lDK" secondAttribute="trailing" id="xT9-jl-yLv"/>
                 <constraint firstItem="Ilg-Id-Q46" firstAttribute="top" secondItem="HB5-H8-81Y" secondAttribute="top" id="xsv-79-E4o"/>
                 <constraint firstAttribute="trailing" secondItem="CAS-B3-rqP" secondAttribute="trailing" id="xuS-bp-L7e"/>
