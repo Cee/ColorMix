@@ -44,7 +44,7 @@ h1.icon-title {
   color: #468ae9;
 }
 
-.twitter i {
+p.animation {
   color: #ccc;
   -webkit-transition: -webkit-transform .8s,color 1s;	/* Safari 和 Chrome */
   -o-transition: -o-transform .8s,color 1s;	/* Opera */
@@ -52,7 +52,7 @@ h1.icon-title {
   transition: transform .8s,color 1s;
 }
 
-.twitter i:hover {
+p.animation:hover {
   color: #468ae9;
   -webkit-transform: rotate(360deg);	/* Safari 和 Chrome */
   -o-transform: rotate(360deg);	/* Opera */
