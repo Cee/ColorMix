@@ -30,6 +30,7 @@ h1.icon-title {
   font-weight: 500;
   font-size: 1.2em;
   color: #ccc;
+  display: inline-block;
 }
 
 .footer p strong {
