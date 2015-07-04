@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/placeHolderTextViewInMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    "
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <ImageButton
+        android:id="@+id/FantasyModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/placeHolderTextViewInMainMenu"
+        android:layout_centerHorizontal="true"
+     	android:src="@drawable/fantasy"
+     	android:background="@color/full_transparent"
+     	android:onClick="goToFantasyMode"
+ 
+      />
+
+    <ImageButton
+        android:id="@+id/ClassicModeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/placeHolderTextViewInMainMenu"
+        android:layout_alignLeft="@id/FantasyModeButton"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/classic"
+        android:background="@color/full_transparent"
+       	android:onClick="goToClassicMode"
+        
+       />
+
+    <ImageButton
+        android:id="@+id/SettingButton"
+     	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/FantasyModeButton"
+        android:layout_below="@id/FantasyModeButton"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/settings"
+  	    android:background="@color/full_transparent"
+	    android:onClick="goToSetting"  
+        />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="V1.0" />
+
+    <LinearLayout
+        android:id="@+id/setting_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+</RelativeLayout>
