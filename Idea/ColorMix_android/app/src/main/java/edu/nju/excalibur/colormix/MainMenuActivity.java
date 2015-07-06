@@ -14,6 +14,7 @@ import android.content.SharedPreferences.Editor;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,7 +40,8 @@ public class MainMenuActivity extends Activity {
 		UMGameAgent.onResume(this);
 	     SharedPreferences sharedPreferences = getSharedPreferences("localdata", Context.MODE_PRIVATE);
 	     int score = sharedPreferences.getInt("score", -1);
-	     if (score>=0) {
+		Log.v("debug","......................."+score);
+		if (score>=0) {
 	    	 gameResultFragment = new GameResultFragment();
 	    	 int highest = sharedPreferences.getInt("highest", -1);
     		 Editor editor = sharedPreferences.edit();

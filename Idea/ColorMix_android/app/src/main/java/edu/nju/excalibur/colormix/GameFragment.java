@@ -1,7 +1,5 @@
 package edu.nju.excalibur.colormix;
 
-import java.lang.ref.WeakReference;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextPaint;
@@ -13,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
+
 import edu.nju.excalibur.colormix.model.Card;
 import edu.nju.excalibur.colormix.model.Question;
 
@@ -47,9 +46,13 @@ public class GameFragment extends Fragment {
 		}
 		cardView = rootView.findViewById(R.id.question_card_view);
 		cardTextView = (TextView) rootView.findViewById(R.id.question_card_text);
+		cardTextView.setTypeface(CustomFont.getBondfont(getActivity().getApplicationContext()));
+
 		questionTextView = (TextView) rootView.findViewById(R.id.questionTextView);
+		questionTextView.setTypeface(CustomFont.getBondfont(getActivity().getApplicationContext()));
+
 		timeLineView = rootView.findViewById(R.id.question_time_line_view);
-		
+
 		if (gameMode==0) {
 			Card card = question.cardList.get(0);
 			cardView.setBackgroundColor(card.backgroundColor.colorId);
@@ -92,8 +95,8 @@ public class GameFragment extends Fragment {
 			}
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				NextQuestionInterface callback = callbackRef.get();
-				callback.fail();
+				GameActivity activity = (GameActivity)getActivity();
+				activity.fail();
 			}
 		});
 		timeLineView.startAnimation(translateAnimation);	
@@ -104,28 +107,15 @@ public class GameFragment extends Fragment {
 			int id = v.getId();
 			for (int i = 0; i < options.length; i++) {
 				if (option_ids[i] == id) {
-					NextQuestionInterface callback = callbackRef.get();
-					if (callback != null) {
-						if (question.checkAnswer(i) == true) {
-							callback.nextPage();
-						} else {
-							callback.fail();
-						}
+					GameActivity activity = (GameActivity)getActivity();
+					if (question.checkAnswer(i) == true) {
+						activity.change();
+					} else{
+						activity.fail();
 					}
 				}
 			}
 		}
 	};
-
-	private WeakReference<NextQuestionInterface> callbackRef;
-
-	public void setOnNextQuestionInterface(NextQuestionInterface callback) {
-		callbackRef = new WeakReference<NextQuestionInterface>(callback);
-	}
-
-	public interface NextQuestionInterface {
-		public void nextPage();
-		public void fail();
-	}
 
 }

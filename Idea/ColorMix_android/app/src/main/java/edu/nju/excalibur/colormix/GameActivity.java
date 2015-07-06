@@ -1,9 +1,5 @@
 package edu.nju.excalibur.colormix;
 
-import java.util.ArrayList;
-
-import com.umeng.analytics.e;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -14,9 +10,11 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import edu.nju.excalibur.colormix.GameFragment.NextQuestionInterface;
+
+import java.util.ArrayList;
 import edu.nju.excalibur.colormix.model.Card;
 import edu.nju.excalibur.colormix.model.Scene;
 
@@ -38,6 +36,7 @@ public class GameActivity extends FragmentActivity {
 		setContentView(R.layout.activity_game);
 		scoreTextView = (TextView) findViewById(R.id.score_text_view);
 		scoreTextView.setText("0");
+		scoreTextView.setTypeface(CustomFont.getItalicFont(getApplicationContext()));
 		init();
 	}
 	
@@ -80,19 +79,10 @@ public class GameActivity extends FragmentActivity {
 		currentQuestionFragment = new GameFragment();
 		currentQuestionFragment.gameMode = gameMode;
 		currentQuestionFragment.question = scene.currentQuestion;
-		currentQuestionFragment.setOnNextQuestionInterface(new NextQuestionInterface() {
-			@Override
-			public void nextPage() {
-				change();
-			}
-
-			@Override
-			public void fail() {
-				finish();
-			}
-		});
+		nextQuestionFragment = new GameFragment();
+		nextQuestionFragment.gameMode = gameMode;
+		nextQuestionFragment.question = scene.nextQuestion;
 		if (gameMode==1){
-			nextQuestionFragment = currentQuestionFragment;
 			cardViewList = new ArrayList<CardFragment>();
 			ArrayList<Card> cardList = scene.currentQuestion.cardList;
 			for (int i = 0 ; i < cardList.size(); i++){
@@ -110,8 +100,8 @@ public class GameActivity extends FragmentActivity {
 					transaction.setCustomAnimations(R.anim.essense_right_in,R.anim.essense_left_out,
 							R.anim.essense_right_in,R.anim.essense_left_out);
 					if (index == 0) {
-						
-						transaction.replace(R.id.FrameLayout1, nextQuestionFragment);
+
+						transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 					} else {
 						transaction.replace(R.id.FrameLayout1, cardViewList.get(index));
 					}
@@ -122,6 +112,11 @@ public class GameActivity extends FragmentActivity {
 		} else {
 			transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 			transaction.commit();
+		}
+		if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
+			scoreTextView.setTextColor(0xff000000);
+		} else {
+			scoreTextView.setTextColor(0xffffffff);
 		}
 	}
 	
@@ -150,37 +145,37 @@ public class GameActivity extends FragmentActivity {
 		}
 	}
 
-	private void change() {
+	public void fail(){
+		SharedPreferences sharedPreferences = getSharedPreferences("localdata", Context.MODE_PRIVATE);
+		Editor editor = sharedPreferences.edit();
+		editor.putInt("score", scene.point);
+		editor.commit();
+		Log.v("test","..............fail"+scene.point);
+		finish();
+	}
+
+	public void change() {
+		currentQuestionFragment = nextQuestionFragment;
+		scene.showNextQuestion();
 		nextQuestionFragment = new GameFragment();
 		nextQuestionFragment.gameMode = gameMode;
 		nextQuestionFragment.question = scene.nextQuestion;
-		nextQuestionFragment.setOnNextQuestionInterface(new NextQuestionInterface() {
-			@Override
-			public void nextPage() {
-				change();
-			}
-
-			@Override
-			public void fail() {
-				SharedPreferences sharedPreferences = getSharedPreferences("localdata", Context.MODE_PRIVATE);
-				Editor editor = sharedPreferences.edit();
-				editor.putInt("score", scene.point);
-				editor.commit();
-				finish();
-			}
-		});		
-		scene.showNextQuestion();
 		scoreTextView.setText(""+scene.point);
+		if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
+			scoreTextView.setTextColor(0xff000000);
+		} else {
+			scoreTextView.setTextColor(0xffffffff);
+		}
 		FragmentManager manager = getSupportFragmentManager();
 		FragmentTransaction transaction = manager.beginTransaction();
 		transaction.setCustomAnimations(R.anim.essense_right_in,R.anim.essense_left_out,
 				R.anim.essense_right_in,R.anim.essense_left_out);
 		if (gameMode==0){
-			transaction.replace(R.id.FrameLayout1, nextQuestionFragment);
+			transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 			transaction.commit();
 		} else {
 			cardViewList = new ArrayList<CardFragment>();
-			ArrayList<Card> cardList = scene.nextQuestion.cardList;
+			ArrayList<Card> cardList = scene.currentQuestion.cardList;
 			for (int i = 0 ; i < cardList.size(); i++){
 				CardFragment cardFragment = new CardFragment();
 				cardFragment.card = cardList.get(i);

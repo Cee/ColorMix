@@ -24,5 +24,6 @@ public class CardFragment extends Fragment {
 		root.setBackgroundColor(card.backgroundColor.colorId);
 		textView.setText(card.textMeaningColor.colorName);
 		textView.setTextColor(card.textColor.colorId);
+		textView.setTypeface(CustomFont.getBondfont(getActivity().getApplicationContext()));
 	}
 }
