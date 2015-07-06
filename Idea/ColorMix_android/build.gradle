@@ -7,9 +7,13 @@ buildscript {
         classpath 'com.android.tools.build:gradle:1.2.3'
     }
 }
-
 allprojects {
     repositories {
         jcenter()
     }
+}
+
+dependencies {
+    apply plugin: 'java'
+    compile files('libs/umeng-analytics-game-v5.5.3.0.jar')
 }

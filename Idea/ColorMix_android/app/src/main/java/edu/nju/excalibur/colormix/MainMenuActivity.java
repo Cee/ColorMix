@@ -2,7 +2,6 @@ package edu.nju.excalibur.colormix;
 
 import java.io.File;
 
-import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.game.UMGameAgent;
 
 import android.app.Activity;
@@ -18,11 +17,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainMenuActivity extends Activity {
 	SettingFragment settingFragment; 
 	GameResultFragment gameResultFragment;
 	TutorialFragment tutorialFragment;
+	private TextView versionText;
 	private int tutorialIndex = 0;
 	private int gameMode;
     @Override
@@ -32,6 +33,8 @@ public class MainMenuActivity extends Activity {
 		UMGameAgent.init(this);
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_menu);
+        versionText = (TextView)(findViewById(R.id.version));
+        versionText.setTypeface(CustomFont.getBondfont(getApplicationContext()));
     }
     
     @Override
@@ -39,16 +42,17 @@ public class MainMenuActivity extends Activity {
 		super.onResume();
 		UMGameAgent.onResume(this);
 	     SharedPreferences sharedPreferences = getSharedPreferences("localdata", Context.MODE_PRIVATE);
-	     int score = sharedPreferences.getInt("score", -1);
+             int score = sharedPreferences.getInt("score", -1);
 		Log.v("debug","......................."+score);
 		if (score>=0) {
 	    	 gameResultFragment = new GameResultFragment();
-	    	 int highest = sharedPreferences.getInt("highest", -1);
+             String score_key = gameMode == 0 ? "classic_highest" : "fantasy_highest";
+	    	 int highest = sharedPreferences.getInt(score_key, -1);
     		 Editor editor = sharedPreferences.edit();
     		 editor.putInt("score", -1);
 	    	 if (highest < score) {
 	    		 highest = score;
-	    		 editor.putInt("highest", highest);
+	    		 editor.putInt(score_key, highest);
 	    	 }
     		 editor.commit();
 	    	 gameResultFragment.highest = highest;
@@ -139,11 +143,11 @@ public class MainMenuActivity extends Activity {
 		} else {
 			mode = "fantasy";
 		}
-		shareMsg("Share", "share the score", "I scored "+gameResultFragment.score+" in the "+mode+" mode, play #Co!orMix with me: colormix.cee.moe", null);		
+		shareMsg("Share", "share the score", "I scored "+gameResultFragment.score+" in the "+mode+" mode, play #Co!orMix with me: http://colormix.cee.moe", null);
 	}
 	
 	public void share(View v) {
-		shareMsg("Share", "分享应用", "Think you know color? Come and play Co!orMix, a game about color and your reflection. And Please be nice to your phone.  colormix.cee.moe ", null);
+		shareMsg("Share", "分享应用", "Think you know color? Come and play Co!orMix, a game about color and your reflection. And Please be nice to your phone.  http://colormix.cee.moe ", null);
 	}
 	
 	/** 
@@ -190,10 +194,8 @@ public class MainMenuActivity extends Activity {
     	if (tutorialIndex < 8)
     		tutorialFragment.tutorialImageView.setImageResource(tutorialFragment.images[tutorialIndex]);
     	else {
-    		FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-            fragmentTransaction.remove(tutorialFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+            tutorialIndex = 0;
+    		goToSetting(null);
     	}
     }
 }

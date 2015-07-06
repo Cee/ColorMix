@@ -45,6 +45,7 @@ public class GameActivity extends FragmentActivity {
 		if (tutorialIndex - tutorialFragment.start <=3) {
     		tutorialFragment.tutorialImageView.setImageResource(tutorialFragment.images[tutorialIndex]);
 		} else {
+			scoreTextView.setVisibility(View.VISIBLE);
 			init();
 		}
 	}
@@ -53,6 +54,7 @@ public class GameActivity extends FragmentActivity {
 	    SharedPreferences sharedPreferences = getSharedPreferences("localdata", Context.MODE_PRIVATE);
 	    if (gameMode == 0) {
 	    	if (sharedPreferences.getBoolean("first_classic", true)){
+				scoreTextView.setVisibility(View.INVISIBLE);
 	        	tutorialFragment = new TutorialFragment();    	
 	        	getFragmentManager().beginTransaction().replace(R.id.FrameLayout1, tutorialFragment).commit();
 	        	Editor editer = sharedPreferences.edit();
@@ -63,7 +65,8 @@ public class GameActivity extends FragmentActivity {
 	    }
 	    if (gameMode == 1) {
 	     	if (sharedPreferences.getBoolean("first_fantasy", true)){
-	        	tutorialFragment = new TutorialFragment(); 
+				scoreTextView.setVisibility(View.INVISIBLE);
+				tutorialFragment = new TutorialFragment();
 	        	tutorialIndex = 4;
 	        	tutorialFragment.start = 4;
 	        	getFragmentManager().beginTransaction().replace(R.id.FrameLayout1, tutorialFragment).commit();
@@ -90,6 +93,7 @@ public class GameActivity extends FragmentActivity {
 				cardFragment.card = cardList.get(i);
 				cardViewList.add(cardFragment);
 			}
+			scoreTextView.setVisibility(View.INVISIBLE);
 			transaction.replace(R.id.FrameLayout1, cardViewList.get(0));
 			transaction.commit();
 			handler = new Handler() {
@@ -100,11 +104,11 @@ public class GameActivity extends FragmentActivity {
 					transaction.setCustomAnimations(R.anim.essense_right_in,R.anim.essense_left_out,
 							R.anim.essense_right_in,R.anim.essense_left_out);
 					if (index == 0) {
-
 						transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 					} else {
 						transaction.replace(R.id.FrameLayout1, cardViewList.get(index));
 					}
+					scoreTextView.setVisibility(View.VISIBLE);
 					transaction.commit(); 
 				}
 			};
@@ -113,10 +117,12 @@ public class GameActivity extends FragmentActivity {
 			transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 			transaction.commit();
 		}
-		if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
-			scoreTextView.setTextColor(0xff000000);
-		} else {
-			scoreTextView.setTextColor(0xffffffff);
+		if (gameMode == 0) {
+			if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
+				scoreTextView.setTextColor(0xff000000);
+			} else {
+				scoreTextView.setTextColor(0xffffffff);
+			}
 		}
 	}
 	
@@ -124,6 +130,7 @@ public class GameActivity extends FragmentActivity {
 
 		@Override
 		public void run() {
+
 			for (int i = 1 ; i < cardViewList.size(); i++){
 				try {
 					Thread.sleep(2000);
@@ -161,11 +168,6 @@ public class GameActivity extends FragmentActivity {
 		nextQuestionFragment.gameMode = gameMode;
 		nextQuestionFragment.question = scene.nextQuestion;
 		scoreTextView.setText(""+scene.point);
-		if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
-			scoreTextView.setTextColor(0xff000000);
-		} else {
-			scoreTextView.setTextColor(0xffffffff);
-		}
 		FragmentManager manager = getSupportFragmentManager();
 		FragmentTransaction transaction = manager.beginTransaction();
 		transaction.setCustomAnimations(R.anim.essense_right_in,R.anim.essense_left_out,
@@ -173,6 +175,12 @@ public class GameActivity extends FragmentActivity {
 		if (gameMode==0){
 			transaction.replace(R.id.FrameLayout1, currentQuestionFragment);
 			transaction.commit();
+			if (currentQuestionFragment.question.cardList.get(0).backgroundColor.colorName.equals("WHITE")) {
+				scoreTextView.setTextColor(0xff000000);
+			} else {
+				scoreTextView.setTextColor(0xffffffff);
+			}
+
 		} else {
 			cardViewList = new ArrayList<CardFragment>();
 			ArrayList<Card> cardList = scene.currentQuestion.cardList;
@@ -181,6 +189,7 @@ public class GameActivity extends FragmentActivity {
 				cardFragment.card = cardList.get(i);
 				cardViewList.add(cardFragment);
 			}
+			scoreTextView.setVisibility(View.INVISIBLE);
 			transaction.replace(R.id.FrameLayout1, cardViewList.get(0));
 			transaction.commit();
 			new Thread(new MyThread()).start();

@@ -11,7 +11,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
-        android:text="V1.0" />
+        android:text="" />
     
 
      <ImageButton
@@ -68,9 +68,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/logo"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
      	android:textSize = "10pt"
-      	android:textColor="@color/gray"
+      	android:textColor="@color/black"
         />
      
      <TextView
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/result_score"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
      	android:textSize = "10pt"
       	android:textColor="@color/gray"
         />

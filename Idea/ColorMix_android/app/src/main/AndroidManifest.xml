@@ -26,7 +26,7 @@
     
         </activity>
         <meta-data android:value="55975d2a67e58e814b0004bb" android:name="UMENG_APPKEY" />
-        <meta-data android:value="Google Play" android:name="UMENG_CHANNEL"/>
+        <meta-data android:value="WanDouJia" android:name="UMENG_CHANNEL"/>
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

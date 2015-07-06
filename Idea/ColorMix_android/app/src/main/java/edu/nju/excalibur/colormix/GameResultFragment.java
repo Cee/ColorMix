@@ -24,7 +24,9 @@ public class GameResultFragment extends Fragment {
 		scoreTextView = (TextView) root.findViewById(R.id.result_score);
 		higestTextView = (TextView) root.findViewById(R.id.result_highest);
 		scoreTextView.setText("Score: "+score);
-		higestTextView.setText("Highest: "+highest);
+		higestTextView.setText("Best: "+highest);
+		higestTextView.setTypeface(CustomFont.getBondfont(getActivity().getApplicationContext()));
+		scoreTextView.setTypeface(CustomFont.getBondfont(getActivity().getApplicationContext()));
 	}
 }
 
