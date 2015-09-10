@@ -43,6 +43,7 @@
                                 <constraint firstAttribute="centerX" secondItem="AdD-ei-gA4" secondAttribute="centerX" id="FDp-0P-yUA"/>
                             </constraints>
                             <connections>
+                                <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="touchDown" id="9fZ-Ee-lkv"/>
                                 <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="primaryActionTriggered" id="maX-Qo-kB2"/>
                             </connections>
                         </view>
@@ -62,6 +63,7 @@
                                 <constraint firstAttribute="bottom" secondItem="LfO-R7-8Id" secondAttribute="bottom" constant="30" id="r2O-pd-GgY"/>
                             </constraints>
                             <connections>
+                                <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="touchDown" id="sGi-8Z-iZl"/>
                                 <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="primaryActionTriggered" id="yKX-gU-I7c"/>
                             </connections>
                         </view>
@@ -82,6 +84,7 @@
                             </constraints>
                             <connections>
                                 <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="primaryActionTriggered" id="9by-IQ-mUc"/>
+                                <action selector="onOptionButtonClicked:" destination="rCB-wx-C3Q" eventType="touchDown" id="XlD-kh-Aq1"/>
                             </connections>
                         </view>
                     </subviews>
