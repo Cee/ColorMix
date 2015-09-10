@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CMGameViewController">
+            <connections>
+                <outlet property="scoreLabel" destination="OnB-AN-66h" id="zSa-Ad-osi"/>
+                <outlet property="view" destination="I3i-cu-uhv" id="UAJ-Bf-Plp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I3i-cu-uhv">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-AN-66h" customClass="CMLabel">
+                    <rect key="frame" x="1805" y="15" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="oiY-2R-3lD"/>
+                        <constraint firstAttribute="width" constant="100" id="x1Q-FF-LXe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNextCondensed-HeavyItalic" family="Avenir Next Condensed" pointSize="36"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OnB-AN-66h" secondAttribute="trailing" constant="15" id="GUv-BE-jb3"/>
+                <constraint firstItem="OnB-AN-66h" firstAttribute="top" secondItem="I3i-cu-uhv" secondAttribute="top" constant="15" id="taU-iN-ka5"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

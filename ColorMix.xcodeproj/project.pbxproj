@@ -45,8 +45,43 @@
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
 		923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D731B3BEDC4005386A4 /* libz.dylib */; };
-		923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */; };
+		926D50EE1BA12A9600F72AB6 /* CMGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D50ED1BA12A9600F72AB6 /* CMGameViewController.xib */; };
+		926D50F01BA12B2900F72AB6 /* CMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D50EF1BA12B2900F72AB6 /* CMMenuViewController.xib */; };
+		926D50F21BA12B5200F72AB6 /* CMGameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D50F11BA12B5200F72AB6 /* CMGameResultViewController.xib */; };
+		926D50F41BA12B8300F72AB6 /* CMSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926D50F31BA12B8300F72AB6 /* CMSettingViewController.xib */; };
+		927B312D1BA1C8B400569C17 /* ColorList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D56C0741B3B19230032FA52 /* ColorList.plist */; };
 		928208C61B3C11F500664E90 /* UIViewController+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */; };
+		92848DBE1BA1206E001C3B33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92848DBD1BA1206E001C3B33 /* main.m */; };
+		92848DC11BA1206E001C3B33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92848DC01BA1206E001C3B33 /* AppDelegate.m */; };
+		92848DC41BA1206E001C3B33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92848DC31BA1206E001C3B33 /* ViewController.m */; };
+		92848DC71BA1206E001C3B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92848DC51BA1206E001C3B33 /* Main.storyboard */; };
+		92848DC91BA1206E001C3B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92848DC81BA1206E001C3B33 /* Assets.xcassets */; };
+		92848DCE1BA120DA001C3B33 /* UIImage+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */; };
+		92848DCF1BA120DD001C3B33 /* UIView+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C0671B3B0CFD0032FA52 /* UIView+ColorMix.m */; };
+		92848DD01BA120E0001C3B33 /* UIColor+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06A1B3B0D5B0032FA52 /* UIColor+ColorMix.m */; };
+		92848DD11BA120E3001C3B33 /* UILabel+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C06D1B3B0E540032FA52 /* UILabel+ColorMix.m */; };
+		92848DD21BA120E6001C3B33 /* UIViewController+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */; };
+		92848DD31BA120EA001C3B33 /* CMScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB721B3C57F200C2E8F6 /* CMScoreView.m */; };
+		92848DD61BA120F6001C3B33 /* CMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB701B3C561500C2E8F6 /* CMLabel.m */; };
+		92848DD71BA120FA001C3B33 /* CMQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3441B3AE03200C2FDDC /* CMQuestionView.m */; };
+		92848DD91BA12102001C3B33 /* CMCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF5ADE1B3B2C2A00A85AB5 /* CMCardView.m */; };
+		92848DDB1BA12111001C3B33 /* CMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7E9E881B3CD5B900DA58A5 /* CMTutorialViewController.m */; };
+		92848DDE1BA12111001C3B33 /* CMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB33F1B3ADC9B00C2FDDC /* CMGameViewController.m */; };
+		92848DE01BA12111001C3B33 /* CMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3391B3ADB4500C2FDDC /* CMMenuViewController.m */; };
+		92848DE21BA12111001C3B33 /* CMGameResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D56C07B1B3B25390032FA52 /* CMGameResultViewController.m */; };
+		92848DE41BA12111001C3B33 /* CMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB661B3C4B0300C2E8F6 /* CMSettingViewController.m */; };
+		92848DE61BA1212D001C3B33 /* CMColorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3321B3ACFC000C2FDDC /* CMColorFactory.m */; };
+		92848DE71BA1212D001C3B33 /* CMCardFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB32D1B3ACEFE00C2FDDC /* CMCardFactory.m */; };
+		92848DE81BA1212D001C3B33 /* CMQuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3351B3AD31500C2FDDC /* CMQuestionFactory.m */; };
+		92848DE91BA1212D001C3B33 /* CMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3211B3AC93A00C2FDDC /* CMColor.m */; };
+		92848DEA1BA1212D001C3B33 /* CMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB31E1B3AC8A800C2FDDC /* CMCard.m */; };
+		92848DEB1BA1212D001C3B33 /* CMQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3261B3ACAE200C2FDDC /* CMQuestion.m */; };
+		92848DEC1BA1212D001C3B33 /* CMScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1BB3291B3ACC2C00C2FDDC /* CMScene.m */; };
+		92848DEE1BA12135001C3B33 /* CMGameCenterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */; };
+		92848DF41BA12250001C3B33 /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92848DF01BA12250001C3B33 /* libMobClickGameLibrary.a */; };
+		928A52E71BA12400003FDBE5 /* CMScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A52E61BA12400003FDBE5 /* CMScoreView.xib */; };
+		928A52E91BA124A3003FDBE5 /* CMQuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A52E81BA124A3003FDBE5 /* CMQuestionView.xib */; };
+		928A52EB1BA12524003FDBE5 /* CMCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A52EA1BA12524003FDBE5 /* CMCardView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,13 +160,29 @@
 		9234BD731B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD741B3A805100D3FFF2 /* ColorMixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorMixTests.m; sourceTree = "<group>"; };
 		923B6D731B3BEDC4005386A4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobClickGameLibrary.a; path = ColorMix/Frameworks/Umeng/libMobClickGameLibrary.a; sourceTree = "<group>"; };
-		923B6D771B3BEE9E005386A4 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = ColorMix/Frameworks/Umeng/MobClick.h; sourceTree = "<group>"; };
-		923B6D781B3BEE9E005386A4 /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClickGameAnalytics.h; path = ColorMix/Frameworks/Umeng/MobClickGameAnalytics.h; sourceTree = "<group>"; };
-		923B6D791B3BEE9E005386A4 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobClickSocialAnalytics.h; path = ColorMix/Frameworks/Umeng/MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		925358FE1B3BE84400C0677E /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMConstants.h; path = ColorMix/CMConstants.h; sourceTree = "<group>"; };
+		926D50ED1BA12A9600F72AB6 /* CMGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameViewController.xib; path = View/CMGameViewController.xib; sourceTree = "<group>"; };
+		926D50EF1BA12B2900F72AB6 /* CMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMMenuViewController.xib; path = View/CMMenuViewController.xib; sourceTree = "<group>"; };
+		926D50F11BA12B5200F72AB6 /* CMGameResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMGameResultViewController.xib; path = View/CMGameResultViewController.xib; sourceTree = "<group>"; };
+		926D50F31BA12B8300F72AB6 /* CMSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMSettingViewController.xib; path = View/CMSettingViewController.xib; sourceTree = "<group>"; };
 		928208C41B3C11F500664E90 /* UIViewController+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorMix.h"; path = "Category/UIViewController+ColorMix.h"; sourceTree = "<group>"; };
 		928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorMix.m"; path = "Category/UIViewController+ColorMix.m"; sourceTree = "<group>"; };
+		92848DBA1BA1206E001C3B33 /* ColorMix-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ColorMix-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92848DBD1BA1206E001C3B33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92848DBF1BA1206E001C3B33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92848DC01BA1206E001C3B33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92848DC21BA1206E001C3B33 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92848DC31BA1206E001C3B33 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92848DC61BA1206E001C3B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92848DC81BA1206E001C3B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92848DCA1BA1206E001C3B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92848DF01BA12250001C3B33 /* libMobClickGameLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickGameLibrary.a; sourceTree = "<group>"; };
+		92848DF11BA12250001C3B33 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		92848DF21BA12250001C3B33 /* MobClickGameAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickGameAnalytics.h; sourceTree = "<group>"; };
+		92848DF31BA12250001C3B33 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
+		928A52E61BA12400003FDBE5 /* CMScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMScoreView.xib; path = View/CMScoreView.xib; sourceTree = "<group>"; };
+		928A52E81BA124A3003FDBE5 /* CMQuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMQuestionView.xib; path = View/CMQuestionView.xib; sourceTree = "<group>"; };
+		928A52EA1BA12524003FDBE5 /* CMCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CMCardView.xib; path = View/CMCardView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +191,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC542671B3DB29300830567 /* AudioToolbox.framework in Frameworks */,
-				923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */,
+				92848DF41BA12250001C3B33 /* libMobClickGameLibrary.a in Frameworks */,
 				923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */,
 				922FA0821B3DBDCE00E3FC75 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9234BD6B1B3A805100D3FFF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92848DB71BA1206E001C3B33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,10 +224,10 @@
 		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92848DEF1BA12250001C3B33 /* Umeng */,
 				922FA0811B3DBDCE00E3FC75 /* GameKit.framework */,
 				7DC542661B3DB29300830567 /* AudioToolbox.framework */,
 				923B6D731B3BEDC4005386A4 /* libz.dylib */,
-				923B6D721B3BED9D005386A4 /* Umeng */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +326,7 @@
 				925358FE1B3BE84400C0677E /* CMConstants.h */,
 				9234BD571B3A805100D3FFF2 /* ColorMix */,
 				9234BD711B3A805100D3FFF2 /* ColorMixTests */,
+				92848DBB1BA1206E001C3B33 /* ColorMix-tvOS */,
 				9234BD561B3A805100D3FFF2 /* Products */,
 				63BECB6C384543B8E9569D0E /* Pods */,
 				7CFAD281F2F6DB3D8D4C714E /* Frameworks */,
@@ -279,6 +338,7 @@
 			children = (
 				9234BD551B3A805100D3FFF2 /* ColorMix.app */,
 				9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */,
+				92848DBA1BA1206E001C3B33 /* ColorMix-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,15 +387,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		923B6D721B3BED9D005386A4 /* Umeng */ = {
+		92848DBB1BA1206E001C3B33 /* ColorMix-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */,
-				923B6D771B3BEE9E005386A4 /* MobClick.h */,
-				923B6D781B3BEE9E005386A4 /* MobClickGameAnalytics.h */,
-				923B6D791B3BEE9E005386A4 /* MobClickSocialAnalytics.h */,
+				92848DBF1BA1206E001C3B33 /* AppDelegate.h */,
+				92848DC01BA1206E001C3B33 /* AppDelegate.m */,
+				92848DC21BA1206E001C3B33 /* ViewController.h */,
+				92848DC31BA1206E001C3B33 /* ViewController.m */,
+				92848DC51BA1206E001C3B33 /* Main.storyboard */,
+				92848DC81BA1206E001C3B33 /* Assets.xcassets */,
+				92848DCA1BA1206E001C3B33 /* Info.plist */,
+				92848DBC1BA1206E001C3B33 /* Supporting Files */,
+				928A52E61BA12400003FDBE5 /* CMScoreView.xib */,
+				926D50F11BA12B5200F72AB6 /* CMGameResultViewController.xib */,
+				926D50EF1BA12B2900F72AB6 /* CMMenuViewController.xib */,
+				926D50ED1BA12A9600F72AB6 /* CMGameViewController.xib */,
+				928A52E81BA124A3003FDBE5 /* CMQuestionView.xib */,
+				928A52EA1BA12524003FDBE5 /* CMCardView.xib */,
+				926D50F31BA12B8300F72AB6 /* CMSettingViewController.xib */,
+			);
+			path = "ColorMix-tvOS";
+			sourceTree = "<group>";
+		};
+		92848DBC1BA1206E001C3B33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92848DBD1BA1206E001C3B33 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92848DEF1BA12250001C3B33 /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				92848DF01BA12250001C3B33 /* libMobClickGameLibrary.a */,
+				92848DF11BA12250001C3B33 /* MobClick.h */,
+				92848DF21BA12250001C3B33 /* MobClickGameAnalytics.h */,
+				92848DF31BA12250001C3B33 /* MobClickSocialAnalytics.h */,
 			);
 			name = Umeng;
+			path = ColorMix/Frameworks/Umeng;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +467,23 @@
 			productReference = 9234BD6E1B3A805100D3FFF2 /* ColorMixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		92848DB91BA1206E001C3B33 /* ColorMix-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92848DCD1BA1206E001C3B33 /* Build configuration list for PBXNativeTarget "ColorMix-tvOS" */;
+			buildPhases = (
+				92848DB61BA1206E001C3B33 /* Sources */,
+				92848DB71BA1206E001C3B33 /* Frameworks */,
+				92848DB81BA1206E001C3B33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ColorMix-tvOS";
+			productName = "ColorMix-tvOS";
+			productReference = 92848DBA1BA1206E001C3B33 /* ColorMix-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -399,6 +507,15 @@
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 9234BD541B3A805100D3FFF2;
 					};
+					92848DB91BA1206E001C3B33 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = BJJYLFU3B7;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
 				};
 			};
 			buildConfigurationList = 9234BD501B3A805100D3FFF2 /* Build configuration list for PBXProject "ColorMix" */;
@@ -416,6 +533,7 @@
 			targets = (
 				9234BD541B3A805100D3FFF2 /* ColorMix */,
 				9234BD6D1B3A805100D3FFF2 /* ColorMixTests */,
+				92848DB91BA1206E001C3B33 /* ColorMix-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -443,6 +561,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92848DB81BA1206E001C3B33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928A52E91BA124A3003FDBE5 /* CMQuestionView.xib in Resources */,
+				926D50F41BA12B8300F72AB6 /* CMSettingViewController.xib in Resources */,
+				928A52EB1BA12524003FDBE5 /* CMCardView.xib in Resources */,
+				928A52E71BA12400003FDBE5 /* CMScoreView.xib in Resources */,
+				92848DC91BA1206E001C3B33 /* Assets.xcassets in Resources */,
+				926D50F01BA12B2900F72AB6 /* CMMenuViewController.xib in Resources */,
+				92848DC71BA1206E001C3B33 /* Main.storyboard in Resources */,
+				926D50EE1BA12A9600F72AB6 /* CMGameViewController.xib in Resources */,
+				927B312D1BA1C8B400569C17 /* ColorList.plist in Resources */,
+				926D50F21BA12B5200F72AB6 /* CMGameResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +623,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92848DB61BA1206E001C3B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92848DD01BA120E0001C3B33 /* UIColor+ColorMix.m in Sources */,
+				92848DE71BA1212D001C3B33 /* CMCardFactory.m in Sources */,
+				92848DEE1BA12135001C3B33 /* CMGameCenterHelper.m in Sources */,
+				92848DEC1BA1212D001C3B33 /* CMScene.m in Sources */,
+				92848DC41BA1206E001C3B33 /* ViewController.m in Sources */,
+				92848DD71BA120FA001C3B33 /* CMQuestionView.m in Sources */,
+				92848DE01BA12111001C3B33 /* CMMenuViewController.m in Sources */,
+				92848DE61BA1212D001C3B33 /* CMColorFactory.m in Sources */,
+				92848DE81BA1212D001C3B33 /* CMQuestionFactory.m in Sources */,
+				92848DC11BA1206E001C3B33 /* AppDelegate.m in Sources */,
+				92848DD21BA120E6001C3B33 /* UIViewController+ColorMix.m in Sources */,
+				92848DE41BA12111001C3B33 /* CMSettingViewController.m in Sources */,
+				92848DD11BA120E3001C3B33 /* UILabel+ColorMix.m in Sources */,
+				92848DE91BA1212D001C3B33 /* CMColor.m in Sources */,
+				92848DCE1BA120DA001C3B33 /* UIImage+ColorMix.m in Sources */,
+				92848DBE1BA1206E001C3B33 /* main.m in Sources */,
+				92848DDE1BA12111001C3B33 /* CMGameViewController.m in Sources */,
+				92848DDB1BA12111001C3B33 /* CMTutorialViewController.m in Sources */,
+				92848DD91BA12102001C3B33 /* CMCardView.m in Sources */,
+				92848DD31BA120EA001C3B33 /* CMScoreView.m in Sources */,
+				92848DD61BA120F6001C3B33 /* CMLabel.m in Sources */,
+				92848DEB1BA1212D001C3B33 /* CMQuestion.m in Sources */,
+				92848DCF1BA120DD001C3B33 /* UIView+ColorMix.m in Sources */,
+				92848DE21BA12111001C3B33 /* CMGameResultViewController.m in Sources */,
+				92848DEA1BA1212D001C3B33 /* CMCard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -497,6 +664,17 @@
 			targetProxy = 9234BD6F1B3A805100D3FFF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92848DC51BA1206E001C3B33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92848DC61BA1206E001C3B33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9234BD761B3A805100D3FFF2 /* Debug */ = {
@@ -672,6 +850,45 @@
 			};
 			name = Release;
 		};
+		92848DCB1BA1206E001C3B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
+				INFOPLIST_FILE = "ColorMix-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cee.ColorMix-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		92848DCC1BA1206E001C3B33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
+				INFOPLIST_FILE = "ColorMix-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Cee.ColorMix-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -698,6 +915,15 @@
 			buildConfigurations = (
 				9234BD7C1B3A805100D3FFF2 /* Debug */,
 				9234BD7D1B3A805100D3FFF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92848DCD1BA1206E001C3B33 /* Build configuration list for PBXNativeTarget "ColorMix-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92848DCB1BA1206E001C3B33 /* Debug */,
+				92848DCC1BA1206E001C3B33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

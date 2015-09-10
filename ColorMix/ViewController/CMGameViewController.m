@@ -45,16 +45,16 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     if (self.scene == nil) {
-        NSString *firstPlayKey = self.gameMode == classicMode ? kFirstPlayClassicKey : kFirstPlayFantasyKey;
+//        NSString *firstPlayKey = self.gameMode == classicMode ? kFirstPlayClassicKey : kFirstPlayFantasyKey;
         self.scene = [[CMScene alloc] initWithGameMode:self.gameMode];
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:firstPlayKey]) {
+//        if ([[NSUserDefaults standardUserDefaults] objectForKey:firstPlayKey]) {
             [self addCardViews];
             [self.currentQuestionView startTimer];
-        } else {
-            [self showTutorial];
-            [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥好帅" forKey:firstPlayKey];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
+//        } else {
+//            [self showTutorial];
+//            [[NSUserDefaults standardUserDefaults] setObject:@"钦哥哥好帅" forKey:firstPlayKey];
+//            [[NSUserDefaults standardUserDefaults] synchronize];
+//        }
     }
 }
 

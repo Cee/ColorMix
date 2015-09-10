@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CMColor : NSObject
 @property (nonatomic, strong) UIColor *color;

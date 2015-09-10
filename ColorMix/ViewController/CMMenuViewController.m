@@ -73,19 +73,19 @@
 
 #pragma mark - ButtonAction
 - (IBAction)onEasyButtonClicked:(id)sender {
-    [MobClick event:@"Classic"];
+//    [MobClick event:@"Classic"];
     CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:classicMode];
     [self.navigationController pushViewController:gameViewController animated:YES];
 }
 
 - (IBAction)onFantasyButtonClicked:(id)sender {
-    [MobClick event:@"Fantasy"];
+//    [MobClick event:@"Fantasy"];
     CMGameViewController *gameViewController = [[CMGameViewController alloc] initWithGameMode:fantasyMode];
     [self.navigationController pushViewController:gameViewController animated:YES];
 }
 
 - (IBAction)onSettingButtonClicked:(id)sender {
-    [MobClick event:@"Setting"];
+//    [MobClick event:@"Setting"];
     self.settingViewController = [[CMSettingViewController alloc] initWithNibName:NSStringFromClass([CMSettingViewController class]) bundle:nil];
     self.settingViewController.view.frame = self.view.bounds;
     self.settingViewController.view.alpha = 0;
