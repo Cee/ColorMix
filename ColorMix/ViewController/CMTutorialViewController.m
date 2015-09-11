@@ -37,10 +37,10 @@
     _upViewInFirstTutorial.layer.borderColor = [UIColor whiteColor].CGColor;
     _upViewInFirstTutorial.layer.borderWidth = 2.0;
     _currentIndex = 1;
-    [_redView addShadowAtRight];
-    [_blueView addShadowAtRight];
-    [_secondBlueView addShadowAtRight];
-    [_secondRedView addShadowAtRight];
+    [_redView cm_addShadowAtRight];
+    [_blueView cm_addShadowAtRight];
+    [_secondBlueView cm_addShadowAtRight];
+    [_secondRedView cm_addShadowAtRight];
     [self.questionLabel setText:@"Background"];
     // Do any additional setup after loading the view from its nib.
 }

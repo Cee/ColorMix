@@ -10,7 +10,7 @@
 
 @implementation UIImage (ColorMix)
 
-+ (UIImage *)captureImageFromView:(UIView *)view
++ (UIImage *)cm_captureImageFromView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.frame.size, YES, 0.0);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
