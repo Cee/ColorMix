@@ -10,18 +10,22 @@
 
 @implementation UIView (ColorMix)
 
-- (void)cm_setBackgroundColor:(CMColor*)backgroundColor {
-    [self setBackgroundColor:backgroundColor.color];
+- (void)cm_setBackgroundColor:(CMColor *)color
+{
+    [self setBackgroundColor:color.color];
 }
 
--(void)setToRounded {
-    self.layer.cornerRadius = MIN(self.frame.size.height,self.frame.size.width) / 2.0;
+- (void)cm_setToRounded
+{
+    self.layer.cornerRadius = MIN(self.frame.size.height, self.frame.size.width) / 2.0;
     self.clipsToBounds = YES;
 }
 
--(void)addShadowAtRight {
+- (void)cm_addShadowAtRight
+{
     self.layer.shadowOffset = CGSizeMake(0, 20);
     self.layer.shadowRadius = 10;
     self.layer.shadowOpacity = 0.5;
 }
+
 @end

@@ -23,9 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.classicBtn setToRounded];
-    [self.fantasyBtn setToRounded];
-    [self.settingsBtn setToRounded];
+    [self.classicBtn cm_setToRounded];
+    [self.fantasyBtn cm_setToRounded];
+    [self.settingsBtn cm_setToRounded];
     self.settingsBtn.layer.borderColor = self.settingsBtn.titleLabel.textColor.CGColor;
     self.settingsBtn.layer.borderWidth = 2.f;
     [self.versionLabel setText:[NSString stringWithFormat:@"v %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]]];

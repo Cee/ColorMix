@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (ColorMix)
-+ (UIColor *)colorWithHexString:(NSString *)string;
+
+/** 从 HEX 色码转为的UIColor
+ @param string hex 色码
+ @returns 转换成的 UIColor
+ */
++ (UIColor *)cm_colorWithHexString:(NSString *)hexString;
+
 @end
