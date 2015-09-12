@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CMCard.h"
 
 @interface CMQuestion : NSObject
 @property (nonatomic, strong) NSArray *cardList;
