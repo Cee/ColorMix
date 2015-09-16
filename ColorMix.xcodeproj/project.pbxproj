@@ -47,6 +47,7 @@
 		923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D731B3BEDC4005386A4 /* libz.dylib */; };
 		923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */; };
 		928208C61B3C11F500664E90 /* UIViewController+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */; };
+		92EFAF3A1BA9EDB900537B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EFAF391BA9EDB900537B48 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		925358FE1B3BE84400C0677E /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMConstants.h; path = ColorMix/CMConstants.h; sourceTree = "<group>"; };
 		928208C41B3C11F500664E90 /* UIViewController+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorMix.h"; path = "Category/UIViewController+ColorMix.h"; sourceTree = "<group>"; };
 		928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorMix.m"; path = "Category/UIViewController+ColorMix.m"; sourceTree = "<group>"; };
+		92EFAF391BA9EDB900537B48 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 				9234BD581B3A805100D3FFF2 /* Supporting Files */,
 				9229E8DE1B3DD43F00290828 /* CMGameCenterHelper.h */,
 				9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */,
+				92EFAF391BA9EDB900537B48 /* LaunchScreen.storyboard */,
 			);
 			path = ColorMix;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */,
 				7D56C0791B3B25330032FA52 /* CMGameResultViewController.xib in Resources */,
 				7DFADB691B3C4B0300C2E8F6 /* CMSettingViewController.xib in Resources */,
+				92EFAF3A1BA9EDB900537B48 /* LaunchScreen.storyboard in Resources */,
 				7D7E9E8B1B3CD5B900DA58A5 /* CMClassicTutorialViewController.xib in Resources */,
 				7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */,
 			);
@@ -590,7 +594,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -613,7 +616,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
