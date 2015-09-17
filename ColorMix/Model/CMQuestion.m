@@ -7,6 +7,7 @@
 //
 
 #import "CMQuestion.h"
+#import "CMCard.h"
 
 @interface CMQuestion()
 @property (nonatomic) NSInteger answerIndex;

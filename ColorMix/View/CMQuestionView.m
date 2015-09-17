@@ -7,6 +7,7 @@
 //
 
 #import "CMQuestionView.h"
+#import "CMCard.h"
 
 @interface CMQuestionView()
 @property (nonatomic, weak) IBOutlet UIView *cardView;

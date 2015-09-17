@@ -25,9 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [_replayBtn setToRounded];
-    [_shareBtn setToRounded];
-    [_homeBtn setToRounded];
+    [_replayBtn cm_setToRounded];
+    [_shareBtn cm_setToRounded];
+    [_homeBtn cm_setToRounded];
     _homeBtn.layer.borderColor = _homeBtn.titleLabel.textColor.CGColor;
     _homeBtn.layer.borderWidth = 2.0;
     [_scoreLabel setText:[NSString stringWithFormat:@"Score: %ld",(long)self.score]];
@@ -62,7 +62,7 @@
 - (IBAction)onShareButtonClicked:(id)sender {
     [MobClick event:@"Share"];
     CMScoreView *scoreView = [[CMScoreView alloc] initWithScore:self.score];
-    UIImage *imageToShare = [UIImage captureImageFromView:scoreView];
+    UIImage *imageToShare = [UIImage cm_captureImageFromView:scoreView];
     NSString *stringToShare = [NSString stringWithFormat:@"I scored %ld in the %@ mode, play #Co!orMix with me: %@", (long)self.score, self.gameMode == classicMode ? @"classic" : @"fantasy" , kAppStoreUrl ];
     NSArray *activityItems = [[NSArray alloc] initWithObjects:imageToShare,stringToShare, nil];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];

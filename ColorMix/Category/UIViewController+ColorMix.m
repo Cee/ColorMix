@@ -10,9 +10,12 @@
 
 @implementation UIViewController (ColorMix)
 
-+ (void)load {
++ (void)load
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
+        // method swizzling viewWillAppear:
         Class class = [self class];
         
         SEL originalSelector = @selector(viewWillAppear:);

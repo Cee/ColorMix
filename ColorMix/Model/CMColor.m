@@ -12,7 +12,7 @@
 - (instancetype)initWithDictionary:(NSDictionary *)colorDic {
     self = [super init];
     if (self) {
-        self.color = [UIColor colorWithHexString:colorDic[@"Color"]];
+        self.color = [UIColor cm_colorWithHexString:colorDic[@"Color"]];
         self.colorName = colorDic[@"Name"];
     }
     return self;
