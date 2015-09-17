@@ -40,13 +40,13 @@
 		7DFADB761B3C582900C2E8F6 /* CMScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFADB751B3C582900C2E8F6 /* CMScoreView.xib */; };
 		7DFADB791B3C5C6100C2E8F6 /* UIImage+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */; };
 		9229E8E01B3DD43F00290828 /* CMGameCenterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */; };
-		922FA0821B3DBDCE00E3FC75 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922FA0811B3DBDCE00E3FC75 /* GameKit.framework */; };
 		9234BD5B1B3A805100D3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD5A1B3A805100D3FFF2 /* main.m */; };
 		9234BD661B3A805100D3FFF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9234BD651B3A805100D3FFF2 /* Images.xcassets */; };
 		9234BD751B3A805100D3FFF2 /* ColorMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9234BD741B3A805100D3FFF2 /* ColorMixTests.m */; };
 		923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D731B3BEDC4005386A4 /* libz.dylib */; };
 		923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923B6D761B3BEE9E005386A4 /* libMobClickGameLibrary.a */; };
 		928208C61B3C11F500664E90 /* UIViewController+ColorMix.m in Sources */ = {isa = PBXBuildFile; fileRef = 928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */; };
+		9284DFC81BAA716700D565CD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9284DFC71BAA716700D565CD /* GameKit.framework */; };
 		92EFAF3A1BA9EDB900537B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EFAF391BA9EDB900537B48 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +116,6 @@
 		7DFADB781B3C5C6100C2E8F6 /* UIImage+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorMix.m"; path = "Category/UIImage+ColorMix.m"; sourceTree = "<group>"; };
 		9229E8DE1B3DD43F00290828 /* CMGameCenterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMGameCenterHelper.h; path = Helper/CMGameCenterHelper.h; sourceTree = "<group>"; };
 		9229E8DF1B3DD43F00290828 /* CMGameCenterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMGameCenterHelper.m; path = Helper/CMGameCenterHelper.m; sourceTree = "<group>"; };
-		922FA0811B3DBDCE00E3FC75 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		9234BD551B3A805100D3FFF2 /* ColorMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9234BD591B3A805100D3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9234BD5A1B3A805100D3FFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 		925358FE1B3BE84400C0677E /* CMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMConstants.h; path = ColorMix/CMConstants.h; sourceTree = "<group>"; };
 		928208C41B3C11F500664E90 /* UIViewController+ColorMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ColorMix.h"; path = "Category/UIViewController+ColorMix.h"; sourceTree = "<group>"; };
 		928208C51B3C11F500664E90 /* UIViewController+ColorMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ColorMix.m"; path = "Category/UIViewController+ColorMix.m"; sourceTree = "<group>"; };
+		9284DFC71BAA716700D565CD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		92EFAF391BA9EDB900537B48 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +144,7 @@
 				7DC542671B3DB29300830567 /* AudioToolbox.framework in Frameworks */,
 				923B6D7B1B3BEEB3005386A4 /* libMobClickGameLibrary.a in Frameworks */,
 				923B6D741B3BEDC4005386A4 /* libz.dylib in Frameworks */,
-				922FA0821B3DBDCE00E3FC75 /* GameKit.framework in Frameworks */,
+				9284DFC81BAA716700D565CD /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 		7CFAD281F2F6DB3D8D4C714E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				922FA0811B3DBDCE00E3FC75 /* GameKit.framework */,
+				9284DFC71BAA716700D565CD /* GameKit.framework */,
 				7DC542661B3DB29300830567 /* AudioToolbox.framework */,
 				923B6D731B3BEDC4005386A4 /* libz.dylib */,
 				923B6D721B3BED9D005386A4 /* Umeng */,
@@ -594,8 +594,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tianyu Wang (8H8FNZFPPU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tianyu Wang (8H8FNZFPPU)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
@@ -606,9 +606,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ColorMix/Frameworks/Umeng",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cee.ColorMix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2d2bcc7f-b970-42cb-b3d7-b95df6c82a25";
 			};
 			name = Debug;
 		};
@@ -616,8 +616,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianyu Wang (BJJYLFU3B7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tianyu Wang (BJJYLFU3B7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorMix/ColorMix-Prefix.pch";
 				INFOPLIST_FILE = ColorMix/Info.plist;
@@ -628,9 +628,9 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/ColorMix/Frameworks/Umeng",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Cee.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cee.ColorMix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "32bc0792-84ed-479e-8b90-c6a78bd8e9b8";
 			};
 			name = Release;
 		};
