@@ -28,17 +28,17 @@
 }
 
 - (void)showNextQuestion {
-    self.point++;
     self.currentQuestion = self.nextQuestion;
     self.currentQuestion.limitTime = [self limitTime];
     NSInteger cardCount = 1;
     if (self.currentMode == fantasyMode) {
-        if (self.point > 25) {
+        if (self.point >= 24) {
             cardCount = 3;
-        } else if (self.point > 10) {
+        } else if (self.point >= 9) {
             cardCount = 2;
         }
     }
+    self.point++;
     self.nextQuestion = [self.questionFactory createQuestionWithCardCount:cardCount];
 }
 
